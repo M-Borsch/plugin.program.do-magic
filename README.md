@@ -1,7 +1,7 @@
 # plugin.program.do-magic
 This Kodi Program Addon allows users to copy certain files to Kodi environment
 
-![icon](MB-KODI-icon.png) (![icon](Manage-Kodi-Fav-icon.png)  
+![icon](MB-KODI-icon.png) (![icon](MB-KODI-Magic-icon.png)  
 
 # Program Addon: do-magic
 
