@@ -1,11 +1,11 @@
 # plugin.program.do-magic
-This Kodi Program Addon allows users to copy certain files to Kodi environment
+This Kodi Program Addon allows users to execute custom functions to modify their Kodi environment
 
 ![icon](MB-KODI-icon.png) (![icon](MB-KODI-Magic-icon.png)  
 
 # Program Addon: do-magic
 
-This is a simple & lightweight KODI Program Addon that lets you quickly manage your Kodi install by allowing users to copy certain files into your Kodi environment .
+This is a simple & lightweight KODI Program Addon that lets you quickly manage your Kodi install by allowing users to execute certain specialized functions to modify a Kodi environment.
 
 > [!NOTE]
 > (Latest) - This is the latest version of the do-magic Program Addon
