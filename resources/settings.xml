@@ -5,12 +5,13 @@
         <setting type="string" label="30002" />
       
         <!-- Password Field -->
-        <setting id="do-magicPWD" type="string" label="30003" option="hidden" default="" />
+        <setting id="do-magicPWD" type="text" label="30003" option="hidden" default="" />
 
 	        <!-- Function Field -->
-        <setting id="do-magicFunction" type="string" label="30004" default="" />
+        <setting id="do-magicFunction" type="text" label="30004" default="" />
 
        
     </category>
 
 </settings>
+
