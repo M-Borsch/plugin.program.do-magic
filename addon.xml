@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="do-magic" name="[COLOR blue]do-magic[/COLOR]" version="1.0" provider-name="M-Borsch,MB-K@DI">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <news>
+      [COLOR lavender][B]do-magic[/B][/COLOR]
+      [B]1.0:[/B]
+      - Initial Public release
+      - Add ability to enter the password and function.
+    </news>
+    <summary>
+Manage your Kodi install made easy!
+    </summary>
+    <description lang="en">
+Lets you manage your Kodi install with advanced application of functions.
+
+Kodi Program Addon to allow users to modify your Kodi install by running adavnced functions. 
+
+This is a restricted Program Addon that you must contact kodi@borsch.ca to get a password.
+    </description>
+    <platform>all</platform>
+    <assets>
+        <icon>MB-KODI-Magic-icon.png</icon>
+    </assets>
+  </extension>
+</addon>
