@@ -698,13 +698,13 @@ else:
                                    'make any changes to your favourites using the Favourites screen (like adding, '
                                    'removing or reordering items) before closing Kodi, your changes from this '
                                    'add-on will be ignored.'})
-    configureItem = xbmcgui.ListItem('[B]Configure... (Change Settings)[/B]')
+    configureItem = xbmcgui.ListItem('[B]Configure... (Enter PWD/Function in Settings)[/B]')
     configureItem.setArt({'thumb': 'DefaultFolderBack.png'})
     configureItem.setInfo('video', {'plot': 'Configure the default actions in Settings panel for Prefix, Suffix, Colors and Insert/Swap modes.'})
-    overwriteFavs = xbmcgui.ListItem('[COLOR red][B]Overwrite Favourites [/COLOR](Advanced! - Overwrite Favourites file - Leave Changes Pending a Kodi Restart or [COLOR orange]Reload Profile[/COLOR])[/B]')
+    overwriteFavs = xbmcgui.ListItem('[COLOR red][B]Execute Function [/COLOR](Advanced! - This will modify your Kodi install[/B]')
     overwriteFavs.setArt({'thumb': 'DefaultFolderBack.png'})
     overwriteFavs.setInfo('video', {'plot': 'Advanced - Overwrite Kodi Favourites file, Leave Changes Pending a Kodi Restart or [COLOR orange]Reload Profile.[/COLOR]'})
-    exitItem = xbmcgui.ListItem('[B]Exit (No Save-Exit - Abandon Any Unsaved Changes)[/B]')
+    exitItem = xbmcgui.ListItem('[B]Exit[/B]')
     exitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     exitItem.setInfo('video', {'plot': 'Exit the add-on (same as pressing Back), without saving your changes.'})
 
@@ -712,14 +712,10 @@ else:
         PLUGIN_ID,
         (
             # PLUGIN_URL already ends with a slash, so just append the route to it.
-            (PLUGIN_URL + 'dialog', dialogItem, False),
-            (PLUGIN_URL + 'save_reload', saveReloadItem, False),
-            (PLUGIN_URL + 'save_exit', saveExitItem, False),
-            (PLUGIN_URL + 'save_noexit', saveSaveItem, False),
-            (PLUGIN_URL + 'nosave_reload', nosaveReloadItem, False),
             (PLUGIN_URL + 'configure', configureItem, False),
             (PLUGIN_URL + 'overwrite_favs', overwriteFavs, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
