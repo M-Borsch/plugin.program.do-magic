@@ -29,7 +29,7 @@ msgid "[COLOR orange]Settings[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30002"
-msgid "[COLOR white]Here you can add your password to enable custom functions to customize your Kodi install.[/COLOR]"
+msgid "[COLOR yellow]Enter your Password / Function to customize your Kodi install[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30003"
@@ -38,5 +38,6 @@ msgid "[COLOR white]Enter Password: [/COLOR]"
 #: resources/settings.xml
 msgctxt "#30004"
 msgid "[COLOR white]Enter Function: [/COLOR]"
+
 
 
