@@ -16,7 +16,7 @@ Latest Version do-magic :sunglasses:
 - inital release
 (Latest)
 
-<a href="Manage-Kodi-Favourites-2.3.zip">Manage-Kodi-Favourites-2.3.zip</a> (Latest)
+font COLOR="red"><B>RESTRICTED:</B> Contact MB-KODI (Latest)
 
 This <font COLOR="blue"><B>do-magic</B></font> Program Addon is published as a Kodi Program Addon that you can install directly into Kodi. It is a private Addon only authorized for use for designated users and is supported by MB-KODI.<br />
 <br />
