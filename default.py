@@ -244,7 +244,7 @@ class CustomFavouritesDialog(xbmcgui.WindowXMLDialog):
             self.close()
             # Call up Addon Settings
             # Activate the Manage Kodi Favourites Settings window
-            xbmc.executebuiltin('Addon.OpenSettings(Manage-Kodi-Favourites)')
+            xbmc.executebuiltin('Addon.OpenSettings(do-magic)')
   
     def doPreSuffix(self):
         # Check to see if an entry is selected
@@ -718,4 +718,5 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
