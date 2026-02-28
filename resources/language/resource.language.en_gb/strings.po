@@ -1,0 +1,41 @@
+# Kodi Media Center language file
+# SPDX-FileCopyrightText: 2026 M-Borsch kodi@borsch.ca
+#
+# SPDX-License-Identifier: MPL-2.0
+#
+# Addon Name: Manage Kodi Favourites
+# Addon id: Manage-Kodi-Favourites
+# Addon Provider: M-Borsch
+msgid ""
+msgstr ""
+"Project-Id-Version: plugin.program.do-magic\n"
+"Report-Msgid-Bugs-To: kodi@borsch.ca\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: M-Borsch <kodi@borsch.ca>\n"
+"Language-Team: M-Borsch Language Team <kodi@borsch.ca>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: resources/settings.xml
+msgctxt "#30000"
+msgid "[COLOR blue]do-magic[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30001"
+msgid "[COLOR orange]Settings[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30002"
+msgid "[COLOR white]Here you can add your password to enable custom functions to customize your Kodi install.[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30003"
+msgid "[COLOR white]Enter Password.[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30004"
+msgid "[COLOR white]Enter Function.[/COLOR]"
+
