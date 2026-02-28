@@ -33,9 +33,10 @@ msgid "[COLOR white]Here you can add your password to enable custom functions to
 
 #: resources/settings.xml
 msgctxt "#30003"
-msgid "[COLOR white]Enter Password.[/COLOR]"
+msgid "[COLOR white]Enter Password: [/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30004"
-msgid "[COLOR white]Enter Function.[/COLOR]"
+msgid "[COLOR white]Enter Function: [/COLOR]"
+
 
