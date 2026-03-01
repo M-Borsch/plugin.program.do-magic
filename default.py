@@ -721,11 +721,12 @@ else:
         (
             # PLUGIN_URL already ends with a slash, so just append the route to it.
             (PLUGIN_URL + 'configure', configureItem, False),
-            (PLUGIN_URL + 'overwrite_favs', execute_funtcion, False),
+            (PLUGIN_URL + 'overwrite_favs', execute_function, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
