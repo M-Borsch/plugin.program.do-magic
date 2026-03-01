@@ -39,5 +39,14 @@ msgid "[COLOR white]Enter Password: [/COLOR]"
 msgctxt "#30004"
 msgid "[COLOR white]Enter Function: [/COLOR]"
 
+#: resources/settings.xml
+msgctxt "#30005"
+msgid "mikeisgod"
+
+#: resources/settings.xml
+msgctxt "#30006"
+msgid "stalker"
+
+
 
 
