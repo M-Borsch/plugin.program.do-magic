@@ -642,10 +642,10 @@ elif '/exit_only' in PLUGIN_URL:
 
 elif '/configure' in PLUGIN_URL:
     # Call up the configuration panel.
-    # Activate the Manage Kodi Favourites Settings window
-    xbmc.executebuiltin('Addon.OpenSettings(Manage-Kodi-Favourites)')
+    # Activate the Settings window
+    xbmc.executebuiltin('Addon.OpenSettings(do-magic)')
 
-elif '/execute_function' in PLUGIN_URL:
+elif '/function' in PLUGIN_URL:
 
     password = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
     function = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
@@ -721,11 +721,12 @@ else:
         (
             # PLUGIN_URL already ends with a slash, so just append the route to it.
             (PLUGIN_URL + 'configure', configureItem, False),
-            (PLUGIN_URL + 'overwrite_favs', execute_function, False),
+            (PLUGIN_URL + 'function', execute_function, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
