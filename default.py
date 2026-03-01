@@ -647,9 +647,8 @@ elif '/configure' in PLUGIN_URL:
 
 elif '/execute_funtcion' in PLUGIN_URL:
 
-
-    password = 'false' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
-    function = 'false' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+    password = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
+    function = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
 
     if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % password)
     if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % function)
@@ -727,6 +726,7 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
