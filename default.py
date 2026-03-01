@@ -645,7 +645,7 @@ elif '/configure' in PLUGIN_URL:
     # Activate the Manage Kodi Favourites Settings window
     xbmc.executebuiltin('Addon.OpenSettings(Manage-Kodi-Favourites)')
 
-elif '/execute_funtcion' in PLUGIN_URL:
+elif '/execute_function' in PLUGIN_URL:
 
     password = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
     function = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
@@ -726,6 +726,7 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
