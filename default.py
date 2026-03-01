@@ -659,7 +659,7 @@ elif '/function' in PLUGIN_URL:
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do=magic: [/COLOR]Operation Denied.\n\Invalid PWD and/or Function'")
+        dialog.ok("File Operation Error", f"[COLOR red]do=magic: [/COLOR]Operation Denied.\n\Invalid PWD or Function")
 
 elif '/overwrite_favs' in PLUGIN_URL:
 
@@ -734,6 +734,7 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
