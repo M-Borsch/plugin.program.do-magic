@@ -309,15 +309,6 @@ def xbmcLog(*args):
 ### Entry point ###
 
 if '/exit_only' in PLUGIN_URL:
-    # Clear the results property and go back one screen (to wherever the user came from).
-    clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-    clearWindowProperty(REORDER_METHOD)
-    clearWindowProperty(THUMB_SIZE)
-    clearWindowProperty(FONT_SIZE)
-    clearWindowProperty(PREFIX_TEXT_COLOR)
-    clearWindowProperty(SUFFIX_TEXT_COLOR)
-    clearWindowProperty(CURRENTVER)
-
     xbmc.executebuiltin('Action(Back)')
     # Alternative action, going to the Home screen.
     #xbmc.executebuiltin('ActivateWindow(home)') # ID taken from https://kodi.wiki/view/Window_IDs
@@ -365,4 +356,5 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
