@@ -39,6 +39,7 @@ DEBUG2 = '1'
 # Flag to put up the Under Construction Popup
 DEBUG3 = '0'
 FAVOURITES_PATH = 'special://userdata/favourites.xml'
+SETTINGS_PATH = 'special://addons/pvr.stalker/resources/settings.xml'
 NEW_FAVOURITES_PATH = 'special://userdata/favourites-new.xml'
 THUMBNAILS_PATH_FORMAT = 'special://thumbnails/{folder}/{file}'
 
@@ -447,6 +448,68 @@ def saveFavourites(xmlText):
         raise Exception('ERROR: unable to write to the New Favourites file. Nothing was saved.')
     return True
 
+def execFunction():
+
+    # --- Configuration Variables ---
+    # Type of browse dialog: 1 = ShowAndGetFile
+    browse_type = 1
+    # Dialog heading
+    heading = 'Select the settings.xml file'
+    # The starting path. Use "" to list local drives and network shares
+    # or specify a default path like 'special://home/addons/'
+    default_path = 'special://home' 
+    # File mask for readable files (e.g., text, xml, log files). Use '|' to separate extensions.
+    file_mask = 'settings.xml' 
+    # Enable multiple file selection (optional)
+    enable_multiple = False
+    
+    # --- Show the browse dialog ---
+    dialog = xbmcgui.Dialog()
+    selected_file_path = dialog.browse(
+        browse_type,
+        heading,
+        '',  # shares parameter: "" for local/network sources, "files" for file sources
+        file_mask,
+        enableMultiple=enable_multiple,
+        defaultt=default_path # default path to start browsing from
+    )
+
+    # Does the selected file include "settings.xml"
+    if "settings.xml" in selected_file_path:
+    
+        # --- Process the result ---
+        if selected_file_path:
+            xbmc.log(f"[COLOR red]do-magic: [/COLOR]Selected file path: {selected_file_path}", xbmc.LOGINFO)
+            # You can now use xbmcvfs to read the file content
+            # Example (requires importing xbmcvfs):
+            # import xbmcvfs
+            # with xbmcvfs.File(selected_file_path, 'r') as f:
+            #     content = f.read()
+            #     xbmc.log(f"File content snippet: {content[:100]}", xbmc.LOGINFO)
+    
+            # Define source and destination paths using xbmc.translatePath()
+            # 'special://home/' is a common built-in path in Kodi that points to the userdata folder
+            src = xbmcvfs.translatePath(selected_file_path)
+            dst = xbmcvfs.translatePath(SETTINGS_PATH)
+            
+            # Add error handling using a try-except block
+            try:
+                # shutil.copyfile(src, dst)
+                xbmcvfs.copy(src, dst)
+                # Display a confirmation dialog (requires xbmcgui)
+                dialog = xbmcgui.Dialog()
+                dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]settings.xml successfully copied!\n\nYou must relaunch the impacted Addon to view the change")
+            except IOError as e:
+                # Display an error dialog if the operation fails
+                dialog = xbmcgui.Dialog()
+                dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error copying settings.xml file: {e}")
+        
+        else:
+            xbmc.log("[COLOR red]do-magic: [/COLOR]File selection cancelled by user.", xbmc.LOGINFO)
+    else:
+        # Display an error dialog if the operation fails
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Invalid Filename: Please select 'settings.xml'")
 
 def overwriteFavourites():
 
@@ -649,17 +712,16 @@ elif '/function' in PLUGIN_URL:
 
     password = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
     function = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
-    validRequest = 'false'
 
     if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % password)
     if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % function)
 
     if  password == ADDON.getLocalizedString(30005) and function == ADDON.getLocalizedString(30006):
-        validRequest = 'true'
+        ExecFunction()
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do=magic: [/COLOR]Operation Denied.\n\Invalid PWD or Function")
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nInvalid PWD or Function")
 
 elif '/overwrite_favs' in PLUGIN_URL:
 
@@ -734,6 +796,7 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
