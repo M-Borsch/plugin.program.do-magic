@@ -709,9 +709,9 @@ else:
     configureItem = xbmcgui.ListItem('[B]Configure... (Enter PWD/Function in Settings)[/B]')
     configureItem.setArt({'thumb': 'DefaultFolderBack.png'})
     configureItem.setInfo('video', {'plot': 'Configure the default actions in Settings panel for Prefix, Suffix, Colors and Insert/Swap modes.'})
-    overwriteFavs = xbmcgui.ListItem('[COLOR red][B]Execute Function [/COLOR](Advanced! - This will modify your Kodi install[/B]')
-    overwriteFavs.setArt({'thumb': 'DefaultFolderBack.png'})
-    overwriteFavs.setInfo('video', {'plot': 'Advanced - Overwrite Kodi Favourites file, Leave Changes Pending a Kodi Restart or [COLOR orange]Reload Profile.[/COLOR]'})
+    execute_function = xbmcgui.ListItem('[COLOR red][B]Execute Function [/COLOR](Advanced! - This will modify your Kodi install[/B]')
+    execute_function.setArt({'thumb': 'DefaultAddonsUpdates.png'})
+    execute_function.setInfo('video', {'plot': 'Advanced - Modify certain Kodi Functionality'})
     exitItem = xbmcgui.ListItem('[B]Exit[/B]')
     exitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     exitItem.setInfo('video', {'plot': 'Exit the add-on (same as pressing Back), without saving your changes.'})
@@ -726,6 +726,7 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
