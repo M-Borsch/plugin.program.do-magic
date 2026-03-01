@@ -645,6 +645,15 @@ elif '/configure' in PLUGIN_URL:
     # Activate the Manage Kodi Favourites Settings window
     xbmc.executebuiltin('Addon.OpenSettings(Manage-Kodi-Favourites)')
 
+elif '/execute_funtcion' in PLUGIN_URL:
+
+
+    password = 'false' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
+    function = 'false' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+
+    if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % password)
+    if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % function)
+
 elif '/overwrite_favs' in PLUGIN_URL:
 
     # Check if flag is set to allow overwrite
@@ -713,10 +722,11 @@ else:
         (
             # PLUGIN_URL already ends with a slash, so just append the route to it.
             (PLUGIN_URL + 'configure', configureItem, False),
-            (PLUGIN_URL + 'overwrite_favs', overwriteFavs, False),
+            (PLUGIN_URL + 'overwrite_favs', execute_funtcion, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
