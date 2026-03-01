@@ -654,7 +654,7 @@ elif '/function' in PLUGIN_URL:
     if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % password)
     if DEBUG2 == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % function)
 
-    if  password == addon.getLocalizedString(30005) and function == addon.getLocalizedString(30006):
+    if  password == ADDON.getLocalizedString(30005) and function == ADDON.getLocalizedString(30006):
         validRequest = 'true'
     else:
         # Display an error dialog if the operation fails
@@ -734,6 +734,7 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
+
 
 
 
