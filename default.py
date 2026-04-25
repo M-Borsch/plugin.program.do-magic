@@ -53,7 +53,7 @@ def execFunction():
     dialog = xbmcgui.Dialog()
     dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to function Stub!\n\nContinue...")
 
-    if  do-magicFunction == ADDON.getLocalizedString(30007):
+    if  magicFunction == ADDON.getLocalizedString(30007):
         execDownloadFunction()
     else:
         # Display an error dialog if the operation fails
