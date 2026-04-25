@@ -19,6 +19,8 @@ import xbmcgui
 import os
 import shutil
 import xbmcvfs
+import SimpleDownloader as downloader
+from xbmcaddon import Addon
 
 try:
     # Python 2.x
@@ -47,6 +49,30 @@ PLUGIN_URL = sys.argv[0]
 #===================================================================================
 
 def execFunction():
+    # Display a confirmation dialog (requires xbmcgui)
+    dialog = xbmcgui.Dialog()
+    dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to function Stub!\n\nContinue...")
+
+
+def execDownloadFunction():
+    # Display a confirmation dialog (requires xbmcgui)
+    dialog = xbmcgui.Dialog()
+    dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to Download Stub!\n\nContinue...")
+
+    # Initialize the downloader
+    dl = downloader.SimpleDownloader()
+    
+    # Define the download parameters
+    params = {
+        "url": "http://example.com/file.zip",
+        "download_path": "/path/to/download/folder",
+        "title": "My Downloaded File"
+    }
+    
+    # Start the download
+    dl.download("unique_filename_1", params)
+
+def execStalkerFunction():
 
     # --- Configuration Variables ---
     # Type of browse dialog: 1 = ShowAndGetFile
