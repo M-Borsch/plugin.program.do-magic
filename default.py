@@ -193,9 +193,8 @@ elif '/configure' in PLUGIN_URL:
     xbmc.executebuiltin('Addon.OpenSettings(do-magic)')
 
 elif '/function' in PLUGIN_URL:
-
     do-magicPassword = '' if not ADDON.getSetting('PWD') else ADDON.getSetting('PWD')
-    do-magicFunction = '' if not ADDON.getSetting('FUNCTION') else ADDON.getSetting('FUNCTION')
+    do-magicFunction = '' if not ADDON.getSetting('FUNCT') else ADDON.getSetting('FUNCT')
     do-magicName = '' if not ADDON.getSetting('NAME') else ADDON.getSetting('NAME')
     do-magicURL = '' if not ADDON.getSetting('URL') else ADDON.getSetting('URL')
     do-magicDIR = '' if not ADDON.getSetting('DIR') else ADDON.getSetting('DIR')
