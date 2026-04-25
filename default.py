@@ -58,7 +58,7 @@ def execFunction():
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nInvalid Function")
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
 
 def execDownloadFunction():
@@ -70,14 +70,14 @@ def execDownloadFunction():
     # Read from settings.....
     
     # Start the download
-    # download_with_progress('https://example.com', 'my_file.zip')
+    download_with_progress(do-magicUrl, do-magicName)
 
 def download_with_progress(url, dest_name):
     dp = xbmcgui.DialogProgress()
     dp.create('Downloading', 'Starting download...')
     
     # Use xbmcvfs to handle paths across different OSs
-    save_path = xbmcvfs.translatePath(os.path.join('special://home/userdata/downloads', dest_name))
+    save_path = xbmcvfs.translatePath(os.path.join(do-magicDir, dest_name))
 
     def reporthook(count, block_size, total_size):
         if total_size > 0:
@@ -192,16 +192,15 @@ elif '/configure' in PLUGIN_URL:
     # Activate the Settings window
     xbmc.executebuiltin('Addon.OpenSettings(do-magic)')
 
-elif '/function' in PLUGIN_URL:
-    xxx = ''    
-    magicPassword = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
-    magicFunction = '' if not ADDON.getSetting('do-magicFUNCTION') else ADDON.getSetting('do-magicFUNCTION')
-    magicName = '' if not ADDON.getSetting('do-magicNAME') else ADDON.getSetting('do-magicNAME')
-    magicURL = '' if not ADDON.getSetting('do-magicURL') else ADDON.getSetting('do-magicURL')
-    magicDIR = '' if not ADDON.getSetting('do-magicDIR') else ADDON.getSetting('do-magicDIR')
+elif '/function' in PLUGIN_URL:   
+    do-magicPassword = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
+    do-magicFunction = '' if not ADDON.getSetting('do-magicFUNCTION') else ADDON.getSetting('do-magicFUNCTION')
+    do-magicName = '' if not ADDON.getSetting('do-magicNAME') else ADDON.getSetting('do-magicNAME')
+    do-magicUrl = '' if not ADDON.getSetting('do-magicURL') else ADDON.getSetting('do-magicURL')
+    do-magicDir = '' if not ADDON.getSett0ing('do-magicDIR') else ADDON.getSetting('do-magicDIR')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % do-magicPassword)
-    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % do-magicfunction)
+    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % do-magicFunction)
 
     if  do-magicPassword == ADDON.getLocalizedString(30005):
         execFunction()
