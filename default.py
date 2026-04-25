@@ -61,7 +61,7 @@ def execFunction():
 def execDownloadFunction():
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "From: " + magicUrl + "\nTo: " + magicDir + "/" + magicName
+    line2 = "[COLOR blue]From:[/COLOR] " + magicUrl + "\n[COLOR green]To:[/COLOR] " + magicDir + magicName
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Downloading file", line2)
     
