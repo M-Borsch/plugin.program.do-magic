@@ -19,9 +19,8 @@ import xbmcgui
 import os
 import shutil
 import xbmcvfs
-import SimpleDownloader as downloader
-# Initialize the downloader
-dl = downloader.SimpleDownloader()
+import urllib.request
+
 
 try:
     # Python 2.x
@@ -61,15 +60,34 @@ def execDownloadFunction():
     dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to Download Stub!\n\nContinue...")
     
     # Define the download parameters
-    params = {
-        "url": "http://example.com/file.zip",
-        "download_path": "/path/to/download/folder",
-        "title": "My Downloaded File"
-    }
+    # Read from settings.....
     
     # Start the download
-    dl.download("unique_filename_1", params)
+    download_with_progress('https://example.com', 'my_file.zip')
 
+def download_with_progress(url, dest_name):
+    dp = xbmcgui.DialogProgress()
+    dp.create('Downloading', 'Starting download...')
+    
+    # Use xbmcvfs to handle paths across different OSs
+    save_path = xbmcvfs.translatePath(os.path.join('special://home/userdata/downloads', dest_name))
+
+    def reporthook(count, block_size, total_size):
+        if total_size > 0:
+            percent = int(count * block_size * 100 / total_size)
+            dp.update(percent, f"Downloaded {percent}% of file")
+        
+        if dp.iscanceled():
+            urllib.request.urlcleanup()
+            raise Exception("Download Canceled")
+
+    try:
+        urllib.request.urlretrieve(url, save_path, reporthook)
+        dp.close()
+    except Exception as e:
+        dp.close()
+        print(f"Error: {e}")
+        
 def execStalkerFunction():
 
     # --- Configuration Variables ---
