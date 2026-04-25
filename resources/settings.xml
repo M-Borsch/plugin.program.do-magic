@@ -8,7 +8,7 @@
         <setting id="magicPWD" type="text" label="30003" option="hidden" default="" />
 
 	    <!-- Function Field -->
-        <setting id="do-magicFUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008" default="NONE" />
+        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008" default="NONE" />
 
         <!-- Text Field: Only visible if 'Download' is selected -->
         <setting id="magicDIR" type="folder" label="30009" default="" visible="eq(-1,0)" />
