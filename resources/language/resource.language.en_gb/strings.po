@@ -45,8 +45,10 @@ msgid "mikeisgod"
 
 #: resources/settings.xml
 msgctxt "#30006"
+msgid "download"
+
+#: resources/settings.xml
+msgctxt "#30007"
 msgid "stalker"
-
-
 
 
