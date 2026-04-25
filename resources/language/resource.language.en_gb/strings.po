@@ -49,8 +49,12 @@ msgid "download"
 
 #: resources/settings.xml
 msgctxt "#30007"
-msgid "stalker"
+msgid "NONE"
 
 #: resources/settings.xml
 msgctxt "#30008"
+msgid "stalker"
+
+#: resources/settings.xml
+msgctxt "#30009"
 msgid "Enter URL:"
