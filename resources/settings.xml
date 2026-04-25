@@ -8,15 +8,12 @@
         <setting id="PWD" type="text" label="30003" option="hidden" default="" />
 
 	    <!-- Function Field -->
-        <setting id="Function" type="labelenum" label="30004" lvalues="30007|30006|30008" default="NONE" />
+        <setting id="FUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008" default="NONE" />
 
         <!-- Text Field: Only visible if 'Download' is selected -->
         <setting id="DIR" type="folder" label="30009" default="" visible="eq(-1,0)" />
         <setting id='NAME" type="text" label="30010" default="" visible="eq(-2,0)" />
         <setting id="URL" type="text" label="30011" default="" visible="eq(-3,0)" />
-		 
-        <!setting id="Function" type="text" label="30008" default="" />
-
        
     </category>
 
