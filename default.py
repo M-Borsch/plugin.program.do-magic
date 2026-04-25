@@ -191,6 +191,10 @@ elif '/configure' in PLUGIN_URL:
     # Activate the Settings window
     xbmc.executebuiltin('Addon.OpenSettings(do-magic)')
 
+elif '/fmanager' in PLUGIN_URL:
+    # Call up the File Manager.
+    xbmc.executebuiltin("ActivateWindow(FileManager)")
+
 elif '/function' in PLUGIN_URL:   
     magicPassword = '' if not ADDON.getSetting('magicPWD') else ADDON.getSetting('magicPWD')
     magicFunction = '' if not ADDON.getSetting('magicFUNCTION') else ADDON.getSetting('magicFUNCTION')
@@ -217,6 +221,9 @@ else:
     execute_function = xbmcgui.ListItem('[COLOR red][B]Execute Function [/COLOR](Advanced! - This will modify your Kodi install[/B]')
     execute_function.setArt({'thumb': 'DefaultAddonsUpdates.png'})
     execute_function.setInfo('video', {'plot': 'Advanced - Modify certain Kodi Functionality'})
+    file_manager = xbmcgui.ListItem('[COLOR red][B]Launch File Manager...[/B][/COLOR]')
+    file_manager.setArt({'thumb': 'DefaultAddonsUpdates.png'})
+    file_manager.setInfo('video', {'plot': 'Launch File Manager...'})
     exitItem = xbmcgui.ListItem('[B]Exit[/B]')
     exitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     exitItem.setInfo('video', {'plot': 'Exit the add-on (same as pressing Back), without saving your changes.'})
@@ -227,6 +234,7 @@ else:
             # PLUGIN_URL already ends with a slash, so just append the route to it.
             (PLUGIN_URL + 'configure', configureItem, False),
             (PLUGIN_URL + 'function', execute_function, False),
+            (PLUGIN_URL + 'fmanager', file_manager, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
