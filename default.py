@@ -195,8 +195,8 @@ elif '/configure' in PLUGIN_URL:
 elif '/function' in PLUGIN_URL:
 
     do-magicPassword = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('PWD')
-    do-magicfunction = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('Function')
-    do-magicName = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('Name')
+    do-magicFunction = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('FUNCTION')
+    do-magicName = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('NAME')
     do-magicURL = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('URL')
     do-magicDIR = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('DIR')
 
