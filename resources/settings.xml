@@ -7,8 +7,13 @@
         <!-- Password Field -->
         <setting id="do-magicPWD" type="text" label="30003" option="hidden" default="" />
 
-	        <!-- Function Field -->
-        <setting id="do-magicFunction" type="text" label="30004" default="" />
+	    <!-- Function Field -->
+        <setting id="magicFunction" type="labelenum" label="30004" lvalues="30006|30007" default="NONE" />
+
+        <!-- Text Field: Only visible if 'Download' is selected -->
+        <setting id="do-magicURL" type="text" label="30007" default="" visible="eq(-1,0)" />
+		 
+        <!setting id="do-magicFunction" type="text" label="30008" default="" />
 
        
     </category>
