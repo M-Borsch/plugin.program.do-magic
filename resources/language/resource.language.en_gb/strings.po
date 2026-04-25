@@ -45,15 +45,15 @@ msgid "mikeisgod"
 
 #: resources/settings.xml
 msgctxt "#30006"
-msgid "download"
-
-#: resources/settings.xml
-msgctxt "#30007"
 msgid "NONE"
 
 #: resources/settings.xml
+msgctxt "#30007"
+msgid "Download"
+
+#: resources/settings.xml
 msgctxt "#30008"
-msgid "stalker"
+msgid "Stalker"
 
 #: resources/settings.xml
 msgctxt "#30009"
