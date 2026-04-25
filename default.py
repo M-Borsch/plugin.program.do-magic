@@ -65,9 +65,6 @@ def execDownloadFunction():
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Downloading file", line2)
     
-    # Define the download parameters
-    # Read from settings.....
-    
     # Start the download
     download_with_progress(magicUrl, magicName)
 
@@ -87,12 +84,17 @@ def download_with_progress(url, dest_name):
             urllib.request.urlcleanup()
             raise Exception("Download Canceled")
 
-    try:
-        urllib.request.urlretrieve(url, save_path, reporthook)
-        dp.close()
-    except Exception as e:
-        dp.close()
-        print(f"Error: {e}")
+    # Copy file using Kodi's built-in SMB handling
+    if xbmcvfs.copy(url, save_path):
+        xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+    else:
+        xbmc.log("Failed to download file", xbmc.LOGERROR)
+    #try:
+    #    urllib.request.urlretrieve(url, save_path, reporthook)
+    #    dp.close()
+    #except Exception as e:
+    #    dp.close()
+    #    print(f"Error: {e}")
         
 def execStalkerFunction():
 
