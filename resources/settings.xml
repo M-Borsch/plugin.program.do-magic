@@ -13,9 +13,11 @@
     </category>
 
 	<!-- This category only appears if 'show_adv' is true -->
-    <category id="advanced" label="Download Options" visible="eq(-1,0)">
+    <category id="advanced" label="Download Options">
         <!-- Text Field: Only visible if 'Download' is selected --> 
         <setting id="do-magicDIR" type="folder" label="30009" default="" />
+        <setting id='do-magicNAME" type="text" label="30010" default="" />
+        <setting id="do-magicURL" type="text" label="30011" default="" />		
     </category>
 
 </settings>
