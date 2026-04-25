@@ -20,7 +20,8 @@ import os
 import shutil
 import xbmcvfs
 import SimpleDownloader as downloader
-from xbmcaddon import Addon
+# Initialize the downloader
+dl = downloader.SimpleDownloader()
 
 try:
     # Python 2.x
@@ -58,9 +59,6 @@ def execDownloadFunction():
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
     dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to Download Stub!\n\nContinue...")
-
-    # Initialize the downloader
-    dl = downloader.SimpleDownloader()
     
     # Define the download parameters
     params = {
