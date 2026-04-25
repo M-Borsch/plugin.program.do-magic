@@ -194,11 +194,11 @@ elif '/configure' in PLUGIN_URL:
 
 elif '/function' in PLUGIN_URL:
 
-    do-magicPassword = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
-    do-magicfunction = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
-    ddo-magicName = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
-    do-magicURL = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
-    do-magicDIR = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+    do-magicPassword = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('PWD')
+    do-magicfunction = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('Function')
+    do-magicName = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('Name')
+    do-magicURL = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('URL')
+    do-magicDIR = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('DIR')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % do-magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % do-magicfunction)
