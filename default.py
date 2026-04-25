@@ -70,14 +70,14 @@ def execDownloadFunction():
     # Read from settings.....
     
     # Start the download
-    download_with_progress(do-magicUrl, do-magicName)
+    download_with_progress(magicUrl, magicName)
 
 def download_with_progress(url, dest_name):
     dp = xbmcgui.DialogProgress()
     dp.create('Downloading', 'Starting download...')
     
     # Use xbmcvfs to handle paths across different OSs
-    save_path = xbmcvfs.translatePath(os.path.join(do-magicDir, dest_name))
+    save_path = xbmcvfs.translatePath(os.path.join(magicDir, dest_name))
 
     def reporthook(count, block_size, total_size):
         if total_size > 0:
@@ -194,10 +194,10 @@ elif '/configure' in PLUGIN_URL:
 
 elif '/function' in PLUGIN_URL:   
     magicPassword = '' if not ADDON.getSetting('magicPWD') else ADDON.getSetting('magicPWD')
-    #do-magicFunction = '' if not ADDON.getSetting('do-magicFUNCTION') else ADDON.getSetting('do-magicFUNCTION')
-    #do-magicName = '' if not ADDON.getSetting('do-magicNAME') else ADDON.getSetting('do-magicNAME')
-    #do-magicUrl = '' if not ADDON.getSetting('do-magicURL') else ADDON.getSetting('do-magicURL')
-    #do-magicDir = '' if not ADDON.getSett0ing('do-magicDIR') else ADDON.getSetting('do-magicDIR')
+    magicFunction = '' if not ADDON.getSetting('do-magicFUNCTION') else ADDON.getSetting('do-magicFUNCTION')
+    magicName = '' if not ADDON.getSetting('do-magicNAME') else ADDON.getSetting('do-magicNAME')
+    magicUrl = '' if not ADDON.getSetting('do-magicURL') else ADDON.getSetting('do-magicURL')
+    magicDir = '' if not ADDON.getSett0ing('do-magicDIR') else ADDON.getSetting('do-magicDIR')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
