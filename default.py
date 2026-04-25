@@ -49,9 +49,6 @@ PLUGIN_URL = sys.argv[0]
 #===================================================================================
 
 def execFunction():
-    # Display a confirmation dialog (requires xbmcgui)
-    dialog = xbmcgui.Dialog()
-    dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to function Stub!\n\nContinue...")
 
     if  magicFunction == ADDON.getLocalizedString(30007):
         execDownloadFunction()
@@ -64,7 +61,10 @@ def execFunction():
 def execDownloadFunction():
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to Download Stub!\n\nContinue...")
+    line1 = "From: " + magicUrl
+    line2 = "To: " + magicDir + "/" + magicName
+
+    dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Downloading file", line1, line2)
     
     # Define the download parameters
     # Read from settings.....
