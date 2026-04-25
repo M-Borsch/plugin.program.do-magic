@@ -53,6 +53,13 @@ def execFunction():
     dialog = xbmcgui.Dialog()
     dialog.ok("File Operation", "[COLOR red]do-magic: [/COLOR]Call to function Stub!\n\nContinue...")
 
+    if  do-magicFunction == ADDON.getLocalizedString(30007):
+        execDownloadFunction()
+    else:
+        # Display an error dialog if the operation fails
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nInvalid Function")
+
 
 def execDownloadFunction():
     # Display a confirmation dialog (requires xbmcgui)
@@ -63,7 +70,7 @@ def execDownloadFunction():
     # Read from settings.....
     
     # Start the download
-    download_with_progress('https://example.com', 'my_file.zip')
+    # download_with_progress('https://example.com', 'my_file.zip')
 
 def download_with_progress(url, dest_name):
     dp = xbmcgui.DialogProgress()
@@ -187,13 +194,16 @@ elif '/configure' in PLUGIN_URL:
 
 elif '/function' in PLUGIN_URL:
 
-    password = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
-    function = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+    do-magicPassword = '' if not ADDON.getSetting('do-magicPWD') else ADDON.getSetting('do-magicPWD')
+    do-magicfunction = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+    ddo-magicName = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+    do-magicURL = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
+    do-magicDIR = '' if not ADDON.getSetting('do-magicFunction') else ADDON.getSetting('do-magicFunction')
 
-    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % password)
-    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % function)
+    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % do-magicPassword)
+    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % do-magicfunction)
 
-    if  password == ADDON.getLocalizedString(30005):
+    if  do-magicPassword == ADDON.getLocalizedString(30005):
         execFunction()
     else:
         # Display an error dialog if the operation fails
