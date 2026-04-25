@@ -193,12 +193,12 @@ elif '/function' in PLUGIN_URL:
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % password)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % function)
 
-    if  password == ADDON.getLocalizedString(30005) and function == ADDON.getLocalizedString(30006):
+    if  password == ADDON.getLocalizedString(30005):
         execFunction()
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nInvalid PWD or Function")
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nInvalid PWD")
 
 else:
     # Create the menu items.
