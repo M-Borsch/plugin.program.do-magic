@@ -30,4 +30,4 @@ This <font COLOR="blue"><B>do-magic</B></font> Program Addon is published as a K
 # How to use:
 
 > [!IMPORTANT]
-> Depending on the settings you set in the configuration/setting panel, this Addon will either **Add a Prefix/Suffix** to items and/or add a **Color** to items in your Favourites list as well as allow users to easily and graphically **Sort or Move items** by inserting/swapping entries or using the built-in **Sort** function.
+> Depending on the settings you set in the configuration/setting panel, this Addon will exceute the specified function. This is a 'restricted' Addon - meaning that you must have a password supplied by MB-KODI in order for the Addon to work.
