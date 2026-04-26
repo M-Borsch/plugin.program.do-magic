@@ -84,17 +84,19 @@ def download_with_progress(url, dest_name):
             urllib.request.urlcleanup()
             raise Exception("Download Canceled")
 
-    # Copy file using Kodi's built-in SMB handling
-    if xbmcvfs.copy(url, save_path):
-        xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+    if magicSMBflg:
+        # Copy file using Kodi's built-in SMB handling
+        if xbmcvfs.copy(url, save_path):
+            xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+        else:
+            xbmc.log("Failed to download file", xbmc.LOGERROR)
     else:
-        xbmc.log("Failed to download file", xbmc.LOGERROR)
-    #try:
-    #    urllib.request.urlretrieve(url, save_path, reporthook)
-    #    dp.close()
-    #except Exception as e:
-    #    dp.close()
-    #    print(f"Error: {e}")
+        try:
+            urllib.request.urlretrieve(url, save_path, reporthook)
+            dp.close()
+        except Exception as e:
+            dp.close()
+            print(f"Error: {e}")
         
 def execStalkerFunction():
 
@@ -203,6 +205,7 @@ elif '/function' in PLUGIN_URL:
     magicName = '' if not ADDON.getSetting('magicNAME') else ADDON.getSetting('magicNAME')
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
+    magicSMBflg = False if not ADDON.getSetting('magicSMBcopy') else ADDON.getSetting('magicSMBcopy')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
