@@ -225,7 +225,7 @@ elif '/function' in PLUGIN_URL:
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nInvalid PWD")
+        dialog.ok("File Operation Error", f"[COLOR blue]do-magic: [/COLOR][COLOR blue]Operation Denied.\n\nInvalid PWD[/COLOR]")
 
 else:
     # Create the menu items.
