@@ -4,13 +4,12 @@
      <category label="30001"> <!-- Settings -->
         <setting type="string" label="30002" />
 
-		 <setting type="lsep" label="30002" />
+		 <setting type="lsep" label="30014" />
       
         <!-- Password Field -->
         <setting id="magicPWD" type="text" label="30003" option="hidden" default="" />
 
 		 <setting type="lsep" />
-
 
 	    <!-- Function Field -->
         <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008|30012" default="NONE" />
