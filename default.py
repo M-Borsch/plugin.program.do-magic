@@ -69,28 +69,34 @@ def execDownloadFunction():
     download_with_progress(magicUrl, magicName)
 
 def download_with_progress(url, dest_name):
-    dp = xbmcgui.DialogProgress()
-    dp.create('Downloading', 'Starting download...\n\nPlease Wait...may take time depending on size of file')
-    
-    # Use xbmcvfs to handle paths across different OSs
-    save_path = xbmcvfs.translatePath(os.path.join(magicDir, dest_name))
-
-    def reporthook(count, block_size, total_size):
-        if total_size > 0:
-            percent = int(count * block_size * 100 / total_size)
-            dp.update(percent, f"Downloaded {percent}% of file")
-        
-        if dp.iscanceled():
-            urllib.request.urlcleanup()
-            raise Exception("Download Canceled")
 
     if magicSMBflg:
-        # Copy file using Kodi's built-in SMB handling
-        if xbmcvfs.copy(url, save_path):
-            xbmc.log("File downloaded successfully", xbmc.LOGINFO)
-        else:
-            xbmc.log("Failed to download file", xbmc.LOGERROR)
+        
+        dp = xbmcgui.DialogProgress()
+        dp.create('Downloading', 'Starting download using SMB Copy...\n\nPlease Wait...may take time depending on size of file')
+        
+        # Use xbmcvfs to handle paths across different OSs
+        save_path = xbmcvfs.translatePath(os.path.join(magicDir, dest_name))
+    
+        def reporthook(count, block_size, total_size):
+            if total_size > 0:
+                percent = int(count * block_size * 100 / total_size)
+                dp.update(percent, f"Downloaded {percent}% of file")
+            
+            if dp.iscanceled():
+                urllib.request.urlcleanup()
+                raise Exception("Download Canceled")
+    
+            # Copy file using Kodi's built-in SMB handling
+            if xbmcvfs.copy(url, save_path):
+                xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+            else:
+                xbmc.log("Failed to download file", xbmc.LOGERROR)
     else:
+        
+        dp = xbmcgui.DialogProgress()
+        dp.create('Downloading', 'Starting download using URL Copy...\n\nPlease Wait...may take time depending on size of file')
+
         try:
             urllib.request.urlretrieve(url, save_path, reporthook)
             dp.close()
@@ -223,7 +229,7 @@ else:
     configureItem = xbmcgui.ListItem('[B]Configure... (Enter PWD/Function in Settings)[/B]')
     configureItem.setArt({'thumb': 'DefaultFolderBack.png'})
     configureItem.setInfo('video', {'plot': 'Configure the default actions in Settings panel.'})
-    execute_function = xbmcgui.ListItem('[COLOR red][B]   Execute Function [/COLOR](Advanced! - This may modify your Kodi install)[/B]')
+    execute_function = xbmcgui.ListItem('[COLOR lightgreen][B]   Execute Function [/COLOR](Advanced! - This may modify your Kodi install)[/B]')
     execute_function.setArt({'thumb': 'DefaultAddonsUpdates.png'})
     execute_function.setInfo('video', {'plot': 'Advanced - Modify certain Kodi Functionality'})
     file_manager = xbmcgui.ListItem('[COLOR red][B]   Launch File Manager...[/B][/COLOR]')
