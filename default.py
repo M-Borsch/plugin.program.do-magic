@@ -220,7 +220,7 @@ elif '/function' in PLUGIN_URL:
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
     
-    if  xbmc.getCacheThumbName( magicHash ).split('.', 1)[0] == ADDON.getLocalizedString(30005) + :
+    if  xbmc.getCacheThumbName( magicHash ).split('.', 1)[0] == ADDON.getLocalizedString(30005):
         execFunction()   
     else:
         # Display an error dialog if the operation fails
