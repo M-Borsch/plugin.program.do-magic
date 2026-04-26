@@ -65,7 +65,7 @@ def execHashFunction():
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " To: [COLOR green]" + hashed + "[/COLOR]"
+    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " [COLOR blue]To:[/COLOR] [COLOR green]" + hashed + "[/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
 
@@ -220,7 +220,7 @@ elif '/function' in PLUGIN_URL:
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
 
-    if  magicPassword == ADDON.getLocalizedString(30005):
+    if  magicPassword == ADDON.getLocalizedString(30005) + :
         execFunction()   
     else:
         # Display an error dialog if the operation fails
