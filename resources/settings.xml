@@ -9,7 +9,7 @@
         <!-- Password Field -->
         <setting id="magicPWD" type="text" label="30003" option="hidden" default="" />
 
-		 <setting type="lsep" />
+		 <setting type="lsep" label="30015" />
 
 	    <!-- Function Field -->
         <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008|30012" default="NONE" />
