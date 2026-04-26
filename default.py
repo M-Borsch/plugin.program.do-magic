@@ -20,7 +20,6 @@ import os
 import shutil
 import xbmcvfs
 import urllib.request
-import bcrypt
 
 try:
     # Python 2.x
@@ -62,7 +61,7 @@ def execFunction():
 def execHashFunction():
 
     # Generate a salt and has password
-    hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+    hashed = xbmc.getCacheThumbName( magicHash ) 
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
