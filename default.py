@@ -70,7 +70,7 @@ def execDownloadFunction():
 
 def download_with_progress(url, dest_name):
     dp = xbmcgui.DialogProgress()
-    dp.create('Downloading', 'Starting download...\n\nPlease Wait...')
+    dp.create('Downloading', 'Starting download...\n\nPlease Wait...may take time depending on size of file')
     
     # Use xbmcvfs to handle paths across different OSs
     save_path = xbmcvfs.translatePath(os.path.join(magicDir, dest_name))
