@@ -25,11 +25,11 @@ msgid "[COLOR blue]do-magic[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30001"
-msgid "[COLOR orange]Settings[/COLOR]"
+msgid "[COLOR blue]Settings[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30002"
-msgid "[COLOR yellow]Enter your Password / Function to customize your Kodi install[/COLOR]"
+msgid "[COLOR white]Enter your Password and select the Function to customize your Kodi install[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30003"
@@ -75,3 +75,6 @@ msgid "HASH"
 msgctxt "#30013"
 msgid "Enter Text:"
 
+#: resources/settings.xml
+msgctxt "#30013"
+msgid "[COLOR white]You must have a PWD to run Functions - contact kodi@borsch.ca[/COLOR]"
