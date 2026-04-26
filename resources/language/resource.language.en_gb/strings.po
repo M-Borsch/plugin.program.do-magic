@@ -77,4 +77,4 @@ msgid "Enter Text:"
 
 #: resources/settings.xml
 msgctxt "#30013"
-msgid "[COLOR white]You must have a PWD to run Functions - contact kodi@borsch.ca[/COLOR]"
+msgid "[COLOR red]You must have a PWD to run Functions - contact kodi@borsch.ca[/COLOR]"
