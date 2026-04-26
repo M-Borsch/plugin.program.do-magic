@@ -75,7 +75,3 @@ msgid "HASH"
 msgctxt "#30013"
 msgid "Enter Text:"
 
-#: resources/settings.xml
-msgctxt "#30014"
-msgid ".tbn"
-
