@@ -220,7 +220,7 @@ else:
     configureItem = xbmcgui.ListItem('[B]Configure... (Enter PWD/Function in Settings)[/B]')
     configureItem.setArt({'thumb': 'DefaultFolderBack.png'})
     configureItem.setInfo('video', {'plot': 'Configure the default actions in Settings panel.'})
-    execute_function = xbmcgui.ListItem('[COLOR red][B]   Execute Function [/COLOR](Advanced! - This will modify your Kodi install[/B]')
+    execute_function = xbmcgui.ListItem('[COLOR red][B]   Execute Function [/COLOR](Advanced! - This may modify your Kodi install)[/B]')
     execute_function.setArt({'thumb': 'DefaultAddonsUpdates.png'})
     execute_function.setInfo('video', {'plot': 'Advanced - Modify certain Kodi Functionality'})
     file_manager = xbmcgui.ListItem('[COLOR red][B]   Launch File Manager...[/B][/COLOR]')
