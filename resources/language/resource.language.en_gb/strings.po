@@ -53,16 +53,16 @@ msgid "Download"
 
 #: resources/settings.xml
 msgctxt "#30008"
-msgid "Stalker"
+msgid "Stalker Tweek"
 
 #: resources/settings.xml
 msgctxt "#30009"
-msgid "Enter Download Dir:"
+msgid "Download Dir:"
 
 #: resources/settings.xml
 msgctxt "#30010"
-msgid "Enter Name:"
+msgid "Download File Name:"
 
 #: resources/settings.xml
 msgctxt "#30011"
-msgid "Enter URL:"
+msgid "Source File URL:"
