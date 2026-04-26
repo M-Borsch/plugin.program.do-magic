@@ -71,7 +71,6 @@ def execDownloadFunction():
 def download_with_progress(url, dest_name):
 
     if magicSMBflg:
-        
         dp = xbmcgui.DialogProgress()
         dp.create('Downloading', 'Starting download using SMB Copy...\n\nPlease Wait...may take time depending on size of file')
         
@@ -93,7 +92,6 @@ def download_with_progress(url, dest_name):
             else:
                 xbmc.log("Failed to download file", xbmc.LOGERROR)
     else:
-        
         dp = xbmcgui.DialogProgress()
         dp.create('Downloading', 'Starting download using URL Copy...\n\nPlease Wait...may take time depending on size of file')
 
