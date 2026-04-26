@@ -20,7 +20,7 @@ import os
 import shutil
 import xbmcvfs
 import urllib.request
-
+import bcrypt
 
 try:
     # Python 2.x
@@ -59,12 +59,17 @@ def execFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
-def execHAshFunction():
+def execHashFunction():
+
+    # Generate a salt and has password
+    hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+    
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash
+    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " To: [COLOR green]" + hashed + "[/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
+
 
 def execDownloadFunction():
     # Display a confirmation dialog (requires xbmcgui)
