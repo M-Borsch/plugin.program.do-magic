@@ -66,3 +66,11 @@ msgid "Download File Name:"
 #: resources/settings.xml
 msgctxt "#30011"
 msgid "Source File URL:"
+
+#: resources/settings.xml
+msgctxt "#30012"
+msgid "HASH"
+
+#: resources/settings.xml
+msgctxt "#30013"
+msgid "Enter Text:"
