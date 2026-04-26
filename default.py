@@ -61,7 +61,7 @@ def execFunction():
 def execHashFunction():
 
     # Generate a salt and has password
-    hashed = xbmc.getCacheThumbName( magicHash ) 
+    hashed = xbmc.getCacheThumbName( magicHash ).split('.', 1)[0]
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
@@ -219,8 +219,8 @@ elif '/function' in PLUGIN_URL:
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
-
-    if  magicPassword == ADDON.getLocalizedString(30005) + :
+    
+    if  xbmc.getCacheThumbName( magicHash ).split('.', 1)[0] == ADDON.getLocalizedString(30005) + :
         execFunction()   
     else:
         # Display an error dialog if the operation fails
