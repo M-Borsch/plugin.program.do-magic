@@ -41,7 +41,7 @@ msgid "[COLOR white]Enter Function: [/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30005"
-msgid "mikeisgod"
+msgid "b7f0869c"
 
 #: resources/settings.xml
 msgctxt "#30006"
@@ -74,3 +74,8 @@ msgid "HASH"
 #: resources/settings.xml
 msgctxt "#30013"
 msgid "Enter Text:"
+
+#: resources/settings.xml
+msgctxt "#30014"
+msgid ".tbn"
+
