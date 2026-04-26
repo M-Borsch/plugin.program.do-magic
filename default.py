@@ -203,7 +203,6 @@ elif '/function' in PLUGIN_URL:
     magicName = '' if not ADDON.getSetting('magicNAME') else ADDON.getSetting('magicNAME')
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
-    magicSMBflg = False if not ADDON.getSetting('magicSMBcopy') else ADDON.getSetting('magicSMBcopy')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
