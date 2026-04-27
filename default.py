@@ -68,7 +68,7 @@ def execBackgroudFunction():
     filename = magicBackground.split("/")[-1]
 
     # setup target location
-    save_path = xbmcvfs.translatePath(os.path.join(userdata_pathDIR, filename))
+    save_path = os.path.join(userdata_pathDIR, filename)
 
     # Copy the background file to target location using Kodi's built-in SMB handling
     if xbmcvfs.copy(magicBackground, save_path):
