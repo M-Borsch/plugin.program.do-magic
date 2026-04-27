@@ -62,7 +62,9 @@ def execFunction():
 
 def execBackgroudFunction():
 
-    userdata_path = xbmcvfs.translatePath('special://userdata/')
+    userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
+    save_path = xbmcvfs.translatePath(os.path.join(userdata_pathDIR, 'tst.png'))
+
 
     # Copy the background file to userdata
     # Copy file using Kodi's built-in SMB handling
