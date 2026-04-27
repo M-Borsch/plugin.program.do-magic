@@ -66,13 +66,13 @@ def execBackgroudFunction():
 
     # Extract the filename
     # filename = magicBackground.split("/")[-1]
-    head, filename = os.path.split(magicBackground)
+    directory, filename = os.path.split(magicBackground)
 
     # setup target location
     save_path = userdata_pathDIR + filename
 
     # Copy the background file to target location using Kodi's built-in SMB handling
-    if xbmcvfs.copy(magicBackground, save_path):
+    if xbmcvfs.copy(magicBackground, userdata_pathDIR):
         xbmc.log("File downloaded successfully", xbmc.LOGINFO)
     else:
         xbmc.log("Failed to download file", xbmc.LOGERROR)
