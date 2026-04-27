@@ -82,3 +82,15 @@ msgid "[COLOR blue]You must have a PWD to run Functions - contact kodi@borsch.ca
 #: resources/settings.xml
 msgctxt "#30015"
 msgid "[COLOR white]Here your select and setup a Function...[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30016"
+msgid "[COLOR white]Here your select a custom Kodi background...[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30017"
+msgid "Backgroud"
+
+#: resources/settings.xml
+msgctxt "#30018"
+msgid "Select background file (jpg, png):"
