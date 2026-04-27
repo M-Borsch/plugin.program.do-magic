@@ -62,9 +62,18 @@ def execFunction():
 
 def execBackgroudFunction():
 
+    userdata_path = xbmcvfs.translatePath('special://userdata/')
+
+    # Copy the background file to userdata
+    # Copy file using Kodi's built-in SMB handling
+    if xbmcvfs.copy(magicBackground, userdata_path):
+        xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+    else:
+        xbmc.log("Failed to download file", xbmc.LOGERROR)
+
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Set Background To:[/COLOR][COLOR green]" + magicBackground + "[/COLOR]"
+    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
     
