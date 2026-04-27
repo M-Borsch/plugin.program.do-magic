@@ -80,6 +80,10 @@ def execBackgroudFunction():
     # Set a custom property that the skin is configured to read
     window = xbmcgui.Window(10000)
     window.setProperty('MyCustomBackground', save_path)
+    xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
+
+    # Optional: Inform the user
+    xbmc.executebuiltin('Notification(Background, Updated, 2000)')
         
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
