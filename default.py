@@ -68,7 +68,7 @@ def execBackgroudFunction():
 
     # Copy the background file to userdata
     # Copy file using Kodi's built-in SMB handling
-    if xbmcvfs.copy(magicBackground, userdata_path):
+    if xbmcvfs.copy(magicBackground, save_path):
         xbmc.log("File downloaded successfully", xbmc.LOGINFO)
     else:
         xbmc.log("Failed to download file", xbmc.LOGERROR)
