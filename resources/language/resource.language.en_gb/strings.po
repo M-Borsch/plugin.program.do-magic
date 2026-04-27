@@ -93,4 +93,4 @@ msgid "Background"
 
 #: resources/settings.xml
 msgctxt "#30018"
-msgid "Select background file (jpg, png):"
+msgid "Select background file (jpg file only!):"
