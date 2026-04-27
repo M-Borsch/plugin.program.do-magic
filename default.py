@@ -65,7 +65,8 @@ def execBackgroudFunction():
     userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
 
     # Extract the filename
-    filename = magicBackground.split("/")[-1]
+    # filename = magicBackground.split("/")[-1]
+    head, filename = os.path.split(magicBackground)
 
     # setup target location
     save_path = userdata_pathDIR + filename
