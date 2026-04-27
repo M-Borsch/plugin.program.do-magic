@@ -83,7 +83,7 @@ def execBackgroudFunction():
         
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n" + save_path
+    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n" + save_path + "\n" + userdata_pathDIR
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
      
