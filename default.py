@@ -78,8 +78,9 @@ def execBackgroudFunction():
         xbmc.log("Failed to download file", xbmc.LOGERROR)
 
     # Set a custom property that the skin is configured to read
-    window = xbmcgui.Window(10000)
-    window.setProperty('MyCustomBackground', save_path)
+    # window = xbmcgui.Window(10000)
+    # window.setProperty('MyCustomBackground', save_path)
+    xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
     xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
 
     # Optional: Inform the user
