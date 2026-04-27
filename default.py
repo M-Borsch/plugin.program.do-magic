@@ -53,14 +53,25 @@ def execFunction():
         execDownloadFunction()
     elif magicFunction == ADDON.getLocalizedString(30012):
         execHashFunction() 
+    elif magicFunction == ADDON.getLocalizedString(30017):
+        execBackgroudFunction() 
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
+def execBackgroudFunction():
+
+    # Display a confirmation dialog (requires xbmcgui)
+    dialog = xbmcgui.Dialog()
+    line2 = "[COLOR blue]Set Background To:[/COLOR][COLOR green]" + magicBackground + "[/COLOR]"
+
+    dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
+    
+
 def execHashFunction():
 
-    # Generate a salt and has password
+    # Generate a salt and hash password
     hashed = xbmc.getCacheThumbName( magicHash ).split('.', 1)[0]
     
     # Display a confirmation dialog (requires xbmcgui)
@@ -216,6 +227,7 @@ elif '/function' in PLUGIN_URL:
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
+    magicBackground = '' if not ADDON.getSetting('magicBKGND') else ADDON.getSetting('magicBKGND')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
