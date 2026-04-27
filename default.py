@@ -64,12 +64,15 @@ def execBackgroudFunction():
 
     userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
 
+    BACKGROUND_PATH = xbmcvfs.translatePath('special://addons/skin.confluence/backgrounds/')
+
     # Extract the filename
     # filename = magicBackground.split("/")[-1]
-    directory, filename = os.path.split(magicBackground)
+    # directory, filename = os.path.split(magicBackground)
+    filename = 'SKINDEFAULT.jpg'
 
     # setup target location
-    save_path = userdata_pathDIR + filename
+    save_path = BACKGROUND_PATH + filename
 
     # Copy the background file to target location using Kodi's built-in SMB handling
     if xbmcvfs.copy(magicBackground, save_path):
