@@ -63,13 +63,20 @@ def execFunction():
 def execBackgroudFunction():
 
     userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
-    save_path = xbmcvfs.translatePath(os.path.join(userdata_pathDIR, 'tst.png'))
 
+    # Extract the filename
+    filename = magicBackground.split("/")[-1]
 
-    # Copy the background file to userdata
-    # Copy file using Kodi's built-in SMB handling
+    # setup target location
+    save_path = xbmcvfs.translatePath(os.path.join(userdata_pathDIR, filename))
+
+    # Copy the background file to target location using Kodi's built-in SMB handling
     if xbmcvfs.copy(magicBackground, save_path):
         xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+        window = xbmcgui.Window(10000)
+        # Set a custom property that the skin is configured to read
+        window.setProperty('MyCustomBackground', save_path)
+
     else:
         xbmc.log("Failed to download file", xbmc.LOGERROR)
 
