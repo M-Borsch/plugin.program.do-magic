@@ -73,19 +73,20 @@ def execBackgroudFunction():
     # Copy the background file to target location using Kodi's built-in SMB handling
     if xbmcvfs.copy(magicBackground, save_path):
         xbmc.log("File downloaded successfully", xbmc.LOGINFO)
-        window = xbmcgui.Window(10000)
-        # Set a custom property that the skin is configured to read
-        window.setProperty('MyCustomBackground', save_path)
-
     else:
         xbmc.log("Failed to download file", xbmc.LOGERROR)
 
+    window = xbmcgui.Window(10000)
+    
+    # Set a custom property that the skin is configured to read
+    window.setProperty('MyCustomBackground', save_path)
+        
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]"
+    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n" + save_path
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
-    
+     
 
 def execHashFunction():
 
