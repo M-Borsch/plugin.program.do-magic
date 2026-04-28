@@ -106,9 +106,8 @@ def addMBKodiFileSources():
             dialog = xbmcgui.Dialog()
             line2 = "[COLOR blue]MB-KODI-ADDONS: [/COLOR][COLOR green]MB-KODI-ADDONS File Source Successfully Added[/COLOR]\n\n[COLOR red]IMPORTANT: These File Sources will show up next time you restart KODI...[/COLOR]"
         
-            dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
+            dialog.ok("[COLOR red]do-magic: [/COLOR]File Sources Function", line2)
             #xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
-            xbmc.executebuiltin('UpdateLibrary(video)')
 
         else:
             # Display an error dialog if the operation fails
