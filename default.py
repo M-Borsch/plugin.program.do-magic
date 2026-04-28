@@ -64,11 +64,9 @@ def execFunction():
 
 def addMBKodiFileSources():
 
-        # Display an error dialog if the operation fails
-        dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run addMBKodiFileSources")
+        userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
 
-def holder():
+
         # File paths (ensure these paths are correct for your Kodi setup)
         target_file_path = 'path/to/target.txt'
         replacement_file_path = 'path/to/replacement_content.txt'
@@ -88,6 +86,15 @@ def holder():
         # Save the changes back to the target file
         with open(target_file_path, 'w') as f:
             f.write(updated_data)
+            
+        # Display a confirmation dialog (requires xbmcgui)
+        dialog = xbmcgui.Dialog()
+        line2 = "[COLOR blue]MB=KODI-ADDONS: [/COLOR][COLOR green]"MB-KODI-ADDONS File Source Successfully Added"[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+    
+        dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
+        xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
+
+
 
 
 def updateCofluenceBackground(targetfilename):
