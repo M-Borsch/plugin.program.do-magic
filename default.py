@@ -99,7 +99,7 @@ def addMBKodiFileSources():
                 
             # Display a confirmation dialog (requires xbmcgui)
             dialog = xbmcgui.Dialog()
-            line2 = "[COLOR blue]MB=KODI-ADDONS: [/COLOR][COLOR green]MB-KODI-ADDONS File Source Successfully Added"[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+            line2 = "[COLOR blue]MB=KODI-ADDONS: [/COLOR][COLOR green]MB-KODI-ADDONS File Source Successfully Added"[/COLOR]\n\nReloading Kodi profile. This may take several seconds..."
         
             dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
             xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
@@ -108,10 +108,6 @@ def addMBKodiFileSources():
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
             dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  replacement_file_path)
-
-       
-
-
 
 
 def updateCofluenceBackground(targetfilename):
