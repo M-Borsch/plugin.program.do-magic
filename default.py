@@ -70,7 +70,7 @@ def execBackgroudFunction():
 
     if magicBackgroundFlag:
         
-        updateCofluenceBackground(magicBackground)
+        updateCofluenceBackground(magicCusBackground)
 
     else:
         filename = 'use custom file'
