@@ -68,6 +68,8 @@ def updateCofluenceBackground(targetfilename):
 
 def execBackgroudFunction():
 
+    magicBackgroundFlag = '' if not ADDON.getSetting('magicBKGNDFLG') else ADDON.getSetting('magicBKGNDFLG')
+
     if magicBackgroundFlag:
         
         updateCofluenceBackground('MB-KODIBackground.jpg')
