@@ -65,7 +65,7 @@ def execBackgroudFunction():
     userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
 
     ADDONS_PATH = xbmcvfs.translatePath('special://home/')
-    BACKGROUND_PATH = ADDONS_PATH + 'addons/skin.confluence/backgrounds/'
+    BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
 
     # Extract the filename
     # filename = magicBackground.split("/")[-1]
