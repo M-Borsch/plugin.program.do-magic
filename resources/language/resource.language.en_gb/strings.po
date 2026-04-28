@@ -97,4 +97,4 @@ msgid "Select background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
-msgid "This function chnages the Confluemce by Jezz default Kodi Background file"
+msgid "This function changes the Confluence by Jezz default Kodi Background fil...e"
