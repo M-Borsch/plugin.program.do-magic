@@ -101,5 +101,5 @@ msgid "[I][COLOR red]This function changes the Confluence by Jezz default Kodi B
 
 #: resources/settings.xml
 msgctxt "#30020"
-msgid "Use MB=KODI Default Background"
+msgid "   Use MB-KODI Default Background"
 
