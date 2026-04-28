@@ -54,11 +54,41 @@ def execFunction():
     elif magicFunction == ADDON.getLocalizedString(30012):
         execHashFunction() 
     elif magicFunction == ADDON.getLocalizedString(30017):
-        execBackgroudFunction() 
+        execBackgroudFunction()
+    elif magicFunction == ADDON.getLocalizedString(30026):
+        addMBKodiFileSources() 
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
+
+def addMBKodiFileSources():
+
+        # Display an error dialog if the operation fails
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run addMBKodiFileSources")
+
+def holder():
+        # File paths (ensure these paths are correct for your Kodi setup)
+        target_file_path = 'path/to/target.txt'
+        replacement_file_path = 'path/to/replacement_content.txt'
+        string_to_replace = '</file>'
+        
+        # Read the content that will be used for replacement
+        with open(replacement_file_path, 'r') as f:
+            new_content = f.read()
+        
+        # Read the target file
+        with open(target_file_path, 'r') as f:
+            target_data = f.read()
+        
+        # 3Replace the specific string with the new content
+        updated_data = target_data.replace(string_to_replace, new_content)
+        
+        # Save the changes back to the target file
+        with open(target_file_path, 'w') as f:
+            f.write(updated_data)
+
 
 def updateCofluenceBackground(targetfilename):
 
@@ -124,38 +154,6 @@ def execBackgroudFunction():
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
             dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  magicCusBackground)
-
-def holder():
-
-        userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
-    
-        ADDONS_PATH = xbmcvfs.translatePath('special://home/')
-        BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
-    
-        filename = 'SKINDEFAULT.jpg'
-    
-        # setup target location
-        save_path = BACKGROUND_PATH + filename
-    
-        # Copy the background file to target location using Kodi's built-in SMB handling
-        if xbmcvfs.copy(magicBackground, save_path):
-            xbmc.log("File downloaded successfully", xbmc.LOGINFO)
-        else:
-            xbmc.log("Failed to download file", xbmc.LOGERROR)
-    
-        # Set a custom property that the skin is configured to read
-        # xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
-        # xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
-    
-        # Optional: Inform the user
-        xbmc.executebuiltin('Notification(Background, Updated, 2000)')
-            
-        # Display a confirmation dialog (requires xbmcgui)
-        dialog = xbmcgui.Dialog()
-        line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
-    
-        dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
-        xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
 
 
 def execHashFunction():
@@ -319,9 +317,6 @@ elif '/function' in PLUGIN_URL:
     magicBackgroundFlag = '' if not ADDON.getSettingBool('magicBKGNDFLG') else ADDON.getSettingBool('magicBKGNDFLG')
     magicCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
     magicBackground = '' if not ADDON.getSetting('magicBKGNDFILE') else ADDON.getSetting('magicBKGNDFILE')
-
-    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
-    if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
     
     if  xbmc.getCacheThumbName( magicPassword ).split('.', 1)[0] == ADDON.getLocalizedString(30005):
         execFunction()   
