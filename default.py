@@ -62,8 +62,38 @@ def execFunction():
 
 def updateCofluenceBackground(targetfilename):
 
+        # dialog = xbmcgui.Dialog()
+        # dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR green]do-magic: [/COLOR]Use as KODI Background: \n\n" + targetfilename)
+
+        userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
+    
+        ADDONS_PATH = xbmcvfs.translatePath('special://home/')
+        BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
+    
+        filename = 'SKINDEFAULT.jpg'
+    
+        # setup target location
+        save_path = BACKGROUND_PATH + filename
+    
+        # Copy the background file to target location using Kodi's built-in SMB handling
+        if xbmcvfs.copy(targetfilename, save_path):
+            xbmc.log("Background: File downloaded successfully", xbmc.LOGINFO)
+        else:
+            xbmc.log("Background: Failed to download file", xbmc.LOGERROR)
+    
+        # Set a custom property that the skin is configured to read
+        # xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
+        # xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
+    
+        # Optional: Inform the user
+        xbmc.executebuiltin('Notification(Background, Updated, 2000)')
+            
+        # Display a confirmation dialog (requires xbmcgui)
         dialog = xbmcgui.Dialog()
-        dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: \n\n" + targetfilename)
+        line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+    
+        dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
+        xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
 
 
 def execBackgroudFunction():
@@ -102,9 +132,6 @@ def holder():
         ADDONS_PATH = xbmcvfs.translatePath('special://home/')
         BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
     
-        # Extract the filename
-        # filename = magicBackground.split("/")[-1]
-        # directory, filename = os.path.split(magicBackground)
         filename = 'SKINDEFAULT.jpg'
     
         # setup target location
@@ -117,10 +144,8 @@ def holder():
             xbmc.log("Failed to download file", xbmc.LOGERROR)
     
         # Set a custom property that the skin is configured to read
-        # window = xbmcgui.Window(10000)
-        # window.setProperty('MyCustomBackground', save_path)
-        xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
-        xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
+        # xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
+        # xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
     
         # Optional: Inform the user
         xbmc.executebuiltin('Notification(Background, Updated, 2000)')
