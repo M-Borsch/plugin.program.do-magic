@@ -12,7 +12,7 @@
 		 <setting type="lsep" label="30015" />
 
 	    <!-- Function Field -->
-        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008|30012|30017" default="30007" />
+        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30007|30006|30008|30012|30017" default="30006" />
 
         <!-- Download  Fields: Only visible if 'Download' is selected -->
         <setting id="magicDIR" type="folder" label="30009" default="" visible="eq(-1,0)" />
