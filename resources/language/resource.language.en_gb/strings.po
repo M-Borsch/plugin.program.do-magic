@@ -89,7 +89,7 @@ msgid "[COLOR white]Here your select a custom Kodi background...[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30017"
-msgid "   Background"
+msgid "[COLOR green]Background[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30018"
