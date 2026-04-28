@@ -78,8 +78,8 @@ def execBackgroudFunction():
 
         # Check if file exists
         if xbmcvfs.exists(resource_file):
-        # Process the file
-        updateCofluenceBackground(resource_file)
+            # Process the file
+            updateCofluenceBackground(resource_file)
 
     else:
 
