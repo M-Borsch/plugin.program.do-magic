@@ -29,7 +29,7 @@
 	    <!-- Select MB-KODI bacground file -->
         <setting id="magicBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-7,4)" default="NONE" />
 		 
-        <setting id="magicCUSBKGNDFILE" type="file" label="30018" default="" visible="eq(-2,false)+eq(-8,4)" default="NONE" />
+        <setting id="magicCUSBKGNDFILE" type="file" label="30018" visible="eq(-2,false)+eq(-8,4)" default="NONE" />
 
     </category>
 
