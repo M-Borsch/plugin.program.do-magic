@@ -114,3 +114,11 @@ msgid "Justice League"
 #: resources/settings.xml
 msgctxt "#30023"
 msgid "KODI Default"
+
+#: resources/settings.xml
+msgctxt "#30024"
+msgid "justice_league1920x1080.jpg"
+
+#: resources/settings.xml
+msgctxt "#30025"
+msgid "ConfluenceSkin-orig.jpg"
