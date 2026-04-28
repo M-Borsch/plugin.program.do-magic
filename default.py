@@ -66,7 +66,6 @@ def addMBKodiFileSources():
 
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
         filename = 'sources.xml'
-        BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
 
          # Get the base add-on path (encoded)
         addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
