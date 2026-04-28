@@ -93,7 +93,7 @@ msgid "   Background"
 
 #: resources/settings.xml
 msgctxt "#30018"
-msgid "   Upload a [I]custom[/I] background file (jpg file only!):"
+msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
