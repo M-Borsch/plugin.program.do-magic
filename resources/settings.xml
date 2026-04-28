@@ -25,10 +25,11 @@
 		<!-- Backgroundad Fields: Only visible if 'Download' is selected -->
         <setting type="string" label="30019" visible="eq(-5,4)" />
         <setting id="magicBKGNDFlg" type="bool" label="30020" default="true" visible="eq(-6,4)" />
+		 
 	    <!-- Select MB-KODI bacground file -->
         <setting id="magicFUNCTION" type="labelenum" label="30021" lvalues="30022|30023" visible="eq(-1,true)+eq(-7,4)" default="30022" />
 		 
-        <setting id="magicBKGND" type="file" label="30018" default="" visible="eq(-2,false)+eq(-7,4)" />
+        <setting id="magicBKGND" type="file" label="30018" default="" visible="eq(-2,false)+eq(-8,4)" />
 
     </category>
 
