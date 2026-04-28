@@ -122,3 +122,19 @@ msgid "justice_league1920x1080.jpg"
 #: resources/settings.xml
 msgctxt "#30025"
 msgid "ConfluenceSkin-orig.jpg"
+
+#: resources/settings.xml
+msgctxt "#30026"
+msgid "[COLOR green]ADD MB-KODI-ADDONS File Sources[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30027"
+msgid "MB-KODI-sources.xml"
+
+#: resources/settings.xml
+msgctxt "#30028"
+msgid "</files>"
+
+
+
+
