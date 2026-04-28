@@ -25,7 +25,7 @@
 		<!-- Backgroundad Fields: Only visible if 'Download' is selected -->
         <setting type="string" label="30019" visible="eq(-5,4)" />
         <setting id="magicBKGNDFlg" type="bool" label="30020" default="true" visible="eq(-6,4)" />
-        <setting id="magicBKGND" type="file" label="30018" default="" visible="!eq(-1,4)" />
+        <setting id="magicBKGND" type="file" label="30018" default="" visible="eq(-1,false)" />
 
     </category>
 
