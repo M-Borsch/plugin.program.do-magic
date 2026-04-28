@@ -57,15 +57,15 @@ msgid "Stalker Tweek"
 
 #: resources/settings.xml
 msgctxt "#30009"
-msgid "Download Dir:"
+msgid "   Download Dir:"
 
 #: resources/settings.xml
 msgctxt "#30010"
-msgid "Download File Name:"
+msgid "   Download File Name:"
 
 #: resources/settings.xml
 msgctxt "#30011"
-msgid "Source File URL:"
+msgid "   Source File URL:"
 
 #: resources/settings.xml
 msgctxt "#30012"
@@ -73,7 +73,7 @@ msgid "HASH"
 
 #: resources/settings.xml
 msgctxt "#30013"
-msgid "Enter Text:"
+msgid "   Enter Text:"
 
 #: resources/settings.xml
 msgctxt "#30014"
@@ -89,11 +89,11 @@ msgid "[COLOR white]Here your select a custom Kodi background...[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30017"
-msgid "Background"
+msgid "   Background"
 
 #: resources/settings.xml
 msgctxt "#30018"
-msgid "Select background file (jpg file only!):"
+msgid "   Select background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
