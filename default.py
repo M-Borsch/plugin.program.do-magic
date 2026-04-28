@@ -90,7 +90,7 @@ def updateCofluenceBackground(targetfilename):
             
         # Display a confirmation dialog (requires xbmcgui)
         dialog = xbmcgui.Dialog()
-        line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+        line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + targetfilename + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
     
         dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
         xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
