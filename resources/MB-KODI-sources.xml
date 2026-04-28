@@ -1,0 +1,11 @@
+       <source>
+            <name>MB-KODI-ADDONS on Github</name>
+            <path pathversion="1">https://m-borsch.github.io/MB-KODI-ADDONS/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+       <source>
+            <name>MB-KODI-ADDONS on borsch.ca</name>
+            <path pathversion="1">http://borsch.myqnapcloud.com:8089/MB-KODI-ADDONS/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+   </files>
