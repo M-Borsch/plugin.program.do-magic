@@ -23,8 +23,8 @@
         <setting id="magicHASH" type="text" label="30013" default="" visible="eq(-4,3)" />
 
 		<!-- Backgroundad Fields: Only visible if 'Download' is selected -->
-        <setting id="magicBKGND" type="file" label="30018" default="" visible="eq(-5,4)" />
-        <setting type="string" label="30019" visible="eq(-6,4)" />
+        <setting id="magicBKGND" type="file" label="30019" default="" visible="eq(-5,4)" />
+        <setting type="string" label="30018" visible="eq(-6,4)" />
 
     </category>
 
