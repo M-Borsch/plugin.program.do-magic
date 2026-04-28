@@ -60,14 +60,24 @@ def execFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
+def updateCofluenceBackground(filename):
+
+        dialog = xbmcgui.Dialog()
+        dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: " + filename)
+
+
 def execBackgroudFunction():
 
     if magicBackgroundFlag:
         
-        dialog = xbmcgui.Dialog()
-        dialog.ok("Fumction Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: " + magicBackground)
+        updateCofluenceBackground(magicBackground)
 
     else:
+        filename = 'use custom file'
+        updateCofluenceBackground(filename)
+
+
+def holder():
 
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
     
