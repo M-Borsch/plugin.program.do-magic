@@ -274,7 +274,7 @@ elif '/function' in PLUGIN_URL:
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
-    magicBackgroundFlag = '' if not ADDON.getSettingBOol('magicBKGNDFLG') else ADDON.getSetting('magicBKGNDFLG')
+    magicBackgroundFlag = '' if not ADDON.getSettingBool('magicBKGNDFLG') else ADDON.getSettingBool('magicBKGNDFLG')
     magicCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
     magicBackground = '' if not ADDON.getSetting('magicBKGNDFILE') else ADDON.getSetting('magicBKGNDFILE')
 
