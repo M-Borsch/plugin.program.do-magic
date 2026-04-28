@@ -65,7 +65,7 @@ def execBackgroudFunction():
     if magicBackgroundFlag:
         
         dialog = xbmcgui.Dialog()
-        dialog.ok("Fumction Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background")
+        dialog.ok("Fumction Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: " + magicBackground)
 
     else:
 
