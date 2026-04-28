@@ -70,11 +70,11 @@ def execBackgroudFunction():
 
     if magicBackgroundFlag:
         
-        updateCofluenceBackground('MB-KODIBackground.jpg')
+        updateCofluenceBackground(magicBackground)
 
     else:
 
-        updateCofluenceBackground('CUSTOMBackground.jpg')
+        updateCofluenceBackground(magicCusBackground)
 
 
 
