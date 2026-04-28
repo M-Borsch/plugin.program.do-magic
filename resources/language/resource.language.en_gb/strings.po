@@ -94,3 +94,7 @@ msgid "Background"
 #: resources/settings.xml
 msgctxt "#30018"
 msgid "Select background file (jpg file only!):"
+
+#: resources/settings.xml
+msgctxt "#30019"
+msgid "This function chnages the Confluemce by Jezz default Kodi Background file"
