@@ -33,11 +33,11 @@ msgid "[COLOR white]Enter your Password and select the Function to customize you
 
 #: resources/settings.xml
 msgctxt "#30003"
-msgid "[COLOR blue]Enter Password: [/COLOR]"
+msgid "[COLOR blue]Enter Password:[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30004"
-msgid "[COLOR white]Select Function: [/COLOR]"
+msgid "[COLOR green]Select Function:[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30005"
@@ -45,15 +45,15 @@ msgid "b7f0869c"
 
 #: resources/settings.xml
 msgctxt "#30006"
-msgid "NONE"
+msgid "[COLOR green]NONE[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30007"
-msgid "Download"
+msgid "[COLOR green]Download[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30008"
-msgid "Stalker Tweek"
+msgid "[COLOR green]Stalker Tweek[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30009"
@@ -69,7 +69,7 @@ msgid "   Source File URL:"
 
 #: resources/settings.xml
 msgctxt "#30012"
-msgid "HASH"
+msgid "[COLOR green]HASH[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30013"
