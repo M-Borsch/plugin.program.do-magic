@@ -68,13 +68,14 @@ def updateCofluenceBackground(targetfilename):
 
 def execBackgroudFunction():
 
-    if !magicBackgroundFlag:
+    if magicBackgroundFlag:
         
-        updateCofluenceBackground(magicCusBackground)
+        updateCofluenceBackground('magicCusBackground.jpg')
 
     else:
-        filename = 'customfile'
-        updateCofluenceBackground(filename)
+
+        updateCofluenceBackground(magicCusBackground)
+
 
 
 def holder():
