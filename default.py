@@ -63,7 +63,7 @@ def execFunction():
 def updateCofluenceBackground(targetfilename):
 
         dialog = xbmcgui.Dialog()
-        dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: " + targetfilename)
+        dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: \n\n" + targetfilename)
 
 
 def execBackgroudFunction():
@@ -83,13 +83,17 @@ def execBackgroudFunction():
         else:
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
-            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n" +  resource_file)
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  resource_file)
 
     else:
-
-        updateCofluenceBackground(magicCusBackground)
-
-
+         # Check if file exists
+        if xbmcvfs.exists(magicCusBackground):
+            # Process the file
+            updateCofluenceBackground(magicCusBackground)
+        else:
+            # Display an error dialog if the operation fails
+            dialog = xbmcgui.Dialog()
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  magicCusBackground)
 
 def holder():
 
