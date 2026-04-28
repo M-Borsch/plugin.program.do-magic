@@ -63,7 +63,7 @@ def execFunction():
 def updateCofluenceBackground(targetfilename):
 
         # dialog = xbmcgui.Dialog()
-        # dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR green]do-magic: [/COLOR]Use as KODI Background: \n\n" + targetfilename)
+        # dialog.ok("Update KODI Background", f"[COLOR green]do-magic: [/COLOR]Use as KODI Background: \n\n" + targetfilename)
 
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
     
