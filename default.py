@@ -66,6 +66,7 @@ def addMBKodiFileSources():
 
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
         filename = 'sources.xml'
+        debugfilename = 'debug.xml"
 
          # Get the base add-on path (encoded)
         addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
@@ -79,6 +80,7 @@ def addMBKodiFileSources():
             # Process the file
             # File paths (ensure these paths are correct for your Kodi setup)
             target_file_path = os.path.join(userdata_pathDIR, filename)
+            debug_file_path  = os.path.join(userdata_pathDIR, debugfilename)
             string_to_replace = '</file>'
             
             # Read the content that will be used for replacement
@@ -94,6 +96,10 @@ def addMBKodiFileSources():
             
             # Save the changes back to the target file
             with open(target_file_path, 'w') as f:
+                f.write(updated_data)
+
+            # Save the changes back to the debug target file
+            with open(debug_file_path, 'w') as f:
                 f.write(updated_data)
                 
             # Display a confirmation dialog (requires xbmcgui)
