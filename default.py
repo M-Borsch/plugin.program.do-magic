@@ -80,6 +80,10 @@ def execBackgroudFunction():
         if xbmcvfs.exists(resource_file):
             # Process the file
             updateCofluenceBackground(resource_file)
+        else:
+            # Display an error dialog if the operation fails
+            dialog = xbmcgui.Dialog()
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n" +  resource_file)
 
     else:
 
