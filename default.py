@@ -62,40 +62,46 @@ def execFunction():
 
 def execBackgroudFunction():
 
-    userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
+    if magicBackgroundFlag:
 
-    ADDONS_PATH = xbmcvfs.translatePath('special://home/')
-    BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
+        dialog.ok("Fumction Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background")
 
-    # Extract the filename
-    # filename = magicBackground.split("/")[-1]
-    # directory, filename = os.path.split(magicBackground)
-    filename = 'SKINDEFAULT.jpg'
-
-    # setup target location
-    save_path = BACKGROUND_PATH + filename
-
-    # Copy the background file to target location using Kodi's built-in SMB handling
-    if xbmcvfs.copy(magicBackground, save_path):
-        xbmc.log("File downloaded successfully", xbmc.LOGINFO)
     else:
-        xbmc.log("Failed to download file", xbmc.LOGERROR)
 
-    # Set a custom property that the skin is configured to read
-    # window = xbmcgui.Window(10000)
-    # window.setProperty('MyCustomBackground', save_path)
-    xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
-    xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
-
-    # Optional: Inform the user
-    xbmc.executebuiltin('Notification(Background, Updated, 2000)')
-        
-    # Display a confirmation dialog (requires xbmcgui)
-    dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
-
-    dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
-    xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
+        userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
+    
+        ADDONS_PATH = xbmcvfs.translatePath('special://home/')
+        BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
+    
+        # Extract the filename
+        # filename = magicBackground.split("/")[-1]
+        # directory, filename = os.path.split(magicBackground)
+        filename = 'SKINDEFAULT.jpg'
+    
+        # setup target location
+        save_path = BACKGROUND_PATH + filename
+    
+        # Copy the background file to target location using Kodi's built-in SMB handling
+        if xbmcvfs.copy(magicBackground, save_path):
+            xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+        else:
+            xbmc.log("Failed to download file", xbmc.LOGERROR)
+    
+        # Set a custom property that the skin is configured to read
+        # window = xbmcgui.Window(10000)
+        # window.setProperty('MyCustomBackground', save_path)
+        xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
+        xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
+    
+        # Optional: Inform the user
+        xbmc.executebuiltin('Notification(Background, Updated, 2000)')
+            
+        # Display a confirmation dialog (requires xbmcgui)
+        dialog = xbmcgui.Dialog()
+        line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+    
+        dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
+        xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
 
 
 def execHashFunction():
@@ -256,7 +262,9 @@ elif '/function' in PLUGIN_URL:
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
-    magicBackground = '' if not ADDON.getSetting('magicBKGND') else ADDON.getSetting('magicBKGND')
+    magicBackgroundFlag = '' if not ADDON.getSetting('magicBKGNDFLG') else ADDON.getSetting('magicBKGNDFLG')
+    magicCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
+    magicBackground = '' if not ADDON.getSetting('magicBKGNDFILE') else ADDON.getSetting('magicBKGNDFILE')
 
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(PWD)' % magicPassword)
     if DEBUG == '1': xbmcgui.Dialog().ok('do-magic', 'INFO: "%s"\n\n(Function)' % magicFunction)
