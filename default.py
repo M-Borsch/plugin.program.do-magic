@@ -65,34 +65,51 @@ def execFunction():
 def addMBKodiFileSources():
 
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
+        filename = 'sources.xml'
+        BACKGROUND_PATH = os.path.join(ADDONS_PATH, "addons/skin.confluence/backgrounds/")
 
+         # Get the base add-on path (encoded)
+        addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
 
-        # File paths (ensure these paths are correct for your Kodi setup)
-        target_file_path = 'path/to/target.txt'
-        replacement_file_path = 'path/to/replacement_content.txt'
-        string_to_replace = '</file>'
-        
-        # Read the content that will be used for replacement
-        with open(replacement_file_path, 'r') as f:
-            new_content = f.read()
-        
-        # Read the target file
-        with open(target_file_path, 'r') as f:
-            target_data = f.read()
-        
-        # 3Replace the specific string with the new content
-        updated_data = target_data.replace(string_to_replace, new_content)
-        
-        # Save the changes back to the target file
-        with open(target_file_path, 'w') as f:
-            f.write(updated_data)
+        # Define path to a resource file
+        replacement_file_path = os.path.join(addon_path, 'resources', 'MB-KODI-sources.xml')
+
+         # Check if file exists
+        if xbmcvfs.exists(replacement_file_path):
             
-        # Display a confirmation dialog (requires xbmcgui)
-        dialog = xbmcgui.Dialog()
-        line2 = "[COLOR blue]MB=KODI-ADDONS: [/COLOR][COLOR green]"MB-KODI-ADDONS File Source Successfully Added"[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+            # Process the file
+            # File paths (ensure these paths are correct for your Kodi setup)
+            target_file_path = os.path.join(userdata_pathDIR, filename)
+            string_to_replace = '</file>'
+            
+            # Read the content that will be used for replacement
+            with open(replacement_file_path, 'r') as f:
+                new_content = f.read()
+            
+            # Read the target file
+            with open(target_file_path, 'r') as f:
+                target_data = f.read()
+            
+            # 3Replace the specific string with the new content
+            updated_data = target_data.replace(string_to_replace, new_content)
+            
+            # Save the changes back to the target file
+            with open(target_file_path, 'w') as f:
+                f.write(updated_data)
+                
+            # Display a confirmation dialog (requires xbmcgui)
+            dialog = xbmcgui.Dialog()
+            line2 = "[COLOR blue]MB=KODI-ADDONS: [/COLOR][COLOR green]"MB-KODI-ADDONS File Source Successfully Added"[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
+        
+            dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
+            xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
     
-        dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
-        xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
+        else:
+            # Display an error dialog if the operation fails
+            dialog = xbmcgui.Dialog()
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  replacement_file_path)
+
+       
 
 
 
