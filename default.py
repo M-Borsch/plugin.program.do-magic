@@ -66,7 +66,7 @@ def addMBKodiFileSources():
 
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
         filename = 'sources.xml'
-        debugfilename = 'debug.xml'
+        # debugfilename = 'debug.xml'
 
          # Get the base add-on path (encoded)
         addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
@@ -91,16 +91,16 @@ def addMBKodiFileSources():
             with open(target_file_path, 'r') as f:
                 target_data = f.read()
             
-            # 3Replace the specific string with the new content
+            # Replace the specific string with the new content
             updated_data = target_data.replace(string_to_replace, new_content)
             
             # Save the changes back to the target file
-            #with open(target_file_path, 'w') as f:
-            #   f.write(updated_data)
+            with open(target_file_path, 'w') as f:
+               f.write(updated_data)
 
             # Save the changes back to the debug target file
-            with open(debug_file_path, 'w') as f:
-                f.write(updated_data)
+            #with open(debug_file_path, 'w') as f:
+            #    f.write(updated_data)
                 
             # Display a confirmation dialog (requires xbmcgui)
             dialog = xbmcgui.Dialog()
