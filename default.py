@@ -70,6 +70,9 @@ def execBackgroudFunction():
 
     if magicBackgroundFlag:
 
+        # Get the base add-on path (encoded)
+        addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
+
         # Define path to a resource file
         resource_file = os.path.join(addon_path, 'resources', magicBackground)
 
