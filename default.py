@@ -92,10 +92,11 @@ def execBackgroudFunction():
         
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "This change will only take effect the next time you run Kodi..."
+    line2 = "[COLOR blue]Set Background To: [/COLOR][COLOR green]" + magicBackground + "[/COLOR]\n\n" + "Reloading Kodi profile. This may take several seconds..."
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
-     
+    xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
+
 
 def execHashFunction():
 
