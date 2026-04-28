@@ -69,8 +69,14 @@ def updateCofluenceBackground(targetfilename):
 def execBackgroudFunction():
 
     if magicBackgroundFlag:
-        
-        updateCofluenceBackground(magicBackground)
+
+        # Define path to a resource file
+        resource_file = os.path.join(addon_path, 'resources', magicBackground)
+
+        # Check if file exists
+        if xbmcvfs.exists(resource_file):
+        # Process the file
+        updateCofluenceBackground(resource_file)
 
     else:
 
