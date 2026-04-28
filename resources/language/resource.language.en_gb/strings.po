@@ -93,7 +93,7 @@ msgid "   Background"
 
 #: resources/settings.xml
 msgctxt "#30018"
-msgid "   Select background file (jpg file only!):"
+msgid "   Upload a [I]custom[/I] background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
@@ -101,11 +101,11 @@ msgid "[I][COLOR red]This function changes the Confluence by Jezz default Kodi B
 
 #: resources/settings.xml
 msgctxt "#30020"
-msgid "   Use MB-KODI Default Background"
+msgid "   Use a MB-KODI Background"
 
 #: resources/settings.xml
 msgctxt "#30021"
-msgid "   Select a MB-KODI background file:"
+msgid "   Select an existing MB-KODI background file:"
 
 #: resources/settings.xml
 msgctxt "#30022"
