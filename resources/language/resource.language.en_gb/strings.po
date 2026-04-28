@@ -103,3 +103,14 @@ msgid "[I][COLOR red]This function changes the Confluence by Jezz default Kodi B
 msgctxt "#30020"
 msgid "   Use MB-KODI Default Background"
 
+#: resources/settings.xml
+msgctxt "#30021"
+msgid "   Select a MB-KODI background file:"
+
+#: resources/settings.xml
+msgctxt "#30022"
+msgid "Justice League"
+
+#: resources/settings.xml
+msgctxt "#30023"
+msgid "KODI Default"
