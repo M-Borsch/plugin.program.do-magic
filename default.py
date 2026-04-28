@@ -60,10 +60,10 @@ def execFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
-def updateCofluenceBackground(filename):
+def updateCofluenceBackground(tagetfilename):
 
         dialog = xbmcgui.Dialog()
-        dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: " + filename)
+        dialog.ok("FumctionupdateCofluenceBackground Dialog", f"[COLOR red]do-magic: [/COLOR]Use a MB-KODI Background: " + targetfilename)
 
 
 def execBackgroudFunction():
