@@ -81,7 +81,7 @@ def addMBKodiFileSources():
             # File paths (ensure these paths are correct for your Kodi setup)
             target_file_path = os.path.join(userdata_pathDIR, filename)
             debug_file_path  = os.path.join(userdata_pathDIR, debugfilename)
-            string_to_replace = '</file>'
+            string_to_replace = '</files>'
             
             # Read the content that will be used for replacement
             with open(replacement_file_path, 'r') as f:
@@ -95,8 +95,8 @@ def addMBKodiFileSources():
             updated_data = target_data.replace(string_to_replace, new_content)
             
             # Save the changes back to the target file
-            with open(target_file_path, 'w') as f:
-                f.write(updated_data)
+            #with open(target_file_path, 'w') as f:
+            #   f.write(updated_data)
 
             # Save the changes back to the debug target file
             with open(debug_file_path, 'w') as f:
