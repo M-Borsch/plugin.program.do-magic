@@ -35,7 +35,7 @@
         <setting id="magicCONFBKGNDFLG" type="bool" label="30020" default="true" visible="eq(-10,6)" />
 
 	    <!-- Select a MB-KODI or Custom bacground file -->
-        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30029" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-11,6)" default="NONE" />
+        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-11,6)" default="NONE" />
         <setting id="magicCONFCUSBKGNDFILE" type="file" label="30018" visible="eq(-2,false)+eq(-12,6)" default="NONE" />
 
 
