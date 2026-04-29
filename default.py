@@ -93,6 +93,9 @@ def execConfBackgroudFunction():
         # 3. Set the background image path
         # Confluence uses the setting 'CustomBackgroundPath' to store the image location
         xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
+    
+        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
+        xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
         
         # Optional: Force a skin reload to apply changes immediately (can be intrusive)
         # xbmc.executebuiltin('ReloadSkin()')
