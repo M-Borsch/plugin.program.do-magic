@@ -26,10 +26,14 @@
         <setting type="string" label="30019" visible="eq(-5,4)" />
         <setting id="magicBKGNDFLG" type="bool" label="30020" default="true" visible="eq(-6,4)" />
 		 
-	    <!-- Select MB-KODI bacground file -->
+	    <!-- Select a MB-KODI or Custom bacground file -->
         <setting id="magicBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-7,4)" default="NONE" />
-		 
         <setting id="magicCUSBKGNDFILE" type="file" label="30018" visible="eq(-2,false)+eq(-8,4)" default="NONE" />
+
+	    <!-- Select a MB-KODI or Custom bacground file -->
+        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30029" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-9,4)" default="NONE" />
+        <setting id="magicCONFCUSBKGNDFILE" type="file" label="30018" visible="eq(-2,false)+eq(-10,4)" default="NONE" />
+
 
     </category>
 
