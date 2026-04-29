@@ -66,9 +66,9 @@ def execFunction():
 
 def execConfBackgroudFunction():
     
-        # Display an error dialog if the operation fails
-        dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
+    # Display an error dialog if the operation fails
+    dialog = xbmcgui.Dialog()
+    dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
 
     if magicConfBackgroundFlag:
 
