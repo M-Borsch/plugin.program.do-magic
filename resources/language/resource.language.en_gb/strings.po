@@ -125,18 +125,6 @@ msgid "[COLOR red]Set Kodi Default Background[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30026"
-msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
-
-#: resources/settings.xml
-msgctxt "#30024"
-msgid "justice_league1920x1080.jpg"
-
-#: resources/settings.xml
-msgctxt "#30025"
-msgid "ConfluenceSkin-orig.jpg"
-
-#: resources/settings.xml
-msgctxt "#30026"
 msgid "[COLOR green]ADD MB-KODI-ADDONS File Sources[/COLOR]"
 
 #: resources/settings.xml
@@ -155,3 +143,14 @@ msgid "[COLOR green]Set Confluence Skin Custom Background[/COLOR]"
 msgctxt "#30030"
 msgid "[I][COLOR white]This function changes the Confluence Skin Custom Background file...[/COLOR][/I]"
 
+#: resources/settings.xml
+msgctxt "#30031"
+msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
+
+#: resources/settings.xml
+msgctxt "#30032"
+msgid "justice_league1920x1080.jpg"
+
+#: resources/settings.xml
+msgctxt "#30033"
+msgid "ConfluenceSkin-orig.jpg"
