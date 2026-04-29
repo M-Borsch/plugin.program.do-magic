@@ -93,7 +93,7 @@ msgid "[COLOR red]Set Kodi Default Background[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30018"
-msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
+msgid "   Upload a [I]custom[/I]  background file (jpg or png files only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
@@ -145,7 +145,7 @@ msgid "[I][COLOR white]You maust have Custom Backgrounds enabled in settings...[
 
 #: resources/settings.xml
 msgctxt "#30031"
-msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
+msgid "   Upload a [I]custom[/I]  background file (jpg or png files only!):"
 
 #: resources/settings.xml
 msgctxt "#30032"
