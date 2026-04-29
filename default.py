@@ -295,6 +295,8 @@ def download_with_progress(url, dest_name):
     # Copy file using Kodi's built-in SMB handling
     if xbmcvfs.copy(url, save_path):
         xbmc.log("File downloaded successfully", xbmc.LOGINFO)
+         # Optional: Inform the user
+        xbmc.executebuiltin('Notification(Downloader, File dowloaded, 2000)')
     else:
         xbmc.log("Failed to download file", xbmc.LOGERROR)
     #try:
