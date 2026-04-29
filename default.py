@@ -65,6 +65,9 @@ def execFunction():
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
 def execConfBackgroudFunction():
+
+        import xbmcaddon
+    
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
