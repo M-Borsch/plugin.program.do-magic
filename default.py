@@ -57,7 +57,7 @@ def execFunction():
         execBackgroudFunction()
     elif magicFunction == ADDON.getLocalizedString(30026):
         addMBKodiFileSources()
-     elif magicFunction == ADDON.getLocalizedString(30029):
+    elif magicFunction == ADDON.getLocalizedString(30029):
         execConfBackgroudFunction() 
     else:
         # Display an error dialog if the operation fails
