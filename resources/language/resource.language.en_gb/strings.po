@@ -141,7 +141,7 @@ msgid "[COLOR green]Set Confluence Skin Custom Background[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30030"
-msgid "[I][COLOR white]This function changes the Confluence Skin Custom Background file...[/COLOR][/I]"
+msgid "[I][COLOR white]You maust have Custom Backgrounds enabled in settings...[/COLOR][/I]"
 
 #: resources/settings.xml
 msgctxt "#30031"
