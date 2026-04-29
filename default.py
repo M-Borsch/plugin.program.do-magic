@@ -95,7 +95,7 @@ def execConfBackgroudFunction():
 
     else:
          # Check if file exists
-        if xbmcvfs.exists(magicConfCusBackground):
+        if isValidFile(magicConfCusBackground) and xbmcvfs.exists(magicConfCusBackground):
             # Process the file
             updateConfluenceBackground(magicConfCusBackground)
         else:
@@ -248,7 +248,7 @@ def execBackgroudFunction():
 
     else:
          # Check if file exists
-        if xbmcvfs.exists(magicCusBackground):
+        if isValidFile(magicCusBackground) and xbmcvfs.exists(magicCusBackground):
             # Process the file
             updateKiodiBackground(magicCusBackground)
         else:
