@@ -76,7 +76,7 @@ def execConfBackgroudFunction():
         addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
 
         # Define path to a resource file
-        resource_file = os.path.join(addon_path, 'resources', magicConfCusBackground)
+        resource_file = os.path.join(addon_path, 'resources', magicConfBackground)
 
         # Check if file exists
         if xbmcvfs.exists(resource_file):
