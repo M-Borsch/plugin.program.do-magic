@@ -76,7 +76,7 @@ def execConfBackgroudFunction():
         addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
 
         # Define path to a resource file
-        resource_file = os.path.join(addon_path, 'resources', magicCusBackground)
+        resource_file = os.path.join(addon_path, 'resources', magicConfCusBackground)
 
         # Check if file exists
         if xbmcvfs.exists(resource_file):
@@ -89,13 +89,13 @@ def execConfBackgroudFunction():
 
     else:
          # Check if file exists
-        if xbmcvfs.exists(magicCusBackground):
+        if xbmcvfs.exists(magicConfCusBackground):
             # Process the file
-            updateConfluenceBackground(magicCusBackground)
+            updateConfluenceBackground(magicConfCusBackground)
         else:
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
-            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  magicCusBackground)
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  magicConfCusBackground)
 
 
 def addMBKodiFileSources():
@@ -411,6 +411,7 @@ elif '/function' in PLUGIN_URL:
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
     magicBackgroundFlag = '' if not ADDON.getSettingBool('magicBKGNDFLG') else ADDON.getSettingBool('magicBKGNDFLG')
     magicConfBackgroundFlag = '' if not ADDON.getSettingBool('magicCONFBKGNDFLG') else ADDON.getSettingBool('magicCONFBKGNDFLG')
+    magicConfCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
     magicCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
     magicBackground = '' if not ADDON.getSetting('magicBKGNDFILE') else ADDON.getSetting('magicBKGNDFILE')
     
