@@ -265,9 +265,16 @@ def execDownloadFunction():
     line2 = "[COLOR blue]From:[/COLOR] " + magicUrl + "\n[COLOR green]To:[/COLOR] " + magicDir + magicName
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Downloading file", line2)
-    
-    # Start the download
-    download_with_progress(magicUrl, magicName)
+
+    # Check if file exists
+    if xbmcvfs.exists(magicCusBackground):
+        # Process the file
+        # Start the download
+        download_with_progress(magicUrl, magicName)
+    else:
+        # Display an error dialog if the operation fails
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Source Filename \n\n" +  magicUrl)
 
 def download_with_progress(url, dest_name):
     dp = xbmcgui.DialogProgress()
