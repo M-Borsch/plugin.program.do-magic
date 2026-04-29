@@ -93,11 +93,11 @@ def execConfBackgroudFunction():
         # Confluence uses the setting 'CustomBackgroundPath' to store the image location
         xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
 
-        xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "skin.confluence.custombg.enabled", "value": true}, "id": 1}')
+        #xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "skin.confluence.custombg.enabled", "value": true}, "id": 1}')
 
         # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
         #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
-        xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
+        #xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
 
         # Optional: Force a skin reload to apply changes immediately (can be intrusive)
         # xbmc.executebuiltin('ReloadSkin()')
