@@ -73,10 +73,13 @@ def execConfBackgroudFunction():
 
         addon = xbmcaddon.Addon('skin.confluence')
 
-        addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
-        addon.setSetting('enableCustomBackground', 'true')
+        #addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
+        #addon.setSetting('enableCustomBackground', 'true')
 
-        addon.setSetting('custombg', 'true')
+        addon.setSetting(id='custom_background', value='true')
+
+
+        #addon.setSetting('custombg', 'true')
 
 
 def addMBKodiFileSources():
