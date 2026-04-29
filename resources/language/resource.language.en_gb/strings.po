@@ -97,7 +97,7 @@ msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
-msgid "[I][COLOR red]This function changes the Confluence by Jezz default Kodi Background file...[/COLOR][/I]"
+msgid "[I][COLOR red]This function changes the default Kodi Background file...[/COLOR][/I]"
 
 #: resources/settings.xml
 msgctxt "#30020"
@@ -114,6 +114,18 @@ msgid "Justice League"
 #: resources/settings.xml
 msgctxt "#30023"
 msgid "KODI Default"
+
+#: resources/settings.xml
+msgctxt "#30024"
+msgid "[COLOR white]Here your select a custom Kodi background...[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30025"
+msgid "[COLOR red]Set Kodi Default Background[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30026"
+msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30024"
