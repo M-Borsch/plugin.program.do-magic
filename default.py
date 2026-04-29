@@ -64,6 +64,16 @@ def execFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
+def isValidFile(filename):
+    # List of allowed image extensions
+    allowed = ['.jpg', '.jpeg', '.png']
+    ext = os.path.splitext(filename)[1].lower()
+    return ext in allowed
+
+# Example usage:
+# if is_image(my_file):
+#     print("File is a JPG or PNG")
+
 def execConfBackgroudFunction():
 
     if magicConfBackgroundFlag:
@@ -75,7 +85,7 @@ def execConfBackgroudFunction():
         resource_file = os.path.join(addon_path, 'resources', magicConfBackground)
 
         # Check if file exists
-        if xbmcvfs.exists(resource_file):
+        if isValidFile(resource_file) and xbmcvfs.exists(resource_file):
             # Process the file
             updateConfluenceBackground(resource_file)
         else:
@@ -228,7 +238,7 @@ def execBackgroudFunction():
         resource_file = os.path.join(addon_path, 'resources', magicBackground)
 
         # Check if file exists
-        if xbmcvfs.exists(resource_file):
+        if isValidFile(resource_file) and xbmcvfs.exists(resource_file):
             # Process the file
             updateCofluenceBackground(resource_file)
         else:
