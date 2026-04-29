@@ -20,6 +20,7 @@ import os
 import shutil
 import xbmcvfs
 import urllib.request
+import xbmcaddon
 
 try:
     # Python 2.x
@@ -65,8 +66,6 @@ def execFunction():
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
 def execConfBackgroudFunction():
-
-        import xbmcaddon
     
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
@@ -76,6 +75,9 @@ def execConfBackgroudFunction():
 
         addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
         addon.setSetting('enableCustomBackground', 'true')
+
+        addon.setSetting('custombg', 'true')
+
 
 def addMBKodiFileSources():
 
