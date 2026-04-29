@@ -69,7 +69,7 @@ def execConfBackgroudFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
 
-        addon = xbmc.Addon('skin.confluence')
+        addon = xbmcaddon.Addon('skin.confluence')
 
         addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
         addon.setSetting('enableCustomBackground', 'true')
