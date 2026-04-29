@@ -68,7 +68,11 @@ def execConfBackgroudFunction():
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
-        
+
+        addon = xbmc.Addon('skin.cofluence')
+
+        addon.setSetting('customBackgroundPath', 'C:\Users\ekimb\Downloads\_BG-test.png')
+        addon.setSetting('enableCustomBackground', 'true')
 
 def addMBKodiFileSources():
 
