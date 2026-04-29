@@ -89,7 +89,7 @@ msgid "[COLOR white]Here your select a custom Kodi background...[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30017"
-msgid "[COLOR green]Background[/COLOR]"
+msgid "[COLOR red]Set Kodi Default Background[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30018"
@@ -135,6 +135,8 @@ msgid "MB-KODI-sources.xml"
 msgctxt "#30028"
 msgid "</files>"
 
-
+#: resources/settings.xml
+msgctxt "#30029"
+msgid "[COLOR green]Set Custom Background[/COLOR]"
 
 
