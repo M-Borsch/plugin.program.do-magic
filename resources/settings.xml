@@ -12,7 +12,7 @@
 		 <setting type="lsep" label="30015" />
 
 	    <!-- Function Field -->
-        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30026" default="NONE" />
+        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30026|30029" default="NONE" />
 
         <!-- Download  Fields: Only visible if 'Download' is selected -->
         <setting id="magicDIR" type="folder" label="30009" default="" visible="eq(-1,1)" />
@@ -31,8 +31,8 @@
         <setting id="magicCUSBKGNDFILE" type="file" label="30018" visible="eq(-2,false)+eq(-8,4)" default="NONE" />
 
 	    <!-- Select a MB-KODI or Custom bacground file -->
-        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30029" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-9,4)" default="NONE" />
-        <setting id="magicCONFCUSBKGNDFILE" type="file" label="30018" visible="eq(-2,false)+eq(-10,4)" default="NONE" />
+        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30029" lvalues="30006|30024|30025" visible="eq(-1,true)+eq(-9,5)" default="NONE" />
+        <setting id="magicCONFCUSBKGNDFILE" type="file" label="30018" visible="eq(-4,false)+eq(-10,5)" default="NONE" />
 
 
     </category>
