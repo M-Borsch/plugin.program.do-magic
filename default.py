@@ -72,7 +72,7 @@ def execConfBackgroudFunction():
         dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
 
         #addon = xbmcaddon.Addon('skin.confluence')
-        addon = xbmcaddon.Addon(id='skin.confluence')
+        #addon = xbmcaddon.Addon(id='skin.confluence')
 
         #addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
         #addon.setSetting('enableCustomBackground', 'true')
@@ -95,8 +95,9 @@ def execConfBackgroudFunction():
         xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
     
         # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
-        xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
-        
+        #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
+        xbmc.executebuiltin('Skin.SetBool(custombg, true)')
+
         # Optional: Force a skin reload to apply changes immediately (can be intrusive)
         # xbmc.executebuiltin('ReloadSkin()')
 
