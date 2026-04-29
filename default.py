@@ -52,7 +52,7 @@ def execFunction():
     dialog = xbmcgui.Dialog()
     # Parameters: yesno(heading, message, yeslabel='Yes', nolabel='No')
     # labels to "OK" and "Cancel"
-    choice = dialog.yesno("Run " + magicFunction, "Do you want to proceed?\n\n[I]Use the [B]Configure...[/B] option to select a different Function[/I]", yeslabel="OK", nolabel="Cancel")
+    choice = dialog.yesno("Run " + magicFunction, "Do you want to proceed?\n\n[I]Use the [B]Configure...[/B] option to select a different Function[/I]", yeslabel="Proceed...", nolabel="Cancel")
 
     if choice:
         # User clicked OK (Yes)
