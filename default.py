@@ -20,7 +20,6 @@ import os
 import shutil
 import xbmcvfs
 import urllib.request
-import xbmcaddon
 
 try:
     # Python 2.x
@@ -93,7 +92,9 @@ def execConfBackgroudFunction():
         # 3. Set the background image path
         # Confluence uses the setting 'CustomBackgroundPath' to store the image location
         xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
-    
+
+        xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "skin.confluence.custombg.enabled", "value": true}, "id": 1}')
+
         # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
         #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
         xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
