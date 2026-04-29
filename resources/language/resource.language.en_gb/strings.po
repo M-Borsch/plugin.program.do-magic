@@ -49,7 +49,7 @@ msgid "[COLOR green]NONE[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30007"
-msgid "[COLOR green]Download[/COLOR]"
+msgid "[COLOR green]Downloader[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30008"
@@ -151,4 +151,7 @@ msgid "</files>"
 msgctxt "#30029"
 msgid "[COLOR green]Set Confluence Skin Custom Background[/COLOR]"
 
+#: resources/settings.xml
+msgctxt "#30030"
+msgid "[I][COLOR white]This function changes the Confluence Skin Custom Background file...[/COLOR][/I]"
 
