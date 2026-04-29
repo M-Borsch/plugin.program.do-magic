@@ -429,7 +429,7 @@ elif '/function' in PLUGIN_URL:
     magicConfBackgroundFlag = '' if not ADDON.getSettingBool('magicCONFBKGNDFLG') else ADDON.getSettingBool('magicCONFBKGNDFLG')
     
     magicCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
-    magicConfCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
+    magicConfCusBackground = '' if not ADDON.getSetting('magicCONFCUSBKGNDFILE') else ADDON.getSetting('magicCONFCUSBKGNDFILE')
 
     magicBackground = '' if not ADDON.getSetting('magicBKGNDFILE') else ADDON.getSetting('magicBKGNDFILE')
     magicConfBackground = '' if not ADDON.getSetting('magicCONFBKGNDFILE') else ADDON.getSetting('magicCONFBKGNDFILE')
