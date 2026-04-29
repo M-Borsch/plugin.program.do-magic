@@ -97,7 +97,7 @@ msgid "   Upload a [I]custom[/I]  background file (jpg file only!):"
 
 #: resources/settings.xml
 msgctxt "#30019"
-msgid "[I][COLOR red]This function changes the default Kodi Background file...[/COLOR][/I]"
+msgid "[I][COLOR red]WARNING! This function changes the default Kodi Background file...[/COLOR][/I]"
 
 #: resources/settings.xml
 msgctxt "#30020"
