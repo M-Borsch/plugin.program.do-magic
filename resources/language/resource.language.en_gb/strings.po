@@ -149,6 +149,6 @@ msgid "</files>"
 
 #: resources/settings.xml
 msgctxt "#30029"
-msgid "[COLOR green]Set Custom Background[/COLOR]"
+msgid "[COLOR green]Set Confluence Skin Custom Background[/COLOR]"
 
 
