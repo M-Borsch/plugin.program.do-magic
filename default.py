@@ -70,37 +70,33 @@ def execConfBackgroudFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
 
-        #addon = xbmcaddon.Addon('skin.confluence')
-        #addon = xbmcaddon.Addon(id='skin.confluence')
+    if magicConfBackgroundFlag:
 
-        #addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
-        #addon.setSetting('enableCustomBackground', 'true')
+        # Get the base add-on path (encoded)
+        addon_path = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
 
-        image_path = 'C:\\Users\\ekimb\\Downloads\\_BG-test.png'
-        #addon.setSetting(id='custom_background', value='true')
-        #addon.setSetting(id='background_path', value=image_path)
+        # Define path to a resource file
+        resource_file = os.path.join(addon_path, 'resources', magicCusBackground)
 
-        #addon.setSetting('custombg', 'true')
+        # Check if file exists
+        if xbmcvfs.exists(resource_file):
+            # Process the file
+            updateConfluenceBackground(resource_file)
+        else:
+            # Display an error dialog if the operation fails
+            dialog = xbmcgui.Dialog()
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  resource_file)
 
-        # 1. Define the absolute path to your new background image
-        new_background_path = "C:\\Users\\ekimb\\Downloads\\_BG-test.png"
-        
-        # 2. Enable the custom background setting in Confluence
-        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
-        xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
-        
-        # 3. Set the background image path
-        # Confluence uses the setting 'CustomBackgroundPath' to store the image location
-        xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
+    else:
+         # Check if file exists
+        if xbmcvfs.exists(magicCusBackground):
+            # Process the file
+            updateConfluenceBackground(magicCusBackground)
+        else:
+            # Display an error dialog if the operation fails
+            dialog = xbmcgui.Dialog()
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  magicCusBackground)
 
-        #xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "skin.confluence.custombg.enabled", "value": true}, "id": 1}')
-
-        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
-        #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
-        #xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
-
-        # Optional: Force a skin reload to apply changes immediately (can be intrusive)
-        # xbmc.executebuiltin('ReloadSkin()')
 
 def addMBKodiFileSources():
 
@@ -154,8 +150,42 @@ def addMBKodiFileSources():
             dialog = xbmcgui.Dialog()
             dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  replacement_file_path)
 
+def updateConfluenceBackground(targetfilename):
+    
+        #addon = xbmcaddon.Addon('skin.confluence')
+        #addon = xbmcaddon.Addon(id='skin.confluence')
 
-def updateCofluenceBackground(targetfilename):
+        #addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
+        #addon.setSetting('enableCustomBackground', 'true')
+
+        image_path = 'C:\\Users\\ekimb\\Downloads\\_BG-test.png'
+        #addon.setSetting(id='custom_background', value='true')
+        #addon.setSetting(id='background_path', value=image_path)
+
+        #addon.setSetting('custombg', 'true')
+
+        # 1. Define the absolute path to your new background image
+        new_background_path = targetfilename
+        
+        # 2. Enable the custom background setting in Confluence
+        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
+        xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
+        
+        # 3. Set the background image path
+        # Confluence uses the setting 'CustomBackgroundPath' to store the image location
+        xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
+
+        #xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "skin.confluence.custombg.enabled", "value": true}, "id": 1}')
+
+        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
+        #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
+        #xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
+
+        # Optional: Force a skin reload to apply changes immediately (can be intrusive)
+        # xbmc.executebuiltin('ReloadSkin()')
+
+
+def updateKodiBackground(targetfilename):
 
         # dialog = xbmcgui.Dialog()
         # dialog.ok("Update KODI Background", f"[COLOR green]do-magic: [/COLOR]Use as KODI Background: \n\n" + targetfilename)
@@ -214,7 +244,7 @@ def execBackgroudFunction():
          # Check if file exists
         if xbmcvfs.exists(magicCusBackground):
             # Process the file
-            updateCofluenceBackground(magicCusBackground)
+            updateKiodiBackground(magicCusBackground)
         else:
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
