@@ -71,7 +71,7 @@ def execConfBackgroudFunction():
 
         addon = xbmc.Addon('skin.cofluence')
 
-        addon.setSetting('customBackgroundPath', 'C:\Users\ekimb\Downloads\_BG-test.png')
+        addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
         addon.setSetting('enableCustomBackground', 'true')
 
 def addMBKodiFileSources():
