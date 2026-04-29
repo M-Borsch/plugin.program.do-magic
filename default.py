@@ -271,7 +271,7 @@ def execHashFunction():
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " [COLOR blue]To:[/COLOR] [COLOR green]" + hashed + "[/COLOR]"
+    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " [COLOR blue]\nTo:[/COLOR] [COLOR green]" + hashed + "[/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
 
