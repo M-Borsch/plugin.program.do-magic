@@ -56,11 +56,19 @@ def execFunction():
     elif magicFunction == ADDON.getLocalizedString(30017):
         execBackgroudFunction()
     elif magicFunction == ADDON.getLocalizedString(30026):
-        addMBKodiFileSources() 
+        addMBKodiFileSources()
+     elif magicFunction == ADDON.getLocalizedString(30029):
+        execConfBackgroudFunction() 
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
+
+def execConfBackgroudFunction():
+        # Display an error dialog if the operation fails
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation Info", f"[COLOR green]do-magic: [/COLOR]Function Called.\n\nexecConfBackgroudFunction Function")
+        
 
 def addMBKodiFileSources():
 
