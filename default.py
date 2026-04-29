@@ -409,11 +409,15 @@ elif '/function' in PLUGIN_URL:
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
+    
     magicBackgroundFlag = '' if not ADDON.getSettingBool('magicBKGNDFLG') else ADDON.getSettingBool('magicBKGNDFLG')
     magicConfBackgroundFlag = '' if not ADDON.getSettingBool('magicCONFBKGNDFLG') else ADDON.getSettingBool('magicCONFBKGNDFLG')
-    magicConfCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
+    
     magicCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
+    magicConfCusBackground = '' if not ADDON.getSetting('magicCUSBKGNDFILE') else ADDON.getSetting('magicCUSBKGNDFILE')
+
     magicBackground = '' if not ADDON.getSetting('magicBKGNDFILE') else ADDON.getSetting('magicBKGNDFILE')
+    magicConfBackground = '' if not ADDON.getSetting('magicCONFBKGNDFILE') else ADDON.getSetting('magicCONFBKGNDFILE')
     
     if  xbmc.getCacheThumbName( magicPassword ).split('.', 1)[0] == ADDON.getLocalizedString(30005):
         execFunction()   
