@@ -49,20 +49,27 @@ PLUGIN_URL = sys.argv[0]
 
 def execFunction():
 
-    if magicFunction == ADDON.getLocalizedString(30007):
-        execDownloadFunction()
-    elif magicFunction == ADDON.getLocalizedString(30012):
-        execHashFunction() 
-    elif magicFunction == ADDON.getLocalizedString(30017):
-        execBackgroudFunction()
-    elif magicFunction == ADDON.getLocalizedString(30026):
-        addMBKodiFileSources()
-    elif magicFunction == ADDON.getLocalizedString(30029):
-        execConfBackgroudFunction() 
-    else:
-        # Display an error dialog if the operation fails
-        dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
+    dialog = xbmcgui.Dialog()
+    # Parameters: yesno(heading, message, yeslabel='Yes', nolabel='No')
+    # labels to "OK" and "Cancel"
+    choice = dialog.yesno("Run " + magicFunction, "Do you want to proceed?", yeslabel="OK", nolabel="Cancel")
+
+    if choice:
+        # User clicked OK (Yes)
+        if magicFunction == ADDON.getLocalizedString(30007):
+            execDownloadFunction()
+        elif magicFunction == ADDON.getLocalizedString(30012):
+            execHashFunction() 
+        elif magicFunction == ADDON.getLocalizedString(30017):
+            execBackgroudFunction()
+        elif magicFunction == ADDON.getLocalizedString(30026):
+            addMBKodiFileSources()
+        elif magicFunction == ADDON.getLocalizedString(30029):
+            execConfBackgroudFunction() 
+        else:
+            # Display an error dialog if the operation fails
+            dialog = xbmcgui.Dialog()
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Operation Denied.\n\nNot Authorized to Run Function")
 
 def isValidFile(filename):
     # List of allowed image extensions
