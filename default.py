@@ -267,7 +267,7 @@ def execDownloadFunction():
     dialog.ok("[COLOR red]do-magic: [/COLOR]Downloading file", line2)
 
     # Check if file exists
-    if xbmcvfs.exists(magicCusBackground):
+    if xbmcvfs.exists(magicUrl):
         # Process the file
         # Start the download
         download_with_progress(magicUrl, magicName)
