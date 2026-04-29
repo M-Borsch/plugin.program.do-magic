@@ -78,12 +78,24 @@ def execConfBackgroudFunction():
         #addon.setSetting('enableCustomBackground', 'true')
 
         image_path = 'C:\\Users\\ekimb\\Downloads\\_BG-test.png'
-        addon.setSetting(id='custom_background', value='true')
-        addon.setSetting(id='background_path', value=image_path)
-
+        #addon.setSetting(id='custom_background', value='true')
+        #addon.setSetting(id='background_path', value=image_path)
 
         #addon.setSetting('custombg', 'true')
 
+        # 1. Define the absolute path to your new background image
+        new_background_path = "C:\\Users\\ekimb\\Downloads\\_BG-test.png"
+        
+        # 2. Enable the custom background setting in Confluence
+        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
+        xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
+        
+        # 3. Set the background image path
+        # Confluence uses the setting 'CustomBackgroundPath' to store the image location
+        xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
+        
+        # Optional: Force a skin reload to apply changes immediately (can be intrusive)
+        # xbmc.executebuiltin('ReloadSkin()')
 
 def addMBKodiFileSources():
 
