@@ -96,7 +96,7 @@ def execConfBackgroudFunction():
     
         # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
         #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
-        xbmc.executebuiltin('Skin.SetBool(custombg, true)')
+        xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
 
         # Optional: Force a skin reload to apply changes immediately (can be intrusive)
         # xbmc.executebuiltin('ReloadSkin()')
