@@ -339,9 +339,11 @@ def execStalkerTweekFunction():
     stalker = xbmcaddon.Addon(id='pvr.stalker')
     
     # Populate Fields
-    stalker.setSetting('mac_address', '00:1A:79:AA:0A:B7')
+    stalker.setSetting('mac', '00:1A:79:AA:0A:B7')
     stalker.setSetting('portal1', 'http://goodchannel.lol:80/c/')
     stalker.setSetting('device_id', '1234567890')
+
+    xmbc.executebuiltin('SetEnabled(pvr.stalker)')
 
 
 def execStalkerFunction():
