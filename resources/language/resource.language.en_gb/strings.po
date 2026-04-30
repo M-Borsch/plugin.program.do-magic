@@ -57,11 +57,11 @@ msgid "[COLOR green]Stalker Tweek[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30009"
-msgid "   Download Dir:"
+msgid "   Select Download Dir:"
 
 #: resources/settings.xml
 msgctxt "#30010"
-msgid "   Download File Name:"
+msgid "   Downloaedd File Name:"
 
 #: resources/settings.xml
 msgctxt "#30011"
