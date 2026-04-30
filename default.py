@@ -20,7 +20,6 @@ import os
 import shutil
 import xbmcvfs
 import urllib.request
-import xbmcaddon
 
 try:
     # Python 2.x
@@ -67,8 +66,8 @@ def execFunction():
             addMBKodiFileSources()
         elif magicFunction == ADDON.getLocalizedString(30029):
             execConfBackgroudFunction() 
-        elif magicFunction == ADDON.getLocalizedString(30008):
-            execStalkerTweekFunction() 
+        #elif magicFunction == ADDON.getLocalizedString(30008):
+            #execStalkerTweekFunction() 
         else:
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
@@ -334,33 +333,7 @@ def download_with_progress(url, dest_name):
     #    print(f"Error: {e}")
         
 def execStalkerTweekFunction():
-    xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
-
-
-def code_hold():
-
-    try:
-        # Initialize the stalker add-on
-        stalker = xbmcaddon.Addon(id='pvr.stalker')
-        
-        # Populate Fields
-        stalker.setSetting('mac', '00:1A:79:AA:0A:B7')
-        stalker.setSetting('portal1', 'http://goodchannel.lol:80/c/')
-        stalker.setSetting('device_id', '1234567890')
-        stalker.setSetting('login', 'test')
-        stalker.setSetting('password', 'pwd')
-    
-        xbmc.executebuiltin('SetEnabled(pvr.stalker)')
-        
-        # Optional: Inform the user
-        xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
-        
-    except IOError as e:
-        # Display an error dialog if the operation fails
-        dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error pvr.stalker not installed/running: {e}")
-    
-       
+    xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')   
 
 def execStalkerFunction():
 
