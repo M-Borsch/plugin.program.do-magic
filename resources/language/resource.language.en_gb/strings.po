@@ -57,15 +57,15 @@ msgid "[COLOR green]Stalker Tweek[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30009"
-msgid "   Select Download Dir:"
+msgid "[COLOR springgreen]   Select Download Dir:[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30010"
-msgid "   Downloaded File Name:"
+msgid "[COLOR springgreen]   Downloaded File Name:[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30011"
-msgid "   Source File URL/File:"
+msgid "[COLOR khaki]   Source File URL/File:[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30012"
@@ -157,7 +157,7 @@ msgid "ConfluenceSkin-orig.jpg"
 
 #: resources/settings.xml
 msgctxt "#30034"
-msgid "   Use MB-KODI Source Dir"
+msgid "[COLOR khaki]   Use MB-KODI Source Dir[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30035"
