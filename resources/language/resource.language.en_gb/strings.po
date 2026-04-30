@@ -157,6 +157,11 @@ msgid "ConfluenceSkin-orig.jpg"
 
 #: resources/settings.xml
 msgctxt "#30034"
+msgid "[COLOR green]Contact Us...[/COLOR]"
+
+
+#: resources/settings.xml
+msgctxt "#30034"
 msgid "[COLOR khaki]   Use MB-KODI Source Dir[/COLOR]"
 
 #: resources/settings.xml
