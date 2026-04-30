@@ -157,7 +157,7 @@ msgid "ConfluenceSkin-orig.jpg"
 
 #: resources/settings.xml
 msgctxt "#30034"
-msgid "   Use MB-KODI Download Dir"
+msgid "   Use MB-KODI Source Dir"
 
 #: resources/settings.xml
 msgctxt "#30035"
