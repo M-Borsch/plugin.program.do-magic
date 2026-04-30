@@ -342,9 +342,13 @@ def execStalkerTweekFunction():
     stalker.setSetting('mac', '00:1A:79:AA:0A:B7')
     stalker.setSetting('portal1', 'http://goodchannel.lol:80/c/')
     stalker.setSetting('device_id', '1234567890')
+    stalker.setSetting('login', 'test')
+    stalker.setSetting('password', 'pwd')
 
     xbmc.executebuiltin('SetEnabled(pvr.stalker)')
-
+    
+    # Optional: Inform the user
+    xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
 
 def execStalkerFunction():
 
