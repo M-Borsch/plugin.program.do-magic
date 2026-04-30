@@ -175,8 +175,31 @@ msgid "How To - Overview..."
 msgctxt "#30038"
 msgid "[COLOR green]Contact Us...[/COLOR]"
 
+#: resources/settings.xml
+msgctxt "#30039"
+msgid "[COLOR green]Need Help?:[/COLOR][COLOR white] Click below to get the 'How To' on using [/COLOR][COLOR blue]do-magic[/COLOR]"
 
 #: resources/settings.xml
-msgctxt "#30038"
-msgid "[COLOR green]Need Help?:[/COLOR][COLOR white] Click below to get the 'How To' on using [/COLOR][COLOR blue]do-magic[/COLOR]"
+msgctxt "#30040"
+msgid "How To - Menu..."
+
+#: resources/settings.xml
+msgctxt "#30041"
+msgid "How To - Add MB-KODI-ADDONS File Source..."
+
+#: resources/settings.xml
+msgctxt "#30042"
+msgid "How To - Set Confluence Skin Custom Background..."
+
+#: resources/settings.xml
+msgctxt "#30043"
+msgid "How To - Set Kodi Default Background..."
+
+#: resources/settings.xml
+msgctxt "#30040"
+msgid "How To - Overview..."
+
+#: resources/settings.xml
+msgctxt "#30040"
+msgid "How To - Overview..."
 
