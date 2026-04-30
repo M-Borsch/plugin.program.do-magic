@@ -334,6 +334,10 @@ def download_with_progress(url, dest_name):
     #    print(f"Error: {e}")
         
 def execStalkerTweekFunction():
+    xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
+
+
+def code_hold():
 
     try:
         # Initialize the stalker add-on
