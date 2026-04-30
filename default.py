@@ -343,7 +343,7 @@ def execStalkerTweekFunction():
     stalker.setSetting('portal1', 'http://goodchannel.lol:80/c/')
     stalker.setSetting('device_id', '1234567890')
 
-    xmbc.executebuiltin('SetEnabled(pvr.stalker)')
+    xbmc.executebuiltin('SetEnabled(pvr.stalker)')
 
 
 def execStalkerFunction():
