@@ -65,7 +65,7 @@ msgid "   Download File Name:"
 
 #: resources/settings.xml
 msgctxt "#30011"
-msgid "   Source File URL:"
+msgid "   Source File URL/File:"
 
 #: resources/settings.xml
 msgctxt "#30012"
