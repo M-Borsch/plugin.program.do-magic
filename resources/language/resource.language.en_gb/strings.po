@@ -154,3 +154,11 @@ msgid "justice_league1920x1080.jpg"
 #: resources/settings.xml
 msgctxt "#30033"
 msgid "ConfluenceSkin-orig.jpg"
+
+#: resources/settings.xml
+msgctxt "#30034"
+msgid "   Use a MB-KODI Download Dir"
+
+#: resources/settings.xml
+msgctxt "#30035"
+msgid "http://borsch.myqnapcloud.com:8089/"
