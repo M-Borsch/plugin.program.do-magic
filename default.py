@@ -279,7 +279,7 @@ def execHashFunction():
 def execDownloadFunction():
 
     if magicDownloadFlag:
-        srcFile = ADDON.getLocalizedString(30005) + magicUrl
+        srcFile = ADDON.getLocalizedString(30035) + 'd/' + magicUrl
     else:
         srcFile = magicUrl
     
@@ -300,6 +300,7 @@ def execDownloadFunction():
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Source Filename \n\n" +  srcFile)
 
 def download_with_progress(url, dest_name):
+    
     dp = xbmcgui.DialogProgress()
     dp.create('Downloading', 'Starting download...\n\nPlease Wait...may take time depending on file size')
     
