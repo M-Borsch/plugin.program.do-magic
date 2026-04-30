@@ -15,29 +15,29 @@
         <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30025|30029|30026" default="NONE" />
 
         <!-- Download  Fields: Only visible if 'Download' is selected -->
-        <setting id="magicDIR" type="folder" label="30009" default="" visible="eq(-1,1)" />
-        <setting id="magicNAME" type="text" label="30010" default="" visible="eq(-2,1)" />
-        <setting id="magicURL" type="text" label="30011" default="" visible="eq(-3,1)" />
+        <setting id="magicDNLDFLG" type="bool" label="30034" default="true" visible="eq(-1,1)" />
+        <setting id="magicDIR" type="folder" label="30009" default="" visible="eq(-2,1)" />
+        <setting id="magicNAME" type="text" label="30010" default="" visible="eq(-3,1)" />
+        <setting id="magicURL" type="text" label="30011" default="" visible="eq(-4,1)" />
 
         <!-- Hash Text Fields: Only visible if 'Download' is selected -->		 
-        <setting id="magicHASH" type="text" label="30013" default="" visible="eq(-4,3)" />
+        <setting id="magicHASH" type="text" label="30013" default="" visible="eq(-5,3)" />
 
 		<!-- Backgroundad Fields: Only visible if 'Download' is selected -->
-        <setting type="string" label="30019" visible="eq(-5,4)" />
-        <setting id="magicBKGNDFLG" type="bool" label="30020" default="true" visible="eq(-6,4)" />
+        <setting type="string" label="30019" visible="eq(-6,4)" />
+        <setting id="magicBKGNDFLG" type="bool" label="30020" default="true" visible="eq(-7,4)" />
 		 
 	    <!-- Select a MB-KODI or Custom background file -->
-        <setting id="magicBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30032|30033" visible="eq(-1,true)+eq(-7,4)" default="NONE" />
-        <setting id="magicCUSBKGNDFILE" type="file" label="30031" visible="eq(-2,false)+eq(-8,4)" default="NONE" />
+        <setting id="magicBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30032|30033" visible="eq(-1,true)+eq(-8,4)" default="NONE" />
+        <setting id="magicCUSBKGNDFILE" type="file" label="30031" visible="eq(-2,false)+eq(-9,4)" default="NONE" />
 
 		 <!-- Backgroundad Fields: Only visible if 'Download' is selected -->
-        <setting type="string" label="30030" visible="eq(-9,6)" />
-        <setting id="magicCONFBKGNDFLG" type="bool" label="30020" default="true" visible="eq(-10,6)" />
+        <setting type="string" label="30030" visible="eq(-10,6)" />
+        <setting id="magicCONFBKGNDFLG" type="bool" label="30020" default="true" visible="eq(-11,6)" />
 
 	    <!-- Select a MB-KODI or Custom background file -->
-        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30032|30033" visible="eq(-1,true)+eq(-11,6)" default="NONE" />
-        <setting id="magicCONFCUSBKGNDFILE" type="file" label="30031" visible="eq(-2,false)+eq(-12,6)" default="NONE" />
-
+        <setting id="magicCONFBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30032|30033" visible="eq(-1,true)+eq(-12,6)" default="NONE" />
+        <setting id="magicCONFCUSBKGNDFILE" type="file" label="30031" visible="eq(-2,false)+eq(-13,6)" default="NONE" />
 
     </category>
 
