@@ -435,7 +435,7 @@ elif '/function' in PLUGIN_URL:
     magicPassword = '' if not ADDON.getSetting('magicPWD') else ADDON.getSetting('magicPWD')
     magicFunction = '' if not ADDON.getSetting('magicFUNCTION') else ADDON.getSetting('magicFUNCTION')
 
-    magicDownloadFlag = '' if not ADDON.getSetting('magicDNLDFLG') else ADDON.getSetting('magicDNLDFLG')    
+    magicDownloadFlag = '' if not ADDON.getSettingBool('magicDNLDFLG') else ADDON.getSettingBool('magicDNLDFLG')    
     magicName = '' if not ADDON.getSetting('magicNAME') else ADDON.getSetting('magicNAME')
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
