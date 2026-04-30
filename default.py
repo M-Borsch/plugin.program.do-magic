@@ -79,10 +79,6 @@ def isValidFile(filename):
     ext = os.path.splitext(filename)[1].lower()
     return ext in allowed
 
-# Example usage:
-# if is_image(my_file):
-#     print("File is a JPG or PNG")
-
 def execConfBackgroudFunction():
 
     if magicConfBackgroundFlag:
@@ -166,45 +162,20 @@ def addMBKodiFileSources():
             dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  replacement_file_path)
 
 def updateConfluenceBackground(targetfilename):
-    
-        #addon = xbmcaddon.Addon('skin.confluence')
-        #addon = xbmcaddon.Addon(id='skin.confluence')
 
-        #addon.setSetting('customBackgroundPath', 'C:\\Users\\ekimb\\Downloads\\_BG-test.png')
-        #addon.setSetting('enableCustomBackground', 'true')
-
-        image_path = 'C:\\Users\\ekimb\\Downloads\\_BG-test.png'
-        #addon.setSetting(id='custom_background', value='true')
-        #addon.setSetting(id='background_path', value=image_path)
-
-        #addon.setSetting('custombg', 'true')
-
-        # 1. Define the absolute path to your new background image
+        # Define the absolute path to your new background image
         new_background_path = targetfilename
         
-        # 2. Enable the custom background setting in Confluence
+        # Enable the custom background setting in Confluence
         # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
         xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
         
-        # 3. Set the background image path
+        # Set the background image path
         # Confluence uses the setting 'CustomBackgroundPath' to store the image location
         xbmc.executebuiltin(f'Skin.SetString(CustomBackgroundPath, "{new_background_path}")')
 
-        #xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.SetSettingValue", "params": {"setting": "skin.confluence.custombg.enabled", "value": true}, "id": 1}')
-
-        # In Confluence, the toggle is typically controlled by 'Skin.HasSetting(CustomBackground)'
-        #xbmc.executebuiltin('Skin.SetBool(CustomBackground, true)')
-        #xbmc.executebuiltin('Skin.SetBool(custombg.enabled, true)')
-
-        # Optional: Force a skin reload to apply changes immediately (can be intrusive)
-        # xbmc.executebuiltin('ReloadSkin()')
-
-
 def updateKodiBackground(targetfilename):
-
-        # dialog = xbmcgui.Dialog()
-        # dialog.ok("Update KODI Background", f"[COLOR green]do-magic: [/COLOR]Use as KODI Background: \n\n" + targetfilename)
-
+    
         userdata_pathDIR = xbmcvfs.translatePath('special://userdata/')
     
         ADDONS_PATH = xbmcvfs.translatePath('special://home/')
@@ -221,10 +192,6 @@ def updateKodiBackground(targetfilename):
         else:
             xbmc.log("Background: Failed to download file", xbmc.LOGERROR)
     
-        # Set a custom property that the skin is configured to read
-        # xbmcgui.Window(10000).setProperty("CustomBackgroundPath", save_path)
-        # xbmcgui.Window(10000).setProperty("EnableCustomBackground", "true")
-    
         # Optional: Inform the user
         xbmc.executebuiltin('Notification(Background, Updated, 2000)')
             
@@ -234,7 +201,6 @@ def updateKodiBackground(targetfilename):
     
         dialog.ok("[COLOR red]do-magic: [/COLOR]Background Function", line2)
         xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
-
 
 def execBackgroudFunction():
 
@@ -264,7 +230,6 @@ def execBackgroudFunction():
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
             dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Filename \n\n" +  magicCusBackground)
-
 
 def execHashFunction():
 
@@ -398,22 +363,17 @@ def execStalkerFunction():
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Invalid Filename: Please select 'settings.xml'")
 
-
-
 def getRawWindowProperty(prop):
     window = xbmcgui.Window(xbmcgui.getCurrentWindowId())
     return window.getProperty(prop)
-
 
 def setRawWindowProperty(prop, data):
     window = xbmcgui.Window(xbmcgui.getCurrentWindowId())
     window.setProperty(prop, data)
 
-
 def clearWindowProperty(prop):
     window = xbmcgui.Window(xbmcgui.getCurrentWindowId())
     window.clearProperty(prop)
-
 
 # Debugging helper. Logs a LOGNERROR-level message.
 def xbmcLog(*args):
@@ -489,7 +449,3 @@ else:
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
-
-
-
-
