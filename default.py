@@ -335,20 +335,28 @@ def download_with_progress(url, dest_name):
         
 def execStalkerTweekFunction():
 
-    # Initialize the stalker add-on
-    stalker = xbmcaddon.Addon(id='pvr.stalker')
+    try:
+        # Initialize the stalker add-on
+        stalker = xbmcaddon.Addon(id='pvr.stalker')
+        
+        # Populate Fields
+        stalker.setSetting('mac', '00:1A:79:AA:0A:B7')
+        stalker.setSetting('portal1', 'http://goodchannel.lol:80/c/')
+        stalker.setSetting('device_id', '1234567890')
+        stalker.setSetting('login', 'test')
+        stalker.setSetting('password', 'pwd')
     
-    # Populate Fields
-    stalker.setSetting('mac', '00:1A:79:AA:0A:B7')
-    stalker.setSetting('portal1', 'http://goodchannel.lol:80/c/')
-    stalker.setSetting('device_id', '1234567890')
-    stalker.setSetting('login', 'test')
-    stalker.setSetting('password', 'pwd')
-
-    xbmc.executebuiltin('SetEnabled(pvr.stalker)')
+        xbmc.executebuiltin('SetEnabled(pvr.stalker)')
+        
+        # Optional: Inform the user
+        xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
+        
+    except IOError as e:
+        # Display an error dialog if the operation fails
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error pvr.stalker not installed/running: {e}")
     
-    # Optional: Inform the user
-    xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
+       
 
 def execStalkerFunction():
 
