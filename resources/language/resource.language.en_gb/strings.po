@@ -162,3 +162,16 @@ msgid "[COLOR khaki]   Use MB-KODI Source Dir[/COLOR]"
 #: resources/settings.xml
 msgctxt "#30035"
 msgid "http://borsch.myqnapcloud.com:8089/"
+
+#: resources/settings.xml
+msgctxt "#30036"
+msgid "How To"
+
+#: resources/settings.xml
+msgctxt "#30037"
+msgid "How To - Overview..."
+
+#: resources/settings.xml
+msgctxt "#30038"
+msgid "[COLOR green]Need Help?:[/COLOR][COLOR white] Click below to get the 'How To' on using [/COLOR][COLOR blue]do-magic[/COLOR]"
+
