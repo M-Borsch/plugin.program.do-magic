@@ -61,7 +61,7 @@ msgid "   Select Download Dir:"
 
 #: resources/settings.xml
 msgctxt "#30010"
-msgid "   Downloaedd File Name:"
+msgid "   Downloaded File Name:"
 
 #: resources/settings.xml
 msgctxt "#30011"
@@ -157,7 +157,7 @@ msgid "ConfluenceSkin-orig.jpg"
 
 #: resources/settings.xml
 msgctxt "#30034"
-msgid "   Use a MB-KODI Download Dir"
+msgid "   Use MB-KODI Download Dir"
 
 #: resources/settings.xml
 msgctxt "#30035"
