@@ -277,21 +277,27 @@ def execHashFunction():
 
 
 def execDownloadFunction():
+
+    if magicDownloadFlag:
+        srcFile = ADDON.getLocalizedString(30005) + magicUrl
+    else:
+        srcFile = magicUrl
+    
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]From:[/COLOR] " + magicUrl + "\n[COLOR green]To:[/COLOR] " + magicDir + magicName
+    line2 = "[COLOR blue]From:[/COLOR] " + srcFile + "\n[COLOR green]To:[/COLOR] " + magicDir + magicName
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Downloading file", line2)
 
     # Check if file exists
-    if xbmcvfs.exists(magicUrl):
+    if xbmcvfs.exists(srcFile):
         # Process the file
         # Start the download
-        download_with_progress(magicUrl, magicName)
+        download_with_progress(srcFile, magicName)
     else:
         # Display an error dialog if the operation fails
         dialog = xbmcgui.Dialog()
-        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Source Filename \n\n" +  magicUrl)
+        dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error: Invalid Source Filename \n\n" +  srcFile)
 
 def download_with_progress(url, dest_name):
     dp = xbmcgui.DialogProgress()
