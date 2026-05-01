@@ -13,11 +13,13 @@ This is a simple & lightweight KODI Program Addon that lets you quickly manage y
 > Supported by MB-KODI ✔️
 
 Latest Version do-magic :sunglasses:
-- inital release
+- initial release
 - Added ability for to select Functions to run
  - Set File Downloader, Backgrounds, file sources, HASH, Stalker Tweak
 - Added Help screens
 (Latest)
+
+<a href="plugin.program.do-magic-1.0.zip">plugin.program.do-magic-1.0.zip</a> (Latest)
 
 <font COLOR="red"><B>RESTRICTED:</B></font> Contact MB-KODI (Latest)
 
