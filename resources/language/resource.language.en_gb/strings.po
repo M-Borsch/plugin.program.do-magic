@@ -53,7 +53,7 @@ msgid "[COLOR green]Downloader[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30008"
-msgid "[COLOR green]Stalker Tweek[/COLOR]"
+msgid "[COLOR green]Stalker Tweak[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30009"
@@ -201,4 +201,4 @@ msgid "How To - Set Kodi Default Background..."
 
 #: resources/settings.xml
 msgctxt "#30045"
-msgid "How To - Hash / Stalker Tweek..."
+msgid "How To - Hash / Stalker Tweak..."
