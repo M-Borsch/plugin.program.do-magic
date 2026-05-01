@@ -30,7 +30,7 @@ This <font COLOR="blue"><B>do-magic</B></font> Program Addon is published as a K
 <ul>
 <li>NOTE: Contact MB-KODI for a password</li>
  <li>http://borsch.myqnapcloud.com:8089/do-magic</li>
- <li>https://m-borsch.github.io/do-magic</li>
+ <li>https://m-borsch.github.io/plugin.program.do-magic/</li>
 </ul>
 <B><font COLOR="blue">2</font></B> - In Kodi use the "Addons" - "Install from zip" option to install the Addon utilizing the 'source' that you added in the previous step<br />
 
