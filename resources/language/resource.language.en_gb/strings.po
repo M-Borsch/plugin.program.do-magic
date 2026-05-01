@@ -185,16 +185,20 @@ msgid "How To - Menu..."
 
 #: resources/settings.xml
 msgctxt "#30041"
-msgid "How To - Add MB-KODI-ADDONS File Source..."
+msgid "How To - Downloader..."
 
 #: resources/settings.xml
 msgctxt "#30042"
-msgid "How To - Set Confluence Skin Custom Background..."
+msgid "How To - Add MB-KODI-ADDONS File Source..."
 
 #: resources/settings.xml
 msgctxt "#30043"
-msgid "How To - Set Kodi Default Background..."
+msgid "How To - Set Confluence Skin Custom Background..."
 
 #: resources/settings.xml
 msgctxt "#30044"
+msgid "How To - Set Kodi Default Background..."
+
+#: resources/settings.xml
+msgctxt "#30045"
 msgid "How To - Hash / Stalker Tweek..."
