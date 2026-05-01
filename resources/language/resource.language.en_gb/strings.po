@@ -196,10 +196,5 @@ msgctxt "#30043"
 msgid "How To - Set Kodi Default Background..."
 
 #: resources/settings.xml
-msgctxt "#30040"
-msgid "How To - Overview..."
-
-#: resources/settings.xml
-msgctxt "#30040"
-msgid "How To - Overview..."
-
+msgctxt "#30044"
+msgid "How To - Hash / Stalker Tweek..."
