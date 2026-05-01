@@ -36,14 +36,10 @@ This <font COLOR="blue"><B>do-magic</B></font> Program Addon is published as a K
 
 # How to use:
 
-> [!IMPORTANT]
-> Depending on the Function that you select in the configuration/setting panel, this Addon will exceute the specified function. This is a 'restricted' Addon - meaning that you must have a password supplied by MB-KODI in order for the Addon to work.
-
-# How to use:
+> [!WARNING] This is a 'restricted' Addon - meaning that you must have a password supplied by MB-KODI in order for the Addon to work.
 
 > [!IMPORTANT]
 > Depending on the settings you set in the configuration/setting panel, this Addon will either download files and/or set a Custom Skin Background or Kodi default background as well as allow users to easily 'HASH' a text string or Tweak a PVR Stalker install.
-
 
 ## ADDON Main Menu
 > [!IMPORTANT]
