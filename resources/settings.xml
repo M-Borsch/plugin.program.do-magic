@@ -44,13 +44,13 @@
 	<category label="30036"> <!-- Help Section -->
         <setting type="string" label="30039" />
         <setting label="30037" type="action" id="dm-Help-Overview" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Overview.png)"/>
-        <setting label="30039" type="action" id="dm-Help-Menu" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Menu.jpg)"/>
+        <setting label="30040" type="action" id="dm-Help-Menu" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Menu.jpg)"/>
 		
-        <setting label="30040" type="action" id="dm-Help-Downloader" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Downloader.jpg)"/>
-        <setting label="30041" type="action" id="dm-Help-Addons" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-MB-KODI-ADDONS.jpg)"/>
-        <setting label="30042" type="action" id="dm-Help-SkinBG" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-SkinBackground.jpg)"/>
-        <setting label="30043" type="action" id="dm-Help-KodiBG" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-KodiBackground.jpg)"/>
-        <setting label="30044" type="action" id="dm-Help-Hash-Stalker" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Hash-Stalker.jpg)"/>
+        <setting label="30041" type="action" id="dm-Help-Downloader" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Downloader.jpg)"/>
+        <setting label="30042" type="action" id="dm-Help-Addons" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-MB-KODI-ADDONS.jpg)"/>
+        <setting label="30043" type="action" id="dm-Help-SkinBG" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-SkinBackground.jpg)"/>
+        <setting label="30044" type="action" id="dm-Help-KodiBG" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-KodiBackground.jpg)"/>
+        <setting label="30045" type="action" id="dm-Help-Hash-Stalker" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-Hash-Stalker.jpg)"/>
 		
         <setting label="30038" type="action" id="dm-Help-Overview" action="ShowPicture(special://home/addons/do-magic/resources/do-magic-Help-ContactUs.png)"/>
 
