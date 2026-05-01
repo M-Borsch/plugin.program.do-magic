@@ -67,7 +67,7 @@ def execFunction():
         elif magicFunction == ADDON.getLocalizedString(30029):
             execConfBackgroudFunction() 
         #elif magicFunction == ADDON.getLocalizedString(30008):
-            #execStalkerTweekFunction() 
+            #execStalkerTweakFunction() 
         else:
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
