@@ -42,8 +42,6 @@ This <font COLOR="blue"><B>do-magic</B></font> Program Addon is published as a K
 > Depending on the settings you set in the configuration/setting panel, this Addon will either download files and/or set a Custom Skin Background or Kodi default background as well as allow users to easily 'HASH' a text string or Tweak a PVR Stalker install.
 
 ## ADDON Main Menu
-> [!IMPORTANT]
-> If you make a change to your Favourites list using "Manage Kodi Favourites" - make sure after you return to the main menu that you use one of the "Save" options to 'lock' in your change. Otherwise, your edits will be lost! 
 
 ### 1) Configure...   
 Opens a dialog where you must enter your password. This is a one-time setup. You then select and configure the 'Function' that you want to Execute
