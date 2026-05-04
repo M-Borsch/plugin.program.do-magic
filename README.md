@@ -47,7 +47,7 @@ This <font COLOR="blue"><B>do-magic</B></font> Program Addon is published as a K
 Opens a dialog where you must enter your password. This is a one-time setup. You then select and configure the 'Function' that you want to Execute
 
 ### 2) Execute Function (Advanced! - This may modify your Kodi install)
-THis is where you 'Execute' the function that you chose and configures in the previous menu item (Configure...).
+This is where you 'Execute' the function that you chose and configured in the previous menu item (Configure...).
    
 ### 3) File Manager
 This launches the built-in Kodi File Manager.
