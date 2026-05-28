@@ -2,6 +2,7 @@
 <addon id="do-magic" name="[COLOR blue]do-magic[/COLOR]" version="1.1" provider-name="M-Borsch,MB-K@DI">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.25.1"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>executable</provides>
