@@ -102,7 +102,7 @@ def execStalkerDownloadFunction():
 
     # Display a notification dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Copy:[/COLOR] " + link + " [COLOR blue]\nTo:[/COLOR] [COLOR green]" + magicStalkerDir + magicStalkerName "[/COLOR]"
+    line2 = "[COLOR blue]Copy:[/COLOR] " + link + " [COLOR blue]\nTo:[/COLOR] [COLOR green]" + magicStalkerDir + magicStalkerName + "[/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Streamtape Function", line2)
     
