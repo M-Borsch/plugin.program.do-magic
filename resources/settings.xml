@@ -12,7 +12,7 @@
 		 <setting type="lsep" />
 
 	    <!-- Function Field -->
-        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30025|30029|30026" default="NONE" />
+        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30025|30029|30026|30046" default="NONE" />
 
         <!-- Download  Fields: Only visible if 'Download' is selected -->
         <setting id="magicDNLDFLG" type="bool" label="30034" default="true" visible="eq(-1,1)" />
@@ -38,6 +38,11 @@
 	    <!-- Select a MB-KODI or Custom background file -->
         <setting id="magicCONFBKGNDFILE" type="labelenum" label="30021" lvalues="30006|30032|30033" visible="eq(-1,true)+eq(-12,6)" default="NONE" />
         <setting id="magicCONFCUSBKGNDFILE" type="file" label="30031" visible="eq(-2,false)+eq(-13,6)" default="NONE" />
+
+        <!-- Download  Fields: Only visible if 'Download Stalker' is selected -->
+        <setting id="magicSTALKURL" type="text" label="30011" default="" visible="eq(-14,9)" />
+        <setting id="magicSTALKDIR" type="folder" label="30009" default="" visible="eq(-15,9)" />
+        <setting id="magicSTALKNAME" type="text" label="30010" default="" visible="eq(-16,9)" />
 
     </category>
 
