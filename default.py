@@ -120,7 +120,7 @@ def stalkerdownload(url, filename):
                 if chunk: # filter out keep-alive new chunks
                     f.write(chunk)
 
-def old-stalkerdownload(url, fileName):
+def oldstalkerdownload(url, fileName):
     with open(fileName, "wb") as w:
         # print('File opened')
         r = reqs.get(url, stream=True)
