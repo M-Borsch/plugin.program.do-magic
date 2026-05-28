@@ -108,7 +108,7 @@ def execStalkerDownloadFunction():
     
     checkFile(f"{magicStalkerDir}{magicStalkerName}")
     # stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
-    stalkerdownload(magicStalkerURL, f"{magicStalkerDir}{magicStalkerName}")
+    stalkerdownload(magicStalkerUrl, f"{magicStalkerDir}{magicStalkerName}")
 
 
 def stalkerdownload(url, fileName):
