@@ -100,16 +100,15 @@ def execStalkerDownloadFunction():
     rstr = rstr[-2:]
     link = 'https:/' + link[:-2] + rstr + '&stream=1'
     checkFile(f"{magicStalkerDir}{magicStalkerName}")
-    stalkerdownload(link, str(1), f"{magicStalkerDir}{magicStalkerName}")
-    # sys.stdout.write(f"\nFile {i+1} download complete\n")
+    stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
+    # sys.stdout.write(f"\nFile download complete\n")
 
-def stalkerdownload(url, fileIndex, fileName):
+def stalkerdownload(url, fileName):
     with open(fileName, "wb") as w:
         # print('File opened')
         r = reqs.get(url, stream=True)
         total = int(r.headers.get("content-length"))
         downloaded = 0
-        # sys.stdout.write(f"Downloading file {fileIndex} from {url}\n")
         for data in r.iter_content(chunk_size=max(int(total/1000), 1024*1024)):    
             downloaded += len(data)
             percentage = int((downloaded/total)/0.02)
