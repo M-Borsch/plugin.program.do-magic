@@ -5,8 +5,8 @@
 # favourites.xml file.
 #
 # --------------------------------------------------------------------
-# M-Borsch 2026-02-28: Version 1.0
-# - Initial Release
+# M-Borsch 2026-05-28: Version 1.1
+# - Add Streamtape download function
 # --------------------------------------------------------------------
 #
 # ====================================================================
@@ -66,6 +66,8 @@ def execFunction():
             addMBKodiFileSources()
         elif magicFunction == ADDON.getLocalizedString(30029):
             execConfBackgroudFunction() 
+        elif magicFunction == ADDON.getLocalizedString(30046):
+            execStalkerDownloadFunction() 
         #elif magicFunction == ADDON.getLocalizedString(30008):
             #execStalkerTweakFunction() 
         else:
@@ -78,6 +80,41 @@ def isValidFile(filename):
     allowed = ['.jpg', '.jpeg', '.png']
     ext = os.path.splitext(filename)[1].lower()
     return ext in allowed
+
+def execStalkerDownloadFunction():
+    url = magicStalkerUrl
+    name = url.split('/')
+    if name[-1] == '':
+        name.pop(-1)
+    name = name[-1]
+
+    r = reqs.get(url)
+    rstr = str(r.content)
+
+    rstr = rstr[rstr.find('/streamta.pe/'):]
+    link = rstr[:rstr.find('<')]
+    rstr = rstr[rstr.find("xcdd"):]
+    rstr = rstr[:rstr.find("\\")]
+    rstr = rstr[-2:]
+    link = 'https:/' + link[:-2] + rstr + '&stream=1'
+    checkFile(f"{magicStalkerDir}{magicStalkerName}")
+    stalkerdownload(link, str(i+1), f"{magicStalkerDir}{magicStalkerName}")
+    # sys.stdout.write(f"\nFile {i+1} download complete\n")
+
+def stalkerdownload(url, fileIndex, fileName):
+    with open(fileName, "wb") as w:
+        # print('File opened')
+        r = reqs.get(url, stream=True)
+        total = int(r.headers.get("content-length"))
+        downloaded = 0
+        sys.stdout.write(f"Downloading file {fileIndex} from {url}\n")
+        for data in r.iter_content(chunk_size=max(int(total/1000), 1024*1024)):    
+            downloaded += len(data)
+            percentage = int((downloaded/total)/0.02)
+            # sys.stdout.write(f'\r[{"*"*percentage}{"."*(50-percentage)}]')
+            xbmc.executebuiltin('Notification(Streamtape, Downloading..., 2000)')   
+
+            w.write(data)
 
 def execConfBackgroudFunction():
 
@@ -404,6 +441,11 @@ elif '/function' in PLUGIN_URL:
     magicName = '' if not ADDON.getSetting('magicNAME') else ADDON.getSetting('magicNAME')
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
+
+    magicStalkerName = '' if not ADDON.getSetting('magicSTALKNAME') else ADDON.getSetting('magicSTALKNAME')
+    magicStalkerUrl = '' if not ADDON.getSetting('magicSTALKURL') else ADDON.getSetting('magicSTALKURL')
+    magicStalkerDir = '' if not ADDON.getSetting('magicSTALKDIR') else ADDON.getSetting('magicSTALKDIR')
+    
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
     
     magicBackgroundFlag = '' if not ADDON.getSettingBool('magicBKGNDFLG') else ADDON.getSettingBool('magicBKGNDFLG')
