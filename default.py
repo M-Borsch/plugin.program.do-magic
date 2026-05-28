@@ -92,8 +92,8 @@ def execStalkerDownloadFunction():
     r = reqs.get(url)
     rstr = str(r.content)
 
-    rstr = rstr[rstr.find('/streamta.pe/'):]
-#    rstr = rstr[rstr.find('/streamtape.com/'):]
+#    rstr = rstr[rstr.find('/streamta.pe/'):]
+    rstr = rstr[rstr.find('/streamtape.com/'):]
     link = rstr[:rstr.find('<')]
     rstr = rstr[rstr.find("xcdd"):]
     rstr = rstr[:rstr.find("\\")]
