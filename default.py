@@ -107,7 +107,8 @@ def execStalkerDownloadFunction():
     dialog.ok("[COLOR red]do-magic: [/COLOR]Streamtape Function", line2)
     
     checkFile(f"{magicStalkerDir}{magicStalkerName}")
-    stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
+    # stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
+    stalkerdownload(magicStalkerURL, f"{magicStalkerDir}{magicStalkerName}")
 
 
 def stalkerdownload(url, fileName):
