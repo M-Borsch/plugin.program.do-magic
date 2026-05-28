@@ -17,6 +17,7 @@ import traceback
 import xbmc
 import xbmcgui
 import os
+import requests as reqs
 import shutil
 import xbmcvfs
 import urllib.request
