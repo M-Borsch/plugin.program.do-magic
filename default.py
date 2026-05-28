@@ -92,8 +92,8 @@ def execStalkerDownloadFunction():
     r = reqs.get(url)
     rstr = str(r.content)
 
-#    rstr = rstr[rstr.find('/streamta.pe/'):]
-    rstr = rstr[rstr.find('/streamtape.com/'):]
+    rstr = rstr[rstr.find('/streamta.pe/'):]
+#    rstr = rstr[rstr.find('/streamtape.com/'):]
     link = rstr[:rstr.find('<')]
     rstr = rstr[rstr.find("xcdd"):]
     rstr = rstr[:rstr.find("\\")]
@@ -106,12 +106,9 @@ def execStalkerDownloadFunction():
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]Streamtape Function", line2)
     
-    # checkFile(f"{magicStalkerDir}{magicStalkerName}")
-    checkFile(f".\Downloads\test.mp4")
-    
-    # stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
-    stalkerdownload(link, f".\Downloads\test.mp4")
-    # sys.stdout.write(f"\nFile download complete\n")
+    checkFile(f"{magicStalkerDir}{magicStalkerName}")
+    stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
+
 
 def stalkerdownload(url, fileName):
     with open(fileName, "wb") as w:
