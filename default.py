@@ -92,7 +92,8 @@ def execStalkerDownloadFunction():
     r = reqs.get(url)
     rstr = str(r.content)
 
-    rstr = rstr[rstr.find('/streamta.pe/'):]
+#    rstr = rstr[rstr.find('/streamta.pe/'):]
+    rstr = rstr[rstr.find('/streamtape.com/'):]
     link = rstr[:rstr.find('<')]
     rstr = rstr[rstr.find("xcdd"):]
     rstr = rstr[:rstr.find("\\")]
@@ -121,6 +122,7 @@ def checkFile(name :str):
     if not(os.path.isfile(name)):
         with open(name, "x"):
             pass
+
 def execConfBackgroudFunction():
 
     if magicConfBackgroundFlag:
