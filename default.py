@@ -117,6 +117,10 @@ def stalkerdownload(url, fileIndex, fileName):
 
             w.write(data)
 
+def checkFile(name :str):
+    if not(os.path.isfile(name)):
+        with open(name, "x"):
+            pass
 def execConfBackgroudFunction():
 
     if magicConfBackgroundFlag:
