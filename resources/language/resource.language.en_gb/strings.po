@@ -202,3 +202,7 @@ msgid "How To - Set Kodi Default Background..."
 #: resources/settings.xml
 msgctxt "#30045"
 msgid "How To - Hash / Stalker Tweak..."
+
+#: resources/settings.xml
+msgctxt "#30046"
+msgid "[COLOR green]Streamtape Downloader[/COLOR]"
