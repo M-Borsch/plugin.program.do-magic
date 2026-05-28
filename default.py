@@ -99,8 +99,15 @@ def execStalkerDownloadFunction():
     rstr = rstr[:rstr.find("\\")]
     rstr = rstr[-2:]
     link = 'https:/' + link[:-2] + rstr + '&stream=1'
+
+    # Display a notification dialog (requires xbmcgui)
+    dialog = xbmcgui.Dialog()
+    line2 = "[COLOR blue]Copy:[/COLOR] " + link + " [COLOR blue]\nTo:[/COLOR] [COLOR green]" + magicStalkerDir + magicStalkerName "[/COLOR]"
+
+    dialog.ok("[COLOR red]do-magic: [/COLOR]Streamtape Function", line2)
+    
     checkFile(f"{magicStalkerDir}{magicStalkerName}")
-    stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
+    # stalkerdownload(link, f"{magicStalkerDir}{magicStalkerName}")
     # sys.stdout.write(f"\nFile download complete\n")
 
 def stalkerdownload(url, fileName):
