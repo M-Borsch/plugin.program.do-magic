@@ -362,7 +362,7 @@ def download_with_progress(url, dest_name):
 def execStalkerTweekFunction():
     xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
 
-def execDailyFunction():
+def execDailyUploadFunction():
     xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
 
 def execStalkerFunction():
@@ -456,6 +456,18 @@ elif '/configure' in PLUGIN_URL:
     # Call up the configuration panel.
     # Activate the Settings window
     xbmc.executebuiltin('Addon.OpenSettings(do-magic)')
+
+elif '/writeout_log' in PLUGIN_URL:
+    
+    # Let the user know that there are about to write out their kodi log file
+    verbose = 'false' if not ADDON.getSetting('presuffixBool') else ADDON.getSetting('presuffixBool')
+    msg_text = f"[COLOR red]DANGER! [/COLOR]This will save a copy of your Kodi Log file - overwriting any local version of kodi.log in the selected directory\n Proceed?"
+    if verbose == 'true':
+        if xbmcgui.Dialog().yesno('Manage Kodi Favourites', msg_text):
+            # Activate the filemaanager
+            writeoutLog()
+    else:
+        writeoutLog()
 
 elif '/fmanager' in PLUGIN_URL:
     # Call up the File Manager.
