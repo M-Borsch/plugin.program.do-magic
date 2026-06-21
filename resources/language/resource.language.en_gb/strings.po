@@ -210,3 +210,11 @@ msgid "[COLOR green]Streamtape Downloader[/COLOR]"
 #: resources/settings.xml
 msgctxt "#30047"
 msgid "[COLOR khaki]   Streamtape File URL:[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30046"
+msgid "[COLOR green]DailyUpload Downloader[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30047"
+msgid "[COLOR khaki]   DailyUpload File URL:[/COLOR]"
