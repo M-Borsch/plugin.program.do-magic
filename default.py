@@ -570,7 +570,7 @@ def execDailyDownloadFunction():
     try:
         # url = "https://dailyuploads.net/ck1d7zjasu8u"
         url = "https://dailyuploads.net/ck1d7zjasu8u/Voicemails.for.Isabelle.2026.1080p.NF.WEB-DL.10bit.DDP5.1.x265-FaS.mkv"
-        output = "downloaded_file.bin"  # Change as needed
+        output = magicDailyDir + magicDailyFile  # Change as needed
         download_from_dailyuploads(url, output)
     except Exception as err:
         xbmc.log(f"[COLOR red]do-magic: [/COLOR]Unexpected Error: {e}", xbmc.LOGERROR)
