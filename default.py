@@ -471,7 +471,7 @@ def list_items(handle, items):
 
 def router():
     handle = int(sys.argv[1])
-    test_url = magicDailyURL
+    test_url = magicDailyUrl
 
     html = fetch_html(test_url)
     if html is None:
@@ -494,7 +494,6 @@ def download_from_dailyuploads(url, output_path):
     # Basic input validation
     if not isinstance(url, str) or not url.startswith("http"):
         xbmcgui.Dialog().notification("No Data", "Invalid URL provided..", xbmcgui.NOTIFICATION_INFO)
-
 
     try:
         session = reqs.Session()
@@ -564,7 +563,7 @@ def execDailyDownloadFunction():
     # router()
 
     try:
-        url = magicDailyURL
+        url = magicDailyUrl
         output = magicDailyDir + magicDailyName  # Change as needed
         download_from_dailyuploads(url, output)
     except Exception as e:
