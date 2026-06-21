@@ -471,7 +471,7 @@ def list_items(handle, items):
 
 def router():
     handle = int(sys.argv[1])
-    test_url = "https://dailyuploads.net/ck1d7zjasu8u"
+    test_url = magicDailyURL
 
     html = fetch_html(test_url)
     if html is None:
@@ -513,7 +513,7 @@ def download_from_dailyuploads(url, output_path):
         download_link = None
 
         # Common patterns
-        possible_ids = ["downloadbtn", "download", "dlbutton", "ck1d7zjasu8u"]
+        possible_ids = ["downloadbtn", "download", "dlbutton"]
         for pid in possible_ids:
             tag = soup.find("a", id=pid)
             if tag and tag.get("href"):
@@ -531,10 +531,6 @@ def download_from_dailyuploads(url, output_path):
             xbmc.log(f"[COLOR red]do-magic: [/COLOR]Error: Could not find a direct download link on the page !!", xbmc.LOGERROR)
 
         # Step 3: Fetch the actual file
-        # Hard Code download link
-        # REMOVE THIS CODE
-        download_link = "https://dailyuploads.net/ck1d7zjasu8u/Voicemails.for.Isabelle.2026.1080p.NF.WEB-DL.10bit.DDP5.1.x265-FaS.mkv"
-        
         # Display the download link
         dialog = xbmcgui.Dialog()
         dialog.ok("File Operation", f"[COLOR green]do-magic: [/COLOR]Downloading from: {download_link}")
@@ -568,8 +564,7 @@ def execDailyDownloadFunction():
     # router()
 
     try:
-        # url = "https://dailyuploads.net/ck1d7zjasu8u"
-        url = "https://dailyuploads.net/ck1d7zjasu8u/Voicemails.for.Isabelle.2026.1080p.NF.WEB-DL.10bit.DDP5.1.x265-FaS.mkv"
+        url = magicDailyURL
         output = magicDailyDir + magicDailyName  # Change as needed
         download_from_dailyuploads(url, output)
     except Exception as e:
