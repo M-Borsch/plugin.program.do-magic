@@ -5,6 +5,9 @@
 # favourites.xml file.
 #
 # --------------------------------------------------------------------
+# M-Borsch 2026-06-21: Version 1.2
+# - Add DailyUpload download function
+# - Add download of Kodi Log function
 # M-Borsch 2026-05-28: Version 1.1
 # - Add Streamtape download function
 # --------------------------------------------------------------------
