@@ -377,6 +377,7 @@ def execStalkerTweekFunction():
 def execResolveDownloadFunction():
     dailyuploads_url = magicResolveUrl
     output_filepath = magicResolveDir + magicResolveName
+    media_url = False
     
     # Check if ResolveURL can handle the link
     if resolveurl.HostedMediaFile(dailyuploads_url).valid_url():
