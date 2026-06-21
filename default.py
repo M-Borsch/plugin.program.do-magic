@@ -496,7 +496,7 @@ def download_from_dailyuploads(url, output_path):
         raise ValueError("Invalid URL provided.")
 
     try:
-        session = requests.Session()
+        session = reqs.Session()
         session.headers.update({
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
         })
@@ -549,7 +549,7 @@ def download_from_dailyuploads(url, output_path):
         print("File saved to:", filename)
         return filename
 
-    except requests.RequestException as e:
+    except reqs.RequestException as e:
         raise RuntimeError(f"Network error: {e}")
     except Exception as e:
         raise RuntimeError(f"Unexpected error: {e}")
