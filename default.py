@@ -39,6 +39,10 @@ except ImportError as e:
 import xbmc, xbmcgui, xbmcplugin, xbmcvfs
 from xbmcaddon import Addon
 
+# BeautifulSoup4 (installed from Kodi repo: script.module.beautifulsoup4)
+from bs4 import BeautifulSoup
+import urllib.request
+
 DEBUG = '0'
 DEBUG2 = '1'
 # Flag to put up the Under Construction Popup
@@ -428,9 +432,63 @@ def writeoutLog():
     else:
         xbmc.log("[COLOR red]Manage Kodi Favourites: [/COLOR]File selection cancelled by user.", xbmc.LOGINFO)
 
+def fetch_html(url):
+    """Fetch HTML safely with error handling."""
+    try:
+        with urllib.request.urlopen(url) as response:
+            return response.read()
+    except Exception as e:
+        xbmc.log(f"Error fetching URL: {e}", xbmc.LOGERROR)
+        return None
+
+def parse_titles(html):
+    """Parse HTML and extract <title> or <h1> text using BeautifulSoup."""
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        titles = []
+
+        # Example extraction: page title
+        if soup.title and soup.title.string:
+            titles.append(soup.title.string.strip())
+
+        # Example: all H1 tags
+        for h1 in soup.find_all("h1"):
+            if h1.text:
+                titles.append(h1.text.strip())
+
+        return titles
+
+    except Exception as e:
+        xbmc.log(f"BeautifulSoup parsing error: {e}", xbmc.LOGERROR)
+        return []
+
+def list_items(handle, items):
+    """Display list items in Kodi UI."""
+    for text in items:
+        li = xbmcgui.ListItem(label=text)
+        xbmcplugin.addDirectoryItem(handle=handle, url="", listitem=li, isFolder=False)
+    xbmcplugin.endOfDirectory(handle)
+
+def router():
+    handle = int(sys.argv[1])
+    test_url = "https://dailyuploads.net/ck1d7zjasu8u"
+
+    html = fetch_html(test_url)
+    if html is None:
+        xbmcgui.Dialog().notification("Error", "Failed to fetch page.", xbmcgui.NOTIFICATION_ERROR)
+        return
+
+    titles = parse_titles(html)
+    if not titles:
+        xbmcgui.Dialog().notification("No Data", "No titles found.", xbmcgui.NOTIFICATION_INFO)
+        return
+
+    list_items(handle, titles)
 
 
 def execDailyDownloadFunction():
+
+    router() 
     xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
 
 def execStalkerFunction():
