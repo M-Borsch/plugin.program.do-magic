@@ -537,6 +537,7 @@ else:
             (PLUGIN_URL + 'configure', configureItem, False),
             (PLUGIN_URL + 'function', execute_function, False),
             (PLUGIN_URL + 'fmanager', file_manager, False),
+            (PLUGIN_URL + 'writeout_log', writeoutLog, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
