@@ -585,12 +585,12 @@ else:
     execute_function = xbmcgui.ListItem('[COLOR lightgreen][B]   Execute Function [/COLOR](Advanced! - This may modify your Kodi install)[/B]')
     execute_function.setArt({'thumb': 'DefaultAddonsUpdates.png'})
     execute_function.setInfo('video', {'plot': 'Advanced - Modify certain Kodi Functionality'})
+    writeoutLog = xbmcgui.ListItem('[COLOR red][B]-> Download Current Kodi Log file [/COLOR](Advanced! - Save a Copy of kodi.log file[/B]')
+    writeoutLog.setArt({'thumb': 'DefaultFolderBack.png'})
+    writeoutLog.setInfo('video', {'plot': 'Advanced - Download a copy of your Kodi Favourites file.[/COLOR]'})    
     file_manager = xbmcgui.ListItem('[COLOR red][B]   Launch File Manager...[/B][/COLOR]')
     file_manager.setArt({'thumb': 'DefaultAddonsUpdates.png'})
     file_manager.setInfo('video', {'plot': 'Launch File Manager...'})
-    writeoutLog = xbmcgui.ListItem('[COLOR red][B]-> Download Current Kodi Log file [/COLOR](Advanced! - Save a Copy of kodi.log file[/B]')
-    writeoutLog.setArt({'thumb': 'DefaultFolderBack.png'})
-    writeoutLog.setInfo('video', {'plot': 'Advanced - Download a copy of your Kodi Favourites file.[/COLOR]'})
     exitItem = xbmcgui.ListItem('[B]Exit[/B]')
     exitItem.setArt({'thumb': 'DefaultFolderBack.png'})
     exitItem.setInfo('video', {'plot': 'Exit the add-on (same as pressing Back), without saving your changes.'})
@@ -601,8 +601,8 @@ else:
             # PLUGIN_URL already ends with a slash, so just append the route to it.
             (PLUGIN_URL + 'configure', configureItem, False),
             (PLUGIN_URL + 'function', execute_function, False),
-            (PLUGIN_URL + 'fmanager', file_manager, False),
             (PLUGIN_URL + 'writeout_log', writeoutLog, False),
+            (PLUGIN_URL + 'fmanager', file_manager, False),
             (PLUGIN_URL + 'exit_only', exitItem, False)
         )
     )
