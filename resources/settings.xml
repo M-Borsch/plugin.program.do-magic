@@ -49,6 +49,11 @@
         <setting id="magicDAILYDIR" type="folder" label="30009" default="" visible="eq(-18,9)" />
         <setting id="magicDAILYNAME" type="text" label="30010" default="" visible="eq(-19,9)" />
 
+        <!-- ResolveURL Downloader Fields: Only visible if 'Download ResolveURL File' is selected -->
+        <setting id="magicRESOLVEURL" type="text" label="30049" default="" visible="eq(-20,10)" />
+        <setting id="magicRESOLVEDIR" type="folder" label="30009" default="" visible="eq(-21,10)" />
+        <setting id="magicRESOLVENAME" type="text" label="30010" default="" visible="eq(-22,10)" />
+
     </category>
 
 	<category label="30036"> <!-- Help Section -->
