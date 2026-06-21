@@ -531,7 +531,13 @@ def download_from_dailyuploads(url, output_path):
             xbmc.log(f"[COLOR red]do-magic: [/COLOR]Error: Could not find a direct download link on the page !!", xbmc.LOGERROR)
 
         # Step 3: Fetch the actual file
-        print("Downloading from:", download_link)
+        # Hard Code download link
+        # REMOVE THIS CODE
+        download_link = "https://dailyuploads.net/ck1d7zjasu8u/Voicemails.for.Isabelle.2026.1080p.NF.WEB-DL.10bit.DDP5.1.x265-FaS.mkv"
+        
+        # Display the download link
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation", f"[COLOR green]do-magic: [/COLOR]Downloading from: {download_link}")
         file_resp = session.get(download_link, timeout=20, stream=True)
         file_resp.raise_for_status()
 
