@@ -79,7 +79,9 @@ def execFunction():
         elif magicFunction == ADDON.getLocalizedString(30046):
             execStalkerDownloadFunction()
         elif magicFunction == ADDON.getLocalizedString(30048):
-            execDailyDownloadFunction() 
+            execDailyDownloadFunction()
+        elif magicFunction == ADDON.getLocalizedString(30050):
+            execResolveDownloadFunction() 
         #elif magicFunction == ADDON.getLocalizedString(30008):
             #execStalkerTweakFunction() 
         else:
@@ -370,6 +372,10 @@ def download_with_progress(url, dest_name):
         
 def execStalkerTweekFunction():
     xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
+
+
+def execResolveDownloadFunction():
+    xbmc.executebuiltin('Notification(ResolveURL, Executed, 2000)')
 
 def writeoutLog():
 
@@ -697,6 +703,10 @@ elif '/function' in PLUGIN_URL:
     magicDailyName = '' if not ADDON.getSetting('magicDAILYNAME') else ADDON.getSetting('magicDAILYNAME')
     magicDailyUrl = '' if not ADDON.getSetting('magicDAILYURL') else ADDON.getSetting('magicDAILYURL')
     magicDailyDir = '' if not ADDON.getSetting('magicDAILYDIR') else ADDON.getSetting('magicDAILYDIR')
+
+    magicResolveName = '' if not ADDON.getSetting('magicRESOLVENAME') else ADDON.getSetting('magicRESOLVENAME')
+    magicResolveUrl = '' if not ADDON.getSetting('magicRESOLVEURL') else ADDON.getSetting('magicRESOLVEURL')
+    magicResolveDir = '' if not ADDON.getSetting('magicRESOLVEDIR') else ADDON.getSetting('magicRESOLVEDIR')
     
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
     
