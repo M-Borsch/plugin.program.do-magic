@@ -493,7 +493,8 @@ def download_from_dailyuploads(url, output_path):
 
     # Basic input validation
     if not isinstance(url, str) or not url.startswith("http"):
-        raise ValueError("Invalid URL provided.")
+        xbmcgui.Dialog().notification("No Data", "Invalid URL provided..", xbmcgui.NOTIFICATION_INFO)
+
 
     try:
         session = reqs.Session()
@@ -526,7 +527,8 @@ def download_from_dailyuploads(url, output_path):
                 download_link = urljoin(url, tag["href"])
 
         if not download_link:
-            raise RuntimeError("Could not find a direct download link on the page.")
+            xbmcgui.Dialog().notification("No Data", "Could not find a direct download link on the page !!", xbmcgui.NOTIFICATION_INFO)
+            xbmc.log(f"[COLOR red]do-magic: [/COLOR]Error: Could not find a direct download link on the page !!", xbmc.LOGERROR)
 
         # Step 3: Fetch the actual file
         print("Downloading from:", download_link)
@@ -550,9 +552,9 @@ def download_from_dailyuploads(url, output_path):
         return filename
 
     except reqs.RequestException as e:
-        raise RuntimeError(f"Network error: {e}")
+        xbmc.log(f"[COLOR red]do-magic: [/COLOR]Network Error: {e}", xbmc.LOGERROR)
     except Exception as e:
-        raise RuntimeError(f"Unexpected error: {e}")
+        xbmc.log(f"[COLOR red]do-magic: [/COLOR]Unexpected Error: {e}", xbmc.LOGERROR)
 
 
 def execDailyDownloadFunction():
@@ -564,7 +566,7 @@ def execDailyDownloadFunction():
         output = "downloaded_file.bin"  # Change as needed
         download_from_dailyuploads(url, output)
     except Exception as err:
-        raise RuntimeError(f"Unexpected error: {err}")
+        xbmc.log(f"[COLOR red]do-magic: [/COLOR]Unexpected Error: {e}", xbmc.LOGERROR)
 
     xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
 
