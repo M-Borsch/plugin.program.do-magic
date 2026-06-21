@@ -380,8 +380,12 @@ def execResolveDownloadFunction():
     
     # Check if ResolveURL can handle the link
     if resolveurl.HostedMediaFile(dailyuploads_url).valid_url():
-        media_url = resolveurl.HostedMediaFile(dailyuploads_url).resolve()
-    
+        try:
+            media_url = resolveurl.HostedMediaFile(dailyuploads_url).resolve()
+            dialog.notification("ResoleURL", "Media URL found!", xbmcgui.NOTIFICATION_INFO, 5000)
+        except Exception as e:
+            dialog.notification("ResoleURL", f"Failed: {e}", xbmcgui.NOTIFICATION_ERROR, 5000)
+        
         if media_url:
             # Download the resolved media stream
             dialog = xbmcgui.Dialog()
