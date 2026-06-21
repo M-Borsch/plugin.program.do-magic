@@ -373,8 +373,27 @@ def download_with_progress(url, dest_name):
 def execStalkerTweekFunction():
     xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
 
-
 def execResolveDownloadFunction():
+    dailyuploads_url = magicResolveUrl
+    output_filepath = magicResolveDir + magicResolveName
+    
+    # Check if ResolveURL can handle the link
+    if resolveurl.HostedMediaFile(dailyuploads_url).valid_url():
+        media_url = resolveurl.HostedMediaFile(dailyuploads_url).resolve()
+    
+        if media_url:
+            # Download the resolved media stream
+            dialog = xbmcgui.Dialog()
+            dialog.notification("Downloader", "Download starting...", xbmcgui.NOTIFICATION_INFO, 5000)
+    
+            try:
+                urllib.request.urlretrieve(media_url, output_filepath)
+                dialog.notification("Downloader", "Download complete!", xbmcgui.NOTIFICATION_INFO, 5000)
+            except Exception as e:
+                dialog.notification("Downloader", f"Failed: {e}", xbmcgui.NOTIFICATION_ERROR, 5000)
+        else:
+            xbmc.log("Failed to resolve the media URL", xbmc.LOGERROR)
+    
     xbmc.executebuiltin('Notification(ResolveURL, Executed, 2000)')
 
 def writeoutLog():
