@@ -513,7 +513,7 @@ def download_from_dailyuploads(url, output_path):
         download_link = None
 
         # Common patterns
-        possible_ids = ["downloadbtn", "download", "dlbutton"]
+        possible_ids = ["downloadbtn", "download", "dlbutton", "ck1d7zjasu8u"]
         for pid in possible_ids:
             tag = soup.find("a", id=pid)
             if tag and tag.get("href"):
