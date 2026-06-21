@@ -485,10 +485,87 @@ def router():
 
     list_items(handle, titles)
 
+def download_from_dailyuploads(url, output_path):
+    """
+    Safely attempts to download the publicly accessible file linked on DailyUploads.
+    Does not bypass CAPTCHA or restricted/protected downloads.
+    """
+
+    # Basic input validation
+    if not isinstance(url, str) or not url.startswith("http"):
+        raise ValueError("Invalid URL provided.")
+
+    try:
+        session = requests.Session()
+        session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+        })
+
+        # Step 1: Fetch landing page
+        resp = session.get(url, timeout=15)
+        resp.raise_for_status()
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Step 2: Look for the main download button or link
+        # DailyUploads often uses <a id="downloadbtn"> or similar
+        download_link = None
+
+        # Common patterns
+        possible_ids = ["downloadbtn", "download", "dlbutton"]
+        for pid in possible_ids:
+            tag = soup.find("a", id=pid)
+            if tag and tag.get("href"):
+                download_link = urljoin(url, tag["href"])
+                break
+
+        # Fallback: try class name
+        if not download_link:
+            tag = soup.find("a", class_="btn")
+            if tag and tag.get("href"):
+                download_link = urljoin(url, tag["href"])
+
+        if not download_link:
+            raise RuntimeError("Could not find a direct download link on the page.")
+
+        # Step 3: Fetch the actual file
+        print("Downloading from:", download_link)
+        file_resp = session.get(download_link, timeout=20, stream=True)
+        file_resp.raise_for_status()
+
+        # Infer a filename if not given
+        filename = output_path
+        if output_path.endswith("/"):
+            parsed = urlparse(download_link)
+            name = parsed.path.split("/")[-1] or "downloaded_file"
+            filename = output_path + name
+
+        # Step 4: Save the file
+        with open(filename, "wb") as f:
+            for chunk in file_resp.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+
+        print("File saved to:", filename)
+        return filename
+
+    except requests.RequestException as e:
+        raise RuntimeError(f"Network error: {e}")
+    except Exception as e:
+        raise RuntimeError(f"Unexpected error: {e}")
+
 
 def execDailyDownloadFunction():
 
-    router() 
+    # router()
+
+    try:
+        url = input("Enter DailyUploads URL: ").strip()
+        output = "downloaded_file.bin"  # Change as needed
+        download_from_dailyuploads(url, output)
+    except Exception as err:
+        print("Error:", err)
+
     xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
 
 def execStalkerFunction():
