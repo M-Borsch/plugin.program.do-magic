@@ -560,11 +560,11 @@ def execDailyDownloadFunction():
     # router()
 
     try:
-        url = input("Enter DailyUploads URL: ").strip()
+        url = "https://dailyuploads.net/ck1d7zjasu8u"
         output = "downloaded_file.bin"  # Change as needed
         download_from_dailyuploads(url, output)
     except Exception as err:
-        print("Error:", err)
+        raise RuntimeError(f"Unexpected error: {err}")
 
     xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
 
