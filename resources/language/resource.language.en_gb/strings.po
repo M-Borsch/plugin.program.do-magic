@@ -218,3 +218,11 @@ msgid "[COLOR green]DailyUpload Downloader[/COLOR]"
 #: resources/settings.xml
 msgctxt "#30049"
 msgid "[COLOR khaki]   DailyUpload File URL:[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30050"
+msgid "[COLOR green]ResolveURL Downloader[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30051"
+msgid "[COLOR khaki]   Resolve File URL:[/COLOR]"
