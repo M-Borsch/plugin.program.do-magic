@@ -365,7 +365,7 @@ def download_with_progress(url, dest_name):
 def execStalkerTweekFunction():
     xbmc.executebuiltin('Notification(Stalker, Tweeked, 2000)')
 
-def execDailyUploadFunction():
+def execDailyDownloadFunction():
     xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
 
 def execStalkerFunction():
