@@ -45,7 +45,7 @@
         <setting id="magicSTALKNAME" type="text" label="30010" default="" visible="eq(-16,8)" />
 
         <!-- DailyUpload Downloader Fields: Only visible if 'Download DailyUpload File' is selected -->
-        <setting id="magicSDAILYURL" type="text" label="30048" default="" visible="eq(-17,9)" />
+        <setting id="magicSDAILYURL" type="text" label="30049" default="" visible="eq(-17,9)" />
         <setting id="magicDAILYDIR" type="folder" label="30009" default="" visible="eq(-18,9)" />
         <setting id="magicDAILYNAME" type="text" label="30010" default="" visible="eq(-19,9)" />
 
