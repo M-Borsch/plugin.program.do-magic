@@ -23,6 +23,7 @@ import os
 import requests as reqs
 import shutil
 import xbmcvfs
+import resolveurl
 import urllib.request
 
 try:
