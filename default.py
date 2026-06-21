@@ -573,6 +573,8 @@ def execDailyDownloadFunction():
         output = magicDailyDir + magicDailyFile  # Change as needed
         download_from_dailyuploads(url, output)
     except Exception as e:
+        dialog = xbmcgui.Dialog()
+        dialog.ok("File Operation", f"[COLOR red]do-magic: [/COLOR]Error Downloading: {e}")
         xbmc.log(f"[COLOR red]do-magic: [/COLOR]Unexpected Error: {e}", xbmc.LOGERROR)
 
     # xbmc.executebuiltin('Notification(DailyUpload, File Dwnloaded, 2000)')  
