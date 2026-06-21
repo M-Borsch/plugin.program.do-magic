@@ -44,6 +44,8 @@ DEBUG2 = '1'
 # Flag to put up the Under Construction Popup
 DEBUG3 = '0'
 SETTINGS_PATH = 'special://addons/pvr.stalker/resources/settings.xml'
+LOG_PATH = 'special://logpath/'
+
 
 ADDON = Addon()
 PLUGIN_ID = int(sys.argv[1])
