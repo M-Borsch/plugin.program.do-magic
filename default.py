@@ -402,8 +402,6 @@ def execResolveDownloadFunction():
         else:
             xbmc.log("Failed to resolve the media URL", xbmc.LOGERROR)
     
-    xbmc.executebuiltin('Notification(ResolveURL, Executed, 2000)')
-
 def writeoutLog():
 
     # --- Configuration Variables ---
