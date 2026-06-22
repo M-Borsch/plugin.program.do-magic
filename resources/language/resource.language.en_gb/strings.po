@@ -61,7 +61,7 @@ msgid "[COLOR springgreen]   Select Download Dir:[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30010"
-msgid "[COLOR springgreen]   Downloaded File Name:[/COLOR]"
+msgid "[COLOR springgreen]   Override File Name (optional):[/COLOR]"
 
 #: resources/settings.xml
 msgctxt "#30011"
