@@ -25,6 +25,7 @@ import shutil
 import xbmcvfs
 import resolveurl
 import urllib.request
+from pathlib import Path
 
 try:
     # Python 2.x
@@ -717,20 +718,20 @@ elif '/function' in PLUGIN_URL:
     magicFunction = '' if not ADDON.getSetting('magicFUNCTION') else ADDON.getSetting('magicFUNCTION')
 
     magicDownloadFlag = '' if not ADDON.getSettingBool('magicDNLDFLG') else ADDON.getSettingBool('magicDNLDFLG')    
-    magicName = '' if not ADDON.getSetting('magicNAME') else ADDON.getSetting('magicNAME')
     magicUrl = '' if not ADDON.getSetting('magicURL') else ADDON.getSetting('magicURL')
+    magicName = Path(magicUrl).name if not ADDON.getSetting('magicNAME') else ADDON.getSetting('magicNAME')
     magicDir = '' if not ADDON.getSetting('magicDIR') else ADDON.getSetting('magicDIR')
 
-    magicStalkerName = '' if not ADDON.getSetting('magicSTALKNAME') else ADDON.getSetting('magicSTALKNAME')
     magicStalkerUrl = '' if not ADDON.getSetting('magicSTALKURL') else ADDON.getSetting('magicSTALKURL')
+    magicStalkerName = Path(magicStalkerUrl).name if not ADDON.getSetting('magicSTALKNAME') else ADDON.getSetting('magicSTALKNAME')
     magicStalkerDir = '' if not ADDON.getSetting('magicSTALKDIR') else ADDON.getSetting('magicSTALKDIR')
 
-    magicDailyName = '' if not ADDON.getSetting('magicDAILYNAME') else ADDON.getSetting('magicDAILYNAME')
     magicDailyUrl = '' if not ADDON.getSetting('magicDAILYURL') else ADDON.getSetting('magicDAILYURL')
+    magicDailyName = Path(magicDailyUrl).name if not ADDON.getSetting('magicDAILYNAME') else ADDON.getSetting('magicDAILYNAME')
     magicDailyDir = '' if not ADDON.getSetting('magicDAILYDIR') else ADDON.getSetting('magicDAILYDIR')
 
-    magicResolveName = '' if not ADDON.getSetting('magicRESOLVENAME') else ADDON.getSetting('magicRESOLVENAME')
     magicResolveUrl = '' if not ADDON.getSetting('magicRESOLVEURL') else ADDON.getSetting('magicRESOLVEURL')
+    magicResolveName = Path(magicResolveUrl).name if not ADDON.getSetting('magicRESOLVENAME') else ADDON.getSetting('magicRESOLVENAME')
     magicResolveDir = '' if not ADDON.getSetting('magicRESOLVEDIR') else ADDON.getSetting('magicRESOLVEDIR')
     
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
