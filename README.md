@@ -19,7 +19,7 @@ Latest Version do-magic :sunglasses:
 - Added Help screens
 (Latest)
 
-<a href="plugin.program.do-magic-1.0.zip">plugin.program.do-magic-1.0.zip</a> (Latest)
+<a href="plugin.program.do-magic-1.2.zip">plugin.program.do-magic-1.2.zip</a> (Latest)
 
 <font COLOR="red"><B>RESTRICTED:</B></font> Contact MB-KODI (Latest)
 
