@@ -49,10 +49,13 @@ Opens a dialog where you must enter your password. This is a one-time setup. You
 ### 2) Execute Function (Advanced! - This may modify your Kodi install)
 This is where you 'Execute' the function that you chose and configured in the previous menu item (Configure...).
    
-### 3) File Manager
+### 3) Download Kodi Log File
+This downloads the a copy of the current Kodi Log file.
+
+### 4) File Manager
 This launches the built-in Kodi File Manager.
 
-### 4) Exit
+### 5) Exit
 Just steps back from the Addon.
 
 ## Help Screens Available in the Addon
