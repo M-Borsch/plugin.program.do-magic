@@ -331,7 +331,7 @@ def execDecodeURLFunction():
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]URL:[/COLOR] " + decodedURL + " \n [COLOR green]"Written to LOG "[/COLOR]"
+    line2 = "[COLOR blue]URL:[/COLOR] " + decodedURL + " \n [COLOR green] Written to LOG [/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]DECODE URL Function", line2)
 
