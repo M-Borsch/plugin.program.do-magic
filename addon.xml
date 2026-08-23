@@ -13,7 +13,7 @@
     <news>
       [COLOR lavender][B]do-magic[/B][/COLOR]
       [B]1.3:[/B]
-      - Change Streamtape downloader function to decode URL
+      - Add Decode URL function
       [B]1.2:[/B]
       - Add Dailyupload downloader function
       [B]1.1:[/B]
