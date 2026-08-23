@@ -453,7 +453,7 @@ def writeoutLog():
     # --- Process the result ---
     if selected_file_path:
         
-        # xbmc.log(f"[COLOR red]Manage Kodi Favourites: [/COLOR]Selected file path: {selected_file_path}", xbmc.LOGINFO)
+        # xbmc.log(f"[COLOR red]do-magic: [/COLOR]Selected file path: {selected_file_path}", xbmc.LOGINFO)
         
         # You can now use xbmcvfs to read the file content
         # Example (requires importing xbmcvfs):
@@ -473,14 +473,14 @@ def writeoutLog():
             xbmcvfs.copy(src, dst)
             # Display a confirmation dialog (requires xbmcgui)
             dialog = xbmcgui.Dialog()
-            dialog.ok("File Operation", "[COLOR green]Manage Kodi Favourites: [/COLOR]kodi.log successfully copied!\n")
+            dialog.ok("File Operation", "[COLOR green]do-magic: [/COLOR]kodi.log successfully copied!\n")
         except IOError as e:
             # Display an error dialog if the operation fails
             dialog = xbmcgui.Dialog()
-            dialog.ok("File Operation Error", f"[COLOR red]Manage Kodi Favourites: [/COLOR]Error copying kodi.log file: {e}")
+            dialog.ok("File Operation Error", f"[COLOR red]do-magic: [/COLOR]Error copying kodi.log file: {e}")
     
     else:
-        xbmc.log("[COLOR red]Manage Kodi Favourites: [/COLOR]File selection cancelled by user.", xbmc.LOGINFO)
+        xbmc.log("[COLOR red]do-magic: [/COLOR]File selection cancelled by user.", xbmc.LOGINFO)
 
 def fetch_html(url):
     """Fetch HTML safely with error handling."""
@@ -700,7 +700,7 @@ def clearWindowProperty(prop):
 
 # Debugging helper. Logs a LOGNERROR-level message.
 def xbmcLog(*args):
-    xbmc.log('[COLOR yellow]Manage Kodi Favourites > [/COLOR]' + ' '.join((var if isinstance(var, str) else repr(var)) for var in args), level=xbmc.LOGERROR)
+    xbmc.log('[COLOR yellow]do-magic > [/COLOR]' + ' '.join((var if isinstance(var, str) else repr(var)) for var in args), level=xbmc.LOGERROR)
 #===================================================================================
 
 ### Entry point ###
@@ -721,7 +721,7 @@ elif '/writeout_log' in PLUGIN_URL:
     verbose = 'false' if not ADDON.getSetting('presuffixBool') else ADDON.getSetting('presuffixBool')
     msg_text = f"[COLOR red]DANGER! [/COLOR]This will save a copy of your Kodi Log file - overwriting any local version of kodi.log in the selected directory\n Proceed?"
     if verbose == 'true':
-        if xbmcgui.Dialog().yesno('Manage Kodi Favourites', msg_text):
+        if xbmcgui.Dialog().yesno('do-magic', msg_text):
             # Activate the filemaanager
             writeoutLog()
     else:
