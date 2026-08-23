@@ -5,6 +5,8 @@
 # favourites.xml file.
 #
 # --------------------------------------------------------------------
+# M-Borsch 2026-08-23: Version 1.3
+# - Add Decode URL function
 # M-Borsch 2026-06-21: Version 1.2
 # - Add DailyUpload download function
 # - Add download of Kodi Log function
@@ -25,6 +27,7 @@ import shutil
 import xbmcvfs
 import resolveurl
 import urllib.request
+import urllib.parse
 from pathlib import Path
 
 try:
@@ -322,7 +325,7 @@ def execHashFunction():
 def execDecodeURLFunction():
 
     # Decode the URL
-    decodedURL = urllib.parse.unquote(percent_string)
+    decodedURL = urllib.parse.unquote(magicDecodeURL)
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
@@ -747,7 +750,7 @@ elif '/function' in PLUGIN_URL:
     magicResolveName = Path(magicResolveUrl).name if not ADDON.getSetting('magicRESOLVENAME') else ADDON.getSetting('magicRESOLVENAME')
     magicResolveDir = '' if not ADDON.getSetting('magicRESOLVEDIR') else ADDON.getSetting('magicRESOLVEDIR')
 
-    magicDecodeeUrl = '' if not ADDON.getSetting('magicDECODEURL') else ADDON.getSetting('magicDECODEURL')
+    magicDecodeUrl = '' if not ADDON.getSetting('magicDECODEURL') else ADDON.getSetting('magicDECODEURL')
     
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
     
