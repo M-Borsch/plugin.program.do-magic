@@ -321,14 +321,15 @@ def execHashFunction():
 
 def execDecodeURLFunction():
 
-    # Generate a salt and hash password
-    hashed = xbmc.getCacheThumbName( magicHash ).split('.', 1)[0]
+    # Decode the URL
+    decodedURL = urllib.parse.unquote(percent_string)
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " [COLOR blue]\nTo:[/COLOR] [COLOR green]" + hashed + "[/COLOR]"
+    line2 = "[COLOR blue]URL:[/COLOR] " + decodedURL + " \n [COLOR green]"Written to LOG "[/COLOR]"
 
-    dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
+    dialog.ok("[COLOR red]do-magic: [/COLOR]DECODE URL Function", line2)
+
     
 def execDownloadFunction():
 
@@ -745,6 +746,8 @@ elif '/function' in PLUGIN_URL:
     magicResolveUrl = '' if not ADDON.getSetting('magicRESOLVEURL') else ADDON.getSetting('magicRESOLVEURL')
     magicResolveName = Path(magicResolveUrl).name if not ADDON.getSetting('magicRESOLVENAME') else ADDON.getSetting('magicRESOLVENAME')
     magicResolveDir = '' if not ADDON.getSetting('magicRESOLVEDIR') else ADDON.getSetting('magicRESOLVEDIR')
+
+    magicDecodeeUrl = '' if not ADDON.getSetting('magicDECODEURL') else ADDON.getSetting('magicDECODEURL')
     
     magicHash = '' if not ADDON.getSetting('magicHASH') else ADDON.getSetting('magicHASH')
     
