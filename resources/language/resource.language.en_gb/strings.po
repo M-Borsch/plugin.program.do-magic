@@ -226,3 +226,11 @@ msgid "[COLOR green]ResolveURL Downloader[/COLOR]"
 #: resources/settings.xml
 msgctxt "#30051"
 msgid "[COLOR khaki]   Resolve File URL:[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30052"
+msgid "[COLOR green]URL decoding (AKA percent-decoding)[/COLOR]"
+
+#: resources/settings.xml
+msgctxt "#30053"
+msgid "[COLOR khaki]   File URL:[/COLOR]"
