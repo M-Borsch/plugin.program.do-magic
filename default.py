@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-# Manage Kodi Favourites program add-on for Kodi 17.6+.
-# Lets you see and manage your Kodi favourites, to organize them.
-# In other words, this is an add-on to edit your
-# favourites.xml file.
+# do-magic program add-on for Kodi 17.6+.
+# Lets you execute advanced function s on your Kodi install.
 #
 # --------------------------------------------------------------------
 # M-Borsch 2026-08-23: Version 1.3
@@ -325,7 +323,7 @@ def execHashFunction():
 def execDecodeURLFunction():
 
     # Decode the URL
-    decodedURL = urllib.parse.unquote(magicDecodeURL)
+    decodedURL = urllib.parse.unquote(magicDecodeUrl)
 
     xbmc.log(f"[COLOR green]do-magic: [/COLOR]URL: {decodedURL}", xbmc.LOGINFO)
     
