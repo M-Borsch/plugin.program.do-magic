@@ -55,7 +55,7 @@
         <setting id="magicRESOLVENAME" type="text" label="30010" default="" visible="eq(-22,10)" />
 
 		<!-- DecodeURL Fields: Only visible if 'URL decoding' is selected -->
-        <setting id="magicDECODEURL" type="text" label="30053" default="" visible="eq(-23,10)" />
+        <setting id="magicDECODEURL" type="text" label="30053" default="" visible="eq(-23,11)" />
 
     </category>
 
