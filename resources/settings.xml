@@ -12,7 +12,7 @@
 		 <setting type="lsep" />
 
 	    <!-- Function Field -->
-        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30025|30029|30026|30046|30048|30050" default="NONE" />
+        <setting id="magicFUNCTION" type="labelenum" label="30004" lvalues="30006|30007|30008|30012|30017|30025|30029|30026|30046|30048|30050|30052" default="NONE" />
 
         <!-- Download  Fields: Only visible if 'Download' is selected -->
         <setting id="magicDNLDFLG" type="bool" label="30034" default="true" visible="eq(-1,1)" />
@@ -53,6 +53,9 @@
         <setting id="magicRESOLVEURL" type="text" label="30051" default="" visible="eq(-20,10)" />
         <setting id="magicRESOLVEDIR" type="folder" label="30009" default="" visible="eq(-21,10)" />
         <setting id="magicRESOLVENAME" type="text" label="30010" default="" visible="eq(-22,10)" />
+
+		<!-- DecodeURL Fields: Only visible if 'URL decoding' is selected -->
+        <setting id="magicDECODEURL" type="text" label="30053" default="" visible="eq(-23,10)" />
 
     </category>
 
