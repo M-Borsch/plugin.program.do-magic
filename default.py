@@ -326,6 +326,8 @@ def execDecodeURLFunction():
 
     # Decode the URL
     decodedURL = urllib.parse.unquote(magicDecodeURL)
+
+    xbmc.log(f"[COLOR green]do-magic: [/COLOR]URL: {decodedURL}", xbmc.LOGINFO)
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
