@@ -83,7 +83,9 @@ def execFunction():
         elif magicFunction == ADDON.getLocalizedString(30048):
             execDailyDownloadFunction()
         elif magicFunction == ADDON.getLocalizedString(30050):
-            execResolveDownloadFunction() 
+            execResolveDownloadFunction()
+        elif magicFunction == ADDON.getLocalizedString(30052):
+            execDecodeURLFunction()
         #elif magicFunction == ADDON.getLocalizedString(30008):
             #execStalkerTweakFunction() 
         else:
@@ -317,7 +319,17 @@ def execHashFunction():
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
 
+def execDecodeURLFunction():
 
+    # Generate a salt and hash password
+    hashed = xbmc.getCacheThumbName( magicHash ).split('.', 1)[0]
+    
+    # Display a confirmation dialog (requires xbmcgui)
+    dialog = xbmcgui.Dialog()
+    line2 = "[COLOR blue]Hashing:[/COLOR] " + magicHash + " [COLOR blue]\nTo:[/COLOR] [COLOR green]" + hashed + "[/COLOR]"
+
+    dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
+    
 def execDownloadFunction():
 
     if magicDownloadFlag:
