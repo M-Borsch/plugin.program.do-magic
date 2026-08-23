@@ -332,7 +332,6 @@ def execDecodeURLFunction():
     line2 = "[COLOR blue]URL:[/COLOR] " + decodedURL + " \n [COLOR green] Written to LOG [/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]DECODE URL Function", line2)
-
     
 def execDownloadFunction():
 
