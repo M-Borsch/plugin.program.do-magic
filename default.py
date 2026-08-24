@@ -4,7 +4,7 @@
 #
 # --------------------------------------------------------------------
 # M-Borsch 2026-08-23: Version 1.4
-# - Fix Dialof info in Decode URL function
+# - Fix Dialog info in Decode URL function
 # M-Borsch 2026-08-23: Version 1.3
 # - Add Decode URL function
 # M-Borsch 2026-06-21: Version 1.2
@@ -26,7 +26,6 @@ import requests as reqs
 import shutil
 import xbmcvfs
 import resolveurl
-import paperclip
 import urllib.request
 import urllib.parse
 from pathlib import Path
