@@ -4,7 +4,7 @@
 #
 # --------------------------------------------------------------------
 # M-Borsch 2026-08-23: Version 1.4
-# - Add Copy/;paste buffer load to Decode URL function
+# - Fix Dialof info in Decode URL function
 # M-Borsch 2026-08-23: Version 1.3
 # - Add Decode URL function
 # M-Borsch 2026-06-21: Version 1.2
@@ -323,23 +323,10 @@ def execHashFunction():
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]HASH Function", line2)
 
-def copy_to_clipboard(text):
-
-    if not isinstance(text, str):
-        raise TypeError("Only strings can be copied to the clipboard.")
-    try:
-        paperclip.copy(text)
-        xbmcgui.Dialog().notification("do-magic", "Text copied successfully!", xbmcgui.NOTIFICATION_INFO, 2000)
-    except Exception as e:
-        xbmcgui.Dialog().notification("do-magic Error", str(e), xbmcgui.NOTIFICATION_ERROR, 3000)
-
 def execDecodeURLFunction():
 
     # Decode the URL
     decodedURL = urllib.parse.unquote(magicDecodeUrl)
-
-    # Place decodedURL into paste buffer
-    copy_to_clipboard(decodedURL)
     
     xbmc.log(f"[COLOR green]do-magic: [/COLOR]URL: {decodedURL}", xbmc.LOGINFO)
     
