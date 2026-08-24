@@ -26,6 +26,7 @@ import requests as reqs
 import shutil
 import xbmcvfs
 import resolveurl
+import paperclip
 import urllib.request
 import urllib.parse
 from pathlib import Path
@@ -327,10 +328,10 @@ def copy_to_clipboard(text):
     if not isinstance(text, str):
         raise TypeError("Only strings can be copied to the clipboard.")
     try:
-        xbmcgui.Window(xbmcgui.getCurrentWindowId()).setClipboard(text)
+        paperclip.copy(text)
         xbmcgui.Dialog().notification("do-magic", "Text copied successfully!", xbmcgui.NOTIFICATION_INFO, 2000)
     except Exception as e:
-        xbmcgui.Dialog().notification("do-mafgic Error", str(e), xbmcgui.NOTIFICATION_ERROR, 3000)
+        xbmcgui.Dialog().notification("do-magic Error", str(e), xbmcgui.NOTIFICATION_ERROR, 3000)
 
 def execDecodeURLFunction():
 
@@ -344,7 +345,7 @@ def execDecodeURLFunction():
     
     # Display a confirmation dialog (requires xbmcgui)
     dialog = xbmcgui.Dialog()
-    line2 = "[COLOR blue]URL:[/COLOR] " + decodedURL + " \n [COLOR green] Written to LOG [/COLOR]"
+    line2 = "[COLOR blue]URL:[/COLOR] " + decodedURL + " \n [COLOR green] Copied to clipboard and Wwitten to LOG [/COLOR]"
 
     dialog.ok("[COLOR red]do-magic: [/COLOR]DECODE URL Function", line2)
     
